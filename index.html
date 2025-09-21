@@ -18,6 +18,16 @@
                     fontFamily: {
                         'inter': ['Inter', 'sans-serif'],
                     },
+                    backgroundImage: {
+                        'grid-pattern': 'linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px)',
+                        'dot-pattern': 'radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0)',
+                        'mesh-gradient': 'radial-gradient(at 40% 20%, hsla(28,100%,74%,1) 0px, transparent 50%), radial-gradient(at 80% 0%, hsla(189,100%,56%,1) 0px, transparent 50%), radial-gradient(at 0% 50%, hsla(355,100%,93%,1) 0px, transparent 50%)',
+                    },
+                    backgroundSize: {
+                        'grid': '40px 40px',
+                        'dots': '20px 20px',
+                        'mesh': '100% 100%',
+                    },
                     animation: {
                         'marquee': 'marquee 25s linear infinite',
                         'marquee2': 'marquee2 25s linear infinite',
@@ -59,6 +69,27 @@
                         'evervault': 'evervault 20s ease-in-out infinite',
                         'fluid-particles': 'fluid-particles 8s ease-in-out infinite',
                         'prism-glow': 'prism-glow 2s ease-in-out infinite alternate',
+                        'electric-border': 'electric-border 3s ease-in-out infinite',
+                        'electric-pulse': 'electric-pulse 2s ease-in-out infinite',
+                        'border-beam': 'border-beam 8s linear infinite',
+                        'meteor-fall': 'meteor-fall 3s linear infinite',
+                        'sparkles': 'sparkles 2s ease-in-out infinite',
+                        'shimmer': 'shimmer 2s ease-in-out infinite',
+                        'spotlight': 'spotlight 8s ease-in-out infinite',
+                        'speed-boost': 'speed-boost 1.5s ease-out infinite',
+                        'data-flow': 'data-flow 2s linear infinite',
+                        'code-compile': 'code-compile 3s ease-in-out infinite',
+                        'beam-horizontal': 'beam-horizontal 8s ease-in-out infinite',
+                        'beam-vertical': 'beam-vertical 6s ease-in-out infinite',
+                        'beam-diagonal': 'beam-diagonal 10s linear infinite',
+                        'seo-rank': 'seo-rank 3s ease-in-out infinite',
+                        'seo-progress': 'seo-progress 2s ease-in-out infinite',
+                        'analytics-bar': 'analytics-bar 1.5s ease-in-out infinite',
+                        'payment-card': 'payment-card 2s ease-in-out infinite',
+                        'neural-connection': 'neural-connection 2s ease-in-out infinite',
+                        'electric-border': 'electric-border 3s ease-in-out infinite',
+                        'electric-glow': 'electric-glow 2s ease-in-out infinite',
+                        'electric-stroke': 'electric-stroke 4s linear infinite',
                         'cyber-grid': 'cyber-grid 4s linear infinite',
                         'neural-pulse': 'neural-pulse 3s ease-in-out infinite',
                     },
@@ -253,6 +284,38 @@
                                 transform: 'scale(1.02)'
                             },
                         },
+                        'electric-border': {
+                            '0%': {
+                                backgroundPosition: '0% 0%',
+                                boxShadow: '0 0 0 1px rgba(59, 130, 246, 0.4), 0 0 20px rgba(59, 130, 246, 0.2)'
+                            },
+                            '25%': {
+                                backgroundPosition: '100% 0%',
+                                boxShadow: '0 0 0 2px rgba(59, 130, 246, 0.8), 0 0 30px rgba(59, 130, 246, 0.4)'
+                            },
+                            '50%': {
+                                backgroundPosition: '100% 100%',
+                                boxShadow: '0 0 0 2px rgba(147, 51, 234, 0.8), 0 0 40px rgba(147, 51, 234, 0.4)'
+                            },
+                            '75%': {
+                                backgroundPosition: '0% 100%',
+                                boxShadow: '0 0 0 2px rgba(236, 72, 153, 0.8), 0 0 30px rgba(236, 72, 153, 0.4)'
+                            },
+                            '100%': {
+                                backgroundPosition: '0% 0%',
+                                boxShadow: '0 0 0 1px rgba(59, 130, 246, 0.4), 0 0 20px rgba(59, 130, 246, 0.2)'
+                            },
+                        },
+                        'electric-pulse': {
+                            '0%, 100%': {
+                                opacity: '0.6',
+                                transform: 'scale(1)'
+                            },
+                            '50%': {
+                                opacity: '1',
+                                transform: 'scale(1.01)'
+                            },
+                        },
                         'cyber-grid': {
                             '0%': {
                                 backgroundPosition: '0px 0px',
@@ -271,6 +334,232 @@
                             '50%': {
                                 transform: 'scale(1.1)',
                                 opacity: '1'
+                            },
+                        },
+                        'border-beam': {
+                            '0%': {
+                                'offset-distance': '0%',
+                                opacity: '0'
+                            },
+                            '10%': {
+                                opacity: '1'
+                            },
+                            '90%': {
+                                opacity: '1'
+                            },
+                            '100%': {
+                                'offset-distance': '100%',
+                                opacity: '0'
+                            },
+                        },
+                        'meteor-fall': {
+                            '0%': {
+                                transform: 'translateY(-100vh) translateX(0) rotate(45deg)',
+                                opacity: '0'
+                            },
+                            '10%': {
+                                opacity: '1'
+                            },
+                            '90%': {
+                                opacity: '1'
+                            },
+                            '100%': {
+                                transform: 'translateY(100vh) translateX(300px) rotate(45deg)',
+                                opacity: '0'
+                            },
+                        },
+                        'sparkles': {
+                            '0%, 100%': {
+                                opacity: '0',
+                                transform: 'scale(0) rotate(0deg)'
+                            },
+                            '50%': {
+                                opacity: '1',
+                                transform: 'scale(1) rotate(180deg)'
+                            },
+                        },
+                        'shimmer': {
+                            '0%': {
+                                transform: 'translateX(-100%)'
+                            },
+                            '100%': {
+                                transform: 'translateX(100%)'
+                            },
+                        },
+                        'spotlight': {
+                            '0%': {
+                                opacity: '0',
+                                transform: 'translate(-50%, -50%) scale(0.5)'
+                            },
+                            '50%': {
+                                opacity: '1',
+                                transform: 'translate(-50%, -50%) scale(1)'
+                            },
+                            '100%': {
+                                opacity: '0',
+                                transform: 'translate(-50%, -50%) scale(0.5)'
+                            },
+                        },
+                        'speed-boost': {
+                            '0%': {
+                                transform: 'translateX(-100%)',
+                                opacity: '0'
+                            },
+                            '20%': {
+                                opacity: '1'
+                            },
+                            '80%': {
+                                opacity: '1'
+                            },
+                            '100%': {
+                                transform: 'translateX(200%)',
+                                opacity: '0'
+                            },
+                        },
+                        'data-flow': {
+                            '0%': {
+                                transform: 'translateX(-100%) scale(0.5)',
+                                opacity: '0'
+                            },
+                            '10%': {
+                                opacity: '1',
+                                transform: 'translateX(-50%) scale(1)'
+                            },
+                            '90%': {
+                                opacity: '1',
+                                transform: 'translateX(50%) scale(1)'
+                            },
+                            '100%': {
+                                transform: 'translateX(100%) scale(0.5)',
+                                opacity: '0'
+                            },
+                        },
+                        'code-compile': {
+                            '0%': {
+                                width: '0%',
+                                backgroundColor: 'rgba(249, 115, 22, 0.8)'
+                            },
+                            '50%': {
+                                width: '100%',
+                                backgroundColor: 'rgba(34, 197, 94, 0.8)'
+                            },
+                            '100%': {
+                                width: '100%',
+                                backgroundColor: 'rgba(34, 197, 94, 0.8)'
+                            },
+                        },
+                        'beam-horizontal': {
+                            '0%': {
+                                transform: 'translateX(-100%)',
+                                opacity: '0'
+                            },
+                            '10%': {
+                                opacity: '1'
+                            },
+                            '90%': {
+                                opacity: '1'
+                            },
+                            '100%': {
+                                transform: 'translateX(100%)',
+                                opacity: '0'
+                            },
+                        },
+                        'beam-vertical': {
+                            '0%': {
+                                transform: 'translateY(-100%)',
+                                opacity: '0'
+                            },
+                            '10%': {
+                                opacity: '1'
+                            },
+                            '90%': {
+                                opacity: '1'
+                            },
+                            '100%': {
+                                transform: 'translateY(100%)',
+                                opacity: '0'
+                            },
+                        },
+                        'beam-diagonal': {
+                            '0%': {
+                                transform: 'rotate(45deg) translateX(-100%)',
+                                opacity: '0'
+                            },
+                            '10%': {
+                                opacity: '0.8'
+                            },
+                            '90%': {
+                                opacity: '0.8'
+                            },
+                            '100%': {
+                                transform: 'rotate(45deg) translateX(100%)',
+                                opacity: '0'
+                            },
+                        },
+                        'seo-rank': {
+                            '0%': {
+                                transform: 'translateY(5px)',
+                                color: 'rgb(239, 68, 68)'
+                            },
+                            '50%': {
+                                transform: 'translateY(-2px)',
+                                color: 'rgb(34, 197, 94)'
+                            },
+                            '100%': {
+                                transform: 'translateY(0px)',
+                                color: 'rgb(34, 197, 94)'
+                            },
+                        },
+                        'seo-progress': {
+                            '0%': {
+                                height: '0.25rem',
+                                backgroundColor: 'rgb(239, 68, 68)'
+                            },
+                            '100%': {
+                                height: '0.75rem',
+                                backgroundColor: 'rgb(34, 197, 94)'
+                            },
+                        },
+                        'analytics-bar': {
+                            '0%': {
+                                height: '0.25rem',
+                                opacity: '0.5'
+                            },
+                            '50%': {
+                                height: '1rem',
+                                opacity: '1'
+                            },
+                            '100%': {
+                                height: '0.25rem',
+                                opacity: '0.5'
+                            },
+                        },
+                        'payment-card': {
+                            '0%': {
+                                transform: 'scale(1) rotateY(0deg)',
+                                boxShadow: '0 0 0 rgba(59, 130, 246, 0)'
+                            },
+                            '50%': {
+                                transform: 'scale(1.1) rotateY(10deg)',
+                                boxShadow: '0 4px 12px rgba(59, 130, 246, 0.5)'
+                            },
+                            '100%': {
+                                transform: 'scale(1) rotateY(0deg)',
+                                boxShadow: '0 0 0 rgba(59, 130, 246, 0)'
+                            },
+                        },
+                        'neural-connection': {
+                            '0%': {
+                                strokeDasharray: '0, 100',
+                                opacity: '0.3'
+                            },
+                            '50%': {
+                                strokeDasharray: '50, 50',
+                                opacity: '1'
+                            },
+                            '100%': {
+                                strokeDasharray: '100, 0',
+                                opacity: '0.3'
                             },
                         },
                     }
@@ -335,27 +624,59 @@
                         <i data-lucide="sun" class="w-5 h-5 text-white animate-theme-switch"></i>
                     </button>
 
-                    <!-- CTA Button -->
-                    <a href="#contact" class="hidden md:flex items-center gap-2 px-6 py-2 bg-white text-black font-semibold rounded-lg hover:bg-gray-200 transition-colors duration-300">
-                        <i data-lucide="message-circle" class="w-4 h-4"></i>
-                        Cotizar Proyecto
-                    </a>
+                    <!-- CTA Button with Magnetic Effect -->
+                    <div class="magnetic-button hidden md:block">
+                        <a href="#contact" class="relative flex items-center gap-2 px-6 py-2 bg-white text-black font-semibold rounded-lg hover:bg-gray-200 transition-all duration-300 overflow-hidden group">
+                            <!-- Shimmer Effect -->
+                            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 animate-shimmer"></div>
+                            <i data-lucide="message-circle" class="w-4 h-4 relative z-10"></i>
+                            <span class="relative z-10">Cotizar Proyecto</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden">
-        <!-- Meteor Effect -->
-        <div class="absolute top-1/4 left-1/4 w-px h-48 bg-gradient-to-t from-transparent via-white to-transparent animate-meteor"></div>
-        <div class="absolute top-1/3 right-1/3 w-px h-32 bg-gradient-to-t from-transparent via-white to-transparent animate-meteor" style="animation-delay: 2s;"></div>
+    <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden bg-grid-pattern bg-grid opacity-50">
+        <!-- Bund UI Beam Effects -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <!-- Horizontal Beams -->
+            <div class="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-60 animate-beam-horizontal"></div>
+            <div class="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent opacity-60 animate-beam-horizontal" style="animation-delay: 2s;"></div>
+            <div class="absolute top-3/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-pink-500 to-transparent opacity-60 animate-beam-horizontal" style="animation-delay: 4s;"></div>
+
+            <!-- Vertical Beams -->
+            <div class="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-cyan-500 to-transparent opacity-60 animate-beam-vertical"></div>
+            <div class="absolute top-0 left-3/4 w-px h-full bg-gradient-to-b from-transparent via-emerald-500 to-transparent opacity-60 animate-beam-vertical" style="animation-delay: 3s;"></div>
+
+            <!-- Diagonal Beams -->
+            <div class="absolute top-0 left-0 w-full h-full opacity-40">
+                <div class="absolute top-0 left-0 w-px h-full bg-gradient-to-b from-transparent via-yellow-500 to-transparent transform rotate-45 origin-top-left animate-beam-diagonal"></div>
+                <div class="absolute bottom-0 left-0 w-px h-full bg-gradient-to-t from-transparent via-orange-500 to-transparent transform -rotate-45 origin-bottom-left animate-beam-diagonal" style="animation-delay: 1s;"></div>
+            </div>
+        </div>
 
         <div class="text-center z-10 px-4 max-w-6xl mx-auto">
-            <h1 class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent">
-                Soluciones Web<br/>
-                <span class="animate-text-reveal">Personalizadas</span>
-            </h1>
+            <!-- Border Beam Container -->
+            <div class="relative inline-block mb-6 p-8 rounded-3xl">
+                <!-- Border Beam Effect -->
+                <div class="absolute inset-0 rounded-3xl">
+                    <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-20 blur-xl"></div>
+                    <div class="absolute inset-0 rounded-3xl border border-transparent"
+                         style="background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.8), rgba(147, 51, 234, 0.8), rgba(236, 72, 153, 0.8), transparent) border-box;
+                                mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0);
+                                mask-composite: exclude;">
+                        <div class="absolute w-8 h-8 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full blur-md animate-border-beam"
+                             style="offset-path: rect(0 auto auto 0 round 1.5rem); offset-distance: 0%;"></div>
+                    </div>
+                </div>
+                <h1 class="relative text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent">
+                    Soluciones Web<br/>
+                    <span class="animate-text-reveal">Personalizadas</span>
+                </h1>
+            </div>
 
             <!-- Typewriter Effect -->
             <div class="text-xl md:text-2xl text-gray-300 mb-8 h-8 relative">
@@ -436,12 +757,37 @@
                     </div>
                     <div class="p-4 font-mono text-sm">
                         <div class="text-green-400 font-semibold">$ npm create hardcoded-site</div>
-                        <div class="text-blue-400">✓ Installing dependencies...</div>
-                        <div class="text-yellow-400">✓ Setting up database...</div>
-                        <div class="text-purple-400">✓ Configuring payment gateway...</div>
-                        <div class="text-white font-semibold">Ready! Your site is live at https://yoursite.com</div>
-                        <div class="flex items-center mt-2">
+                        <div class="text-blue-400 flex items-center gap-2">
+                            ✓ Installing dependencies...
+                            <div class="relative overflow-hidden h-1 w-20 bg-blue-900 rounded-full">
+                                <div class="absolute inset-0 bg-blue-400 rounded-full animate-code-compile"></div>
+                            </div>
+                        </div>
+                        <div class="text-yellow-400 flex items-center gap-2">
+                            ✓ Setting up database...
+                            <div class="flex gap-1">
+                                <div class="w-1 h-1 bg-yellow-400 rounded-full animate-pulse"></div>
+                                <div class="w-1 h-1 bg-yellow-400 rounded-full animate-pulse" style="animation-delay: 0.2s;"></div>
+                                <div class="w-1 h-1 bg-yellow-400 rounded-full animate-pulse" style="animation-delay: 0.4s;"></div>
+                            </div>
+                        </div>
+                        <div class="text-purple-400 flex items-center gap-2">
+                            ✓ Configuring payment gateway...
+                            <div class="text-xs bg-purple-900/50 px-2 py-1 rounded">SSL ✓</div>
+                            <!-- Payment Animation -->
+                            <div class="flex items-center gap-1 ml-2">
+                                <div class="w-4 h-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-sm animate-payment-card"></div>
+                                <div class="text-xs text-green-400 animate-pulse">💳</div>
+                                <div class="text-xs text-yellow-400 font-mono">$$$</div>
+                            </div>
+                        </div>
+                        <div class="text-green-400 flex items-center gap-2">
+                            <span class="animate-pulse">🚀</span>
+                            <span class="font-semibold">Ready! Your site is live at https://yoursite.com</span>
+                        </div>
+                        <div class="flex items-center mt-2 gap-2">
                             <span class="text-green-400">$</span>
+                            <span class="typing-text text-white" id="typing-output"></span>
                             <span class="animate-terminal-cursor ml-1 w-2 h-4 bg-white"></span>
                         </div>
                     </div>
@@ -1069,8 +1415,7 @@
                 <span class="text-lg font-semibold mx-8 flex items-center gap-2"><i data-lucide="bar-chart" class="w-4 h-4"></i> Analytics</span>
                 <span class="text-lg font-semibold mx-8 flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4"></i> Email Marketing</span>
                 <span class="text-lg font-semibold mx-8 flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> WhatsApp API</span>
-            </div>
-            <div class="animate-marquee2 whitespace-nowrap flex items-center py-4 absolute">
+                <!-- Duplicate content for seamless loop -->
                 <span class="text-lg font-semibold mx-8 flex items-center gap-2"><i data-lucide="globe" class="w-4 h-4"></i> Presencial Digital</span>
                 <span class="text-lg font-semibold mx-8 flex items-center gap-2"><i data-lucide="shopping-bag" class="w-4 h-4"></i> Tienda Online</span>
                 <span class="text-lg font-semibold mx-8 flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4"></i> Google Maps</span>
@@ -1093,6 +1438,15 @@
                 <span class="text-sm font-medium mx-6 flex items-center gap-2"><i data-lucide="clock" class="w-3 h-3"></i> Entrega Rápida</span>
                 <span class="text-sm font-medium mx-6 flex items-center gap-2"><i data-lucide="award" class="w-3 h-3"></i> Calidad Premium</span>
                 <span class="text-sm font-medium mx-6 flex items-center gap-2"><i data-lucide="thumbs-up" class="w-3 h-3"></i> 100% Satisfacción</span>
+                <!-- Duplicate content for seamless loop -->
+                <span class="text-sm font-medium mx-6 flex items-center gap-2"><i data-lucide="shield" class="w-3 h-3"></i> SSL Seguro</span>
+                <span class="text-sm font-medium mx-6 flex items-center gap-2"><i data-lucide="zap" class="w-3 h-3"></i> Ultra Rápido</span>
+                <span class="text-sm font-medium mx-6 flex items-center gap-2"><i data-lucide="smartphone" class="w-3 h-3"></i> Responsive</span>
+                <span class="text-sm font-medium mx-6 flex items-center gap-2"><i data-lucide="headphones" class="w-3 h-3"></i> Soporte 24/7</span>
+                <span class="text-sm font-medium mx-6 flex items-center gap-2"><i data-lucide="star" class="w-3 h-3"></i> 5 Estrellas</span>
+                <span class="text-sm font-medium mx-6 flex items-center gap-2"><i data-lucide="clock" class="w-3 h-3"></i> Entrega Rápida</span>
+                <span class="text-sm font-medium mx-6 flex items-center gap-2"><i data-lucide="award" class="w-3 h-3"></i> Calidad Premium</span>
+                <span class="text-sm font-medium mx-6 flex items-center gap-2"><i data-lucide="thumbs-up" class="w-3 h-3"></i> 100% Satisfacción</span>
             </div>
         </div>
 
@@ -1100,6 +1454,23 @@
         <div class="grid grid-cols-3 gap-4">
             <div class="h-32 overflow-hidden bg-white/5 border border-white/10 rounded-lg">
                 <div class="animate-marquee-vertical flex flex-col">
+                    <div class="py-4 text-center text-sm">
+                        <i data-lucide="code" class="w-4 h-4 mx-auto mb-1"></i>
+                        <div>HTML5</div>
+                    </div>
+                    <div class="py-4 text-center text-sm">
+                        <i data-lucide="palette" class="w-4 h-4 mx-auto mb-1"></i>
+                        <div>CSS3</div>
+                    </div>
+                    <div class="py-4 text-center text-sm">
+                        <i data-lucide="zap" class="w-4 h-4 mx-auto mb-1"></i>
+                        <div>JavaScript</div>
+                    </div>
+                    <div class="py-4 text-center text-sm">
+                        <i data-lucide="server" class="w-4 h-4 mx-auto mb-1"></i>
+                        <div>Node.js</div>
+                    </div>
+                    <!-- Duplicate content for seamless loop -->
                     <div class="py-4 text-center text-sm">
                         <i data-lucide="code" class="w-4 h-4 mx-auto mb-1"></i>
                         <div>HTML5</div>
@@ -1136,13 +1507,35 @@
                         <i data-lucide="shield-check" class="w-4 h-4 mx-auto mb-1"></i>
                         <div>Security</div>
                     </div>
+                    <!-- Duplicate content for seamless loop -->
+                    <div class="py-4 text-center text-sm">
+                        <i data-lucide="database" class="w-4 h-4 mx-auto mb-1"></i>
+                        <div>MySQL</div>
+                    </div>
+                    <div class="py-4 text-center text-sm">
+                        <i data-lucide="cloud" class="w-4 h-4 mx-auto mb-1"></i>
+                        <div>AWS</div>
+                    </div>
+                    <div class="py-4 text-center text-sm">
+                        <i data-lucide="git-branch" class="w-4 h-4 mx-auto mb-1"></i>
+                        <div>Git</div>
+                    </div>
+                    <div class="py-4 text-center text-sm">
+                        <i data-lucide="shield-check" class="w-4 h-4 mx-auto mb-1"></i>
+                        <div>Security</div>
+                    </div>
                 </div>
             </div>
             <div class="h-32 overflow-hidden bg-white/5 border border-white/10 rounded-lg">
                 <div class="animate-marquee-vertical flex flex-col" style="animation-delay: 2s;">
-                    <div class="py-4 text-center text-sm">
-                        <i data-lucide="trending-up" class="w-4 h-4 mx-auto mb-1"></i>
+                    <div class="py-4 text-center text-sm relative">
+                        <i data-lucide="trending-up" class="w-4 h-4 mx-auto mb-1 text-green-400"></i>
                         <div>SEO</div>
+                        <!-- SEO Ranking Animation -->
+                        <div class="absolute -right-2 -top-1 flex flex-col items-center">
+                            <div class="text-xs text-green-400 font-mono animate-seo-rank">#1</div>
+                            <div class="w-1 h-3 bg-green-400 animate-seo-progress"></div>
+                        </div>
                     </div>
                     <div class="py-4 text-center text-sm">
                         <i data-lucide="gauge" class="w-4 h-4 mx-auto mb-1"></i>
@@ -1152,9 +1545,47 @@
                         <i data-lucide="users" class="w-4 h-4 mx-auto mb-1"></i>
                         <div>UX/UI</div>
                     </div>
-                    <div class="py-4 text-center text-sm">
-                        <i data-lucide="monitor" class="w-4 h-4 mx-auto mb-1"></i>
+                    <div class="py-4 text-center text-sm relative">
+                        <i data-lucide="monitor" class="w-4 h-4 mx-auto mb-1 text-blue-400"></i>
                         <div>Analytics</div>
+                        <!-- Real-time Analytics Animation -->
+                        <div class="absolute -right-3 -top-2 flex gap-px">
+                            <div class="w-0.5 h-2 bg-blue-400 animate-analytics-bar" style="animation-delay: 0s;"></div>
+                            <div class="w-0.5 h-3 bg-blue-400 animate-analytics-bar" style="animation-delay: 0.2s;"></div>
+                            <div class="w-0.5 h-1 bg-blue-400 animate-analytics-bar" style="animation-delay: 0.4s;"></div>
+                            <div class="w-0.5 h-4 bg-blue-400 animate-analytics-bar" style="animation-delay: 0.6s;"></div>
+                        </div>
+                        <div class="absolute -left-3 -bottom-1 text-xs text-blue-400 font-mono animate-pulse">↗ 24.5k</div>
+                    </div>
+                    <!-- Duplicate content for seamless loop -->
+                    <div class="py-4 text-center text-sm relative">
+                        <i data-lucide="trending-up" class="w-4 h-4 mx-auto mb-1 text-green-400"></i>
+                        <div>SEO</div>
+                        <!-- SEO Ranking Animation -->
+                        <div class="absolute -right-2 -top-1 flex flex-col items-center">
+                            <div class="text-xs text-green-400 font-mono animate-seo-rank">#1</div>
+                            <div class="w-1 h-3 bg-green-400 animate-seo-progress"></div>
+                        </div>
+                    </div>
+                    <div class="py-4 text-center text-sm">
+                        <i data-lucide="gauge" class="w-4 h-4 mx-auto mb-1"></i>
+                        <div>Performance</div>
+                    </div>
+                    <div class="py-4 text-center text-sm">
+                        <i data-lucide="users" class="w-4 h-4 mx-auto mb-1"></i>
+                        <div>UX/UI</div>
+                    </div>
+                    <div class="py-4 text-center text-sm relative">
+                        <i data-lucide="monitor" class="w-4 h-4 mx-auto mb-1 text-blue-400"></i>
+                        <div>Analytics</div>
+                        <!-- Real-time Analytics Animation -->
+                        <div class="absolute -right-3 -top-2 flex gap-px">
+                            <div class="w-0.5 h-2 bg-blue-400 animate-analytics-bar" style="animation-delay: 0s;"></div>
+                            <div class="w-0.5 h-3 bg-blue-400 animate-analytics-bar" style="animation-delay: 0.2s;"></div>
+                            <div class="w-0.5 h-1 bg-blue-400 animate-analytics-bar" style="animation-delay: 0.4s;"></div>
+                            <div class="w-0.5 h-4 bg-blue-400 animate-analytics-bar" style="animation-delay: 0.6s;"></div>
+                        </div>
+                        <div class="absolute -left-3 -bottom-1 text-xs text-blue-400 font-mono animate-pulse">↗ 24.5k</div>
                     </div>
                 </div>
             </div>
@@ -1162,7 +1593,7 @@
     </section>
 
     <!-- Aceternity-Style Effects Section -->
-    <section class="py-20 bg-black border-t border-white/20 relative overflow-hidden">
+    <section class="py-20 bg-black border-t border-white/20 relative overflow-hidden bg-dot-pattern bg-dots opacity-40">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-4xl md:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-white via-white to-gray-300 bg-clip-text text-transparent">
                 Efectos Premium
@@ -1207,6 +1638,15 @@
                         <div>
                             <h3 class="text-xl font-bold text-white mb-2">Performance Extremo</h3>
                             <p class="text-gray-300 text-sm">Optimización fluida con partículas dinámicas</p>
+                            <!-- Speed Lines Animation -->
+                            <div class="mt-4 relative overflow-hidden h-8">
+                                <div class="absolute inset-0 flex items-center">
+                                    <div class="speed-line w-16 h-0.5 bg-gradient-to-r from-transparent via-green-400 to-transparent animate-speed-boost" style="animation-delay: 0s;"></div>
+                                    <div class="speed-line w-12 h-0.5 bg-gradient-to-r from-transparent via-teal-400 to-transparent animate-speed-boost" style="animation-delay: 0.2s; margin-left: -12px;"></div>
+                                    <div class="speed-line w-20 h-0.5 bg-gradient-to-r from-transparent via-cyan-400 to-transparent animate-speed-boost" style="animation-delay: 0.4s; margin-left: -16px;"></div>
+                                </div>
+                                <div class="absolute right-0 top-1/2 transform -translate-y-1/2 text-green-400 text-xs font-mono">99.9ms</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1264,6 +1704,20 @@
                         <div>
                             <h3 class="text-xl font-bold text-white mb-2">IA Integrada</h3>
                             <p class="text-gray-300 text-sm">Redes neuronales para optimización automática</p>
+                            <!-- AI Neural Network Animation -->
+                            <div class="mt-3 relative">
+                                <div class="flex items-center justify-between">
+                                    <div class="w-2 h-2 bg-orange-400 rounded-full animate-neural-pulse"></div>
+                                    <div class="w-2 h-2 bg-red-400 rounded-full animate-neural-pulse" style="animation-delay: 0.3s;"></div>
+                                    <div class="w-2 h-2 bg-yellow-400 rounded-full animate-neural-pulse" style="animation-delay: 0.6s;"></div>
+                                </div>
+                                <!-- Neural Connections -->
+                                <svg class="absolute inset-0 w-full h-full -mt-1">
+                                    <line x1="8" y1="8" x2="50%" y2="8" stroke="rgba(249, 115, 22, 0.5)" stroke-width="1" class="animate-neural-connection"/>
+                                    <line x1="50%" y1="8" x2="calc(100% - 8px)" y2="8" stroke="rgba(239, 68, 68, 0.5)" stroke-width="1" class="animate-neural-connection" style="animation-delay: 0.5s;"/>
+                                </svg>
+                                <div class="text-xs text-orange-400 font-mono mt-1">🧠 Processing: 99.7% accuracy</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1295,7 +1749,10 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-20 bg-black border-t border-white/20">
+    <section id="services" class="py-20 bg-black border-t border-white/20 relative overflow-hidden spotlight-container">
+        <!-- Aceternity Spotlight Effect -->
+        <div class="spotlight absolute inset-0 opacity-0 pointer-events-none transition-opacity duration-300"
+             style="background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(59, 130, 246, 0.15), transparent 40%);"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-4xl md:text-6xl font-bold text-center mb-4 bg-gradient-to-r from-white via-white to-gray-300 bg-clip-text text-transparent">
                 Nuestros Servicios
@@ -1381,7 +1838,15 @@
                             </div>
                             <div class="flex items-center gap-3">
                                 <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
-                                <span>Múltiples métodos de pago</span>
+                                <span class="flex items-center gap-2">
+                                    Múltiples métodos de pago
+                                    <!-- Payment Method Icons -->
+                                    <div class="flex gap-1 ml-2">
+                                        <div class="w-4 h-3 bg-gradient-to-r from-blue-600 to-blue-700 rounded-sm animate-payment-card text-white text-xs flex items-center justify-center font-bold" style="animation-delay: 0s;">V</div>
+                                        <div class="w-4 h-3 bg-gradient-to-r from-red-600 to-red-700 rounded-sm animate-payment-card text-white text-xs flex items-center justify-center font-bold" style="animation-delay: 0.5s;">M</div>
+                                        <div class="w-4 h-3 bg-gradient-to-r from-purple-600 to-purple-700 rounded-sm animate-payment-card text-white text-xs flex items-center justify-center font-bold" style="animation-delay: 1s;">P</div>
+                                    </div>
+                                </span>
                             </div>
                             <div class="flex items-center gap-3">
                                 <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
@@ -1444,7 +1909,13 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 <!-- Presencial Digital Pricing -->
                 <div class="relative group">
-                    <div class="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-blue-600/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
+                    <!-- Electric Border Effect -->
+                    <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-electric-border"
+                         style="background-size: 400% 400%; padding: 2px;">
+                        <div class="w-full h-full bg-black rounded-3xl"></div>
+                    </div>
+                    <!-- Glow Background -->
+                    <div class="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-blue-600/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-300 animate-electric-pulse"></div>
                     <div class="relative bg-white/5 border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-all duration-500">
                         <div class="text-center mb-8">
                             <div class="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
@@ -1482,16 +1953,26 @@
                             </div>
                         </div>
 
-                        <a href="#contact" class="w-full inline-flex items-center justify-center gap-2 px-6 py-4 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition-colors duration-300">
-                            <i data-lucide="message-circle" class="w-4 h-4"></i>
-                            Solicitar Presupuesto
-                        </a>
+                        <div class="magnetic-button w-full">
+                            <a href="#contact" class="relative w-full inline-flex items-center justify-center gap-2 px-6 py-4 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition-all duration-300 overflow-hidden group">
+                                <!-- Shimmer Effect -->
+                                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+                                <i data-lucide="message-circle" class="w-4 h-4 relative z-10"></i>
+                                <span class="relative z-10">Solicitar Presupuesto</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Tienda Online Pricing -->
                 <div class="relative group">
-                    <div class="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-purple-600/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
+                    <!-- Electric Border Effect -->
+                    <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-electric-border"
+                         style="background-size: 400% 400%; padding: 2px; animation-delay: 0.5s;">
+                        <div class="w-full h-full bg-black rounded-3xl"></div>
+                    </div>
+                    <!-- Glow Background -->
+                    <div class="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-purple-600/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-300 animate-electric-pulse"></div>
                     <div class="relative bg-white/5 border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-all duration-500">
                         <!-- Popular Badge -->
                         <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -1524,7 +2005,15 @@
                             </div>
                             <div class="flex items-center gap-3">
                                 <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
-                                <span>Múltiples métodos de pago</span>
+                                <span class="flex items-center gap-2">
+                                    Múltiples métodos de pago
+                                    <!-- Payment Method Icons -->
+                                    <div class="flex gap-1 ml-2">
+                                        <div class="w-4 h-3 bg-gradient-to-r from-blue-600 to-blue-700 rounded-sm animate-payment-card text-white text-xs flex items-center justify-center font-bold" style="animation-delay: 0s;">V</div>
+                                        <div class="w-4 h-3 bg-gradient-to-r from-red-600 to-red-700 rounded-sm animate-payment-card text-white text-xs flex items-center justify-center font-bold" style="animation-delay: 0.5s;">M</div>
+                                        <div class="w-4 h-3 bg-gradient-to-r from-purple-600 to-purple-700 rounded-sm animate-payment-card text-white text-xs flex items-center justify-center font-bold" style="animation-delay: 1s;">P</div>
+                                    </div>
+                                </span>
                             </div>
                             <div class="flex items-center gap-3">
                                 <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
@@ -1536,10 +2025,14 @@
                             </div>
                         </div>
 
-                        <a href="#contact" class="w-full inline-flex items-center justify-center gap-2 px-6 py-4 bg-purple-500 text-white font-semibold rounded-lg hover:bg-purple-600 transition-colors duration-300">
-                            <i data-lucide="message-circle" class="w-4 h-4"></i>
-                            Solicitar Presupuesto
-                        </a>
+                        <div class="magnetic-button w-full">
+                            <a href="#contact" class="relative w-full inline-flex items-center justify-center gap-2 px-6 py-4 bg-purple-500 text-white font-semibold rounded-lg hover:bg-purple-600 transition-all duration-300 overflow-hidden group">
+                                <!-- Shimmer Effect -->
+                                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+                                <i data-lucide="message-circle" class="w-4 h-4 relative z-10"></i>
+                                <span class="relative z-10">Solicitar Presupuesto</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1845,6 +2338,78 @@
                                 <p class="text-gray-300">Lanzamiento y acompañamiento continuo</p>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fluid Particles Demo Section -->
+    <section class="py-20 relative overflow-hidden">
+        <!-- Fluid Particles Background -->
+        <div class="absolute inset-0">
+            <canvas id="fluid-particles" class="w-full h-full"></canvas>
+        </div>
+
+        <!-- Content Over Particles -->
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent">
+                Tecnología Innovadora
+            </h2>
+            <p class="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+                Utilizamos las últimas tecnologías y frameworks para crear experiencias web excepcionales que destacan en el mercado digital.
+            </p>
+
+            <!-- Tech Stack Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="group relative p-6 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 transition-all duration-300">
+                    <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="globe" class="w-6 h-6 text-blue-400"></i>
+                    </div>
+                    <h3 class="text-white font-semibold">React/Next.js</h3>
+                    <p class="text-gray-400 text-sm">Framework moderno</p>
+                </div>
+
+                <div class="group relative p-6 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 transition-all duration-300">
+                    <div class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="server" class="w-6 h-6 text-green-400"></i>
+                    </div>
+                    <h3 class="text-white font-semibold">Node.js</h3>
+                    <p class="text-gray-400 text-sm">Backend robusto</p>
+                </div>
+
+                <div class="group relative p-6 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 transition-all duration-300">
+                    <div class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 relative">
+                        <i data-lucide="database" class="w-6 h-6 text-purple-400"></i>
+                        <!-- Database Connection Pulses -->
+                        <div class="absolute -inset-2 bg-purple-500/20 rounded-full animate-ping"></div>
+                        <div class="absolute -inset-1 bg-purple-500/30 rounded-full animate-ping" style="animation-delay: 0.5s;"></div>
+                    </div>
+                    <h3 class="text-white font-semibold">PostgreSQL</h3>
+                    <p class="text-gray-400 text-sm">Base de datos</p>
+                    <!-- Data Flow Animation -->
+                    <div class="mt-3 relative overflow-hidden h-2 bg-white/5 rounded-full">
+                        <div class="absolute inset-0 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full animate-data-flow"></div>
+                    </div>
+                    <div class="mt-2 text-xs text-purple-400 font-mono">↗ 1.2k queries/sec</div>
+                </div>
+
+                <div class="group relative p-6 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 transition-all duration-300">
+                    <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 relative">
+                        <i data-lucide="cloud" class="w-6 h-6 text-orange-400"></i>
+                        <!-- Cloud Sync Dots -->
+                        <div class="absolute -top-1 -right-1 w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                        <div class="absolute -bottom-1 -left-1 w-1.5 h-1.5 bg-blue-500 rounded-full animate-pulse" style="animation-delay: 0.3s;"></div>
+                        <div class="absolute top-0 -left-2 w-1 h-1 bg-yellow-500 rounded-full animate-pulse" style="animation-delay: 0.6s;"></div>
+                    </div>
+                    <h3 class="text-white font-semibold">AWS/Vercel</h3>
+                    <p class="text-gray-400 text-sm">Cloud hosting</p>
+                    <!-- Upload Progress Bars -->
+                    <div class="mt-3 space-y-1">
+                        <div class="relative overflow-hidden h-1 bg-white/5 rounded-full">
+                            <div class="absolute inset-0 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-full animate-code-compile"></div>
+                        </div>
+                        <div class="text-xs text-orange-400 font-mono">✓ Deployed to global CDN</div>
                     </div>
                 </div>
             </div>
@@ -2204,6 +2769,272 @@
 
             card.addEventListener('mouseleave', () => {
                 card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+            });
+        });
+
+        // Evervault Card Effect
+        document.querySelectorAll('.evervault-card').forEach(card => {
+            const textElement = card.querySelector('.evervault-text');
+            if (textElement) {
+                const chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
+                const originalText = textElement.textContent;
+                let interval;
+
+                card.addEventListener('mouseenter', () => {
+                    let iteration = 0;
+                    interval = setInterval(() => {
+                        textElement.textContent = originalText
+                            .split('')
+                            .map((char, index) => {
+                                if (index < iteration) {
+                                    return originalText[index];
+                                }
+                                return chars[Math.floor(Math.random() * chars.length)];
+                            })
+                            .join('');
+
+                        if (iteration >= originalText.length) {
+                            clearInterval(interval);
+                        }
+                        iteration += 1 / 3;
+                    }, 30);
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    clearInterval(interval);
+                    textElement.textContent = originalText;
+                });
+            }
+        });
+
+        // Electric Border Mouse Tracking
+        document.querySelectorAll('[class*="animate-electric-border"]').forEach(element => {
+            element.addEventListener('mousemove', (e) => {
+                const rect = element.getBoundingClientRect();
+                const x = ((e.clientX - rect.left) / rect.width) * 100;
+                const y = ((e.clientY - rect.top) / rect.height) * 100;
+
+                element.style.background = `
+                    linear-gradient(${Math.atan2(y - 50, x - 50) * 180 / Math.PI + 90}deg,
+                    rgba(59, 130, 246, 0.8) 0%,
+                    rgba(147, 51, 234, 0.8) 50%,
+                    rgba(236, 72, 153, 0.8) 100%)
+                `;
+            });
+        });
+
+        // Premium Effects Hover Interactions
+        document.querySelectorAll('.group').forEach(group => {
+            const particles = group.querySelectorAll('[class*="particle-"]');
+
+            group.addEventListener('mouseenter', () => {
+                particles.forEach((particle, index) => {
+                    setTimeout(() => {
+                        particle.style.animationPlayState = 'running';
+                        particle.style.opacity = '1';
+                    }, index * 100);
+                });
+            });
+
+            group.addEventListener('mouseleave', () => {
+                particles.forEach(particle => {
+                    particle.style.animationPlayState = 'paused';
+                    particle.style.opacity = '0.3';
+                });
+            });
+        });
+
+        // Magnetic Button Effects (Bund UI Style)
+        document.querySelectorAll('.magnetic-button').forEach(button => {
+            const element = button.firstElementChild;
+
+            button.addEventListener('mousemove', (e) => {
+                const rect = button.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+
+                const distance = Math.sqrt(x * x + y * y);
+                const maxDistance = Math.max(rect.width, rect.height) / 2;
+
+                if (distance < maxDistance) {
+                    const strength = (1 - distance / maxDistance) * 0.3;
+                    element.style.transform = `translate(${x * strength}px, ${y * strength}px) scale(1.05)`;
+                }
+            });
+
+            button.addEventListener('mouseleave', () => {
+                element.style.transform = 'translate(0px, 0px) scale(1)';
+            });
+        });
+
+        // Fluid Particles Background (Bund UI Style)
+        const canvas = document.getElementById('fluid-particles');
+        if (canvas) {
+            const ctx = canvas.getContext('2d');
+            let particles = [];
+            let mouse = { x: 0, y: 0 };
+
+            function resizeCanvas() {
+                canvas.width = canvas.offsetWidth;
+                canvas.height = canvas.offsetHeight;
+            }
+
+            class Particle {
+                constructor() {
+                    this.x = Math.random() * canvas.width;
+                    this.y = Math.random() * canvas.height;
+                    this.vx = (Math.random() - 0.5) * 2;
+                    this.vy = (Math.random() - 0.5) * 2;
+                    this.size = Math.random() * 3 + 1;
+                    this.opacity = Math.random() * 0.5 + 0.2;
+                    this.color = `rgba(${Math.random() * 100 + 155}, ${Math.random() * 100 + 155}, 255, ${this.opacity})`;
+                }
+
+                update() {
+                    this.x += this.vx;
+                    this.y += this.vy;
+
+                    // Mouse interaction
+                    const dx = mouse.x - this.x;
+                    const dy = mouse.y - this.y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+
+                    if (distance < 100) {
+                        const force = (100 - distance) / 100;
+                        this.vx += (dx / distance) * force * 0.01;
+                        this.vy += (dy / distance) * force * 0.01;
+                    }
+
+                    // Boundaries
+                    if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+                    if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+
+                    // Keep in bounds
+                    this.x = Math.max(0, Math.min(canvas.width, this.x));
+                    this.y = Math.max(0, Math.min(canvas.height, this.y));
+
+                    // Friction
+                    this.vx *= 0.995;
+                    this.vy *= 0.995;
+                }
+
+                draw() {
+                    ctx.save();
+                    ctx.globalAlpha = this.opacity;
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                    ctx.fillStyle = this.color;
+                    ctx.fill();
+                    ctx.restore();
+                }
+            }
+
+            function initParticles() {
+                particles = [];
+                const particleCount = Math.min(150, Math.floor((canvas.width * canvas.height) / 10000));
+                for (let i = 0; i < particleCount; i++) {
+                    particles.push(new Particle());
+                }
+            }
+
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                particles.forEach(particle => {
+                    particle.update();
+                    particle.draw();
+                });
+
+                // Draw connections
+                particles.forEach((particle, i) => {
+                    for (let j = i + 1; j < particles.length; j++) {
+                        const dx = particles[j].x - particle.x;
+                        const dy = particles[j].y - particle.y;
+                        const distance = Math.sqrt(dx * dx + dy * dy);
+
+                        if (distance < 80) {
+                            ctx.save();
+                            ctx.globalAlpha = (80 - distance) / 80 * 0.2;
+                            ctx.beginPath();
+                            ctx.moveTo(particle.x, particle.y);
+                            ctx.lineTo(particles[j].x, particles[j].y);
+                            ctx.strokeStyle = 'rgba(255, 255, 255, 0.3)';
+                            ctx.lineWidth = 1;
+                            ctx.stroke();
+                            ctx.restore();
+                        }
+                    }
+                });
+
+                requestAnimationFrame(animate);
+            }
+
+            canvas.addEventListener('mousemove', (e) => {
+                const rect = canvas.getBoundingClientRect();
+                mouse.x = e.clientX - rect.left;
+                mouse.y = e.clientY - rect.top;
+            });
+
+            window.addEventListener('resize', () => {
+                resizeCanvas();
+                initParticles();
+            });
+
+            resizeCanvas();
+            initParticles();
+            animate();
+        }
+
+        // Terminal Typing Animation (Contextual)
+        const typingElement = document.getElementById('typing-output');
+        if (typingElement) {
+            const commands = [
+                'hardcoded --deploy production',
+                'git commit -m "Feature complete"',
+                'npm run build',
+                'docker build -t myapp .',
+                'kubectl apply -f deployment.yaml'
+            ];
+            let currentCommand = 0;
+            let currentChar = 0;
+
+            function typeCommand() {
+                if (currentChar < commands[currentCommand].length) {
+                    typingElement.textContent += commands[currentCommand][currentChar];
+                    currentChar++;
+                    setTimeout(typeCommand, 100 + Math.random() * 100);
+                } else {
+                    setTimeout(() => {
+                        typingElement.textContent = '';
+                        currentChar = 0;
+                        currentCommand = (currentCommand + 1) % commands.length;
+                        setTimeout(typeCommand, 1000);
+                    }, 2000);
+                }
+            }
+
+            setTimeout(typeCommand, 2000);
+        }
+
+        // Aceternity Spotlight Effect
+        document.querySelectorAll('.spotlight-container').forEach(container => {
+            const spotlight = container.querySelector('.spotlight');
+
+            container.addEventListener('mouseenter', () => {
+                spotlight.style.opacity = '1';
+            });
+
+            container.addEventListener('mouseleave', () => {
+                spotlight.style.opacity = '0';
+            });
+
+            container.addEventListener('mousemove', (e) => {
+                const rect = container.getBoundingClientRect();
+                const x = ((e.clientX - rect.left) / rect.width) * 100;
+                const y = ((e.clientY - rect.top) / rect.height) * 100;
+
+                container.style.setProperty('--mouse-x', `${x}%`);
+                container.style.setProperty('--mouse-y', `${y}%`);
             });
         });
     </script>
