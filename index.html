@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>hardcoded.space - Desarrollo Web Profesional</title>
-    <meta name="description" content="Desarrollo web profesional. Presencial digital y tiendas online completas con todas las funcionalidades.">
+    <meta name="description" content="Soluciones web personalizadas para PyMEs. Presencia Digital Profesional y Tienda Online Ilimitada para hacer crecer tu negocio.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -56,6 +56,11 @@
                         'lens-reveal': 'lens-reveal 0.5s ease-out',
                         'progressive-blur': 'progressive-blur 3s ease-in-out infinite',
                         'timeline-draw': 'timeline-draw 3s ease-in-out forwards',
+                        'evervault': 'evervault 20s ease-in-out infinite',
+                        'fluid-particles': 'fluid-particles 8s ease-in-out infinite',
+                        'prism-glow': 'prism-glow 2s ease-in-out infinite alternate',
+                        'cyber-grid': 'cyber-grid 4s linear infinite',
+                        'neural-pulse': 'neural-pulse 3s ease-in-out infinite',
                     },
                     keyframes: {
                         marquee: {
@@ -214,6 +219,60 @@
                             '0%': { strokeDashoffset: '1000' },
                             '100%': { strokeDashoffset: '0' },
                         },
+                        'evervault': {
+                            '0%, 100%': {
+                                backgroundPosition: '0% 50%',
+                                filter: 'hue-rotate(0deg)'
+                            },
+                            '50%': {
+                                backgroundPosition: '100% 50%',
+                                filter: 'hue-rotate(180deg)'
+                            },
+                        },
+                        'fluid-particles': {
+                            '0%': {
+                                transform: 'translateY(0px) rotate(0deg)',
+                                opacity: '0.3'
+                            },
+                            '50%': {
+                                transform: 'translateY(-20px) rotate(180deg)',
+                                opacity: '0.8'
+                            },
+                            '100%': {
+                                transform: 'translateY(0px) rotate(360deg)',
+                                opacity: '0.3'
+                            },
+                        },
+                        'prism-glow': {
+                            '0%': {
+                                boxShadow: '0 0 20px rgba(59, 130, 246, 0.5)',
+                                transform: 'scale(1)'
+                            },
+                            '100%': {
+                                boxShadow: '0 0 40px rgba(147, 51, 234, 0.8)',
+                                transform: 'scale(1.02)'
+                            },
+                        },
+                        'cyber-grid': {
+                            '0%': {
+                                backgroundPosition: '0px 0px',
+                                opacity: '0.3'
+                            },
+                            '100%': {
+                                backgroundPosition: '40px 40px',
+                                opacity: '0.7'
+                            },
+                        },
+                        'neural-pulse': {
+                            '0%, 100%': {
+                                transform: 'scale(1)',
+                                opacity: '0.6'
+                            },
+                            '50%': {
+                                transform: 'scale(1.1)',
+                                opacity: '1'
+                            },
+                        },
                     }
                 }
             }
@@ -294,12 +353,12 @@
 
         <div class="text-center z-10 px-4 max-w-6xl mx-auto">
             <h1 class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent">
-                Desarrollo Web<br/>
-                <span class="animate-text-reveal">Profesional</span>
+                Soluciones Web<br/>
+                <span class="animate-text-reveal">Personalizadas</span>
             </h1>
 
             <!-- Typewriter Effect -->
-            <div class="text-xl md:text-2xl text-gray-400 mb-8 h-8 relative">
+            <div class="text-xl md:text-2xl text-gray-300 mb-8 h-8 relative">
                 <span id="typewriter-text" class="inline-block"></span>
                 <span class="inline-block w-0.5 h-6 bg-white animate-pulse ml-1"></span>
             </div>
@@ -308,19 +367,19 @@
             <div class="flex flex-wrap justify-center gap-8 mb-12">
                 <div class="text-center">
                     <div class="text-3xl font-bold text-white mb-1">50+</div>
-                    <div class="text-sm text-gray-400">Proyectos</div>
+                    <div class="text-sm text-gray-300">Proyectos</div>
                 </div>
                 <div class="text-center">
                     <div class="text-3xl font-bold text-white mb-1">5</div>
-                    <div class="text-sm text-gray-400">Años</div>
+                    <div class="text-sm text-gray-300">Años</div>
                 </div>
                 <div class="text-center">
                     <div class="text-3xl font-bold text-white mb-1">24/7</div>
-                    <div class="text-sm text-gray-400">Soporte</div>
+                    <div class="text-sm text-gray-300">Soporte</div>
                 </div>
                 <div class="text-center">
                     <div class="text-3xl font-bold text-white mb-1">100%</div>
-                    <div class="text-sm text-gray-400">Satisfacción</div>
+                    <div class="text-sm text-gray-300">Satisfacción</div>
                 </div>
             </div>
 
@@ -359,28 +418,28 @@
     </section>
 
     <!-- Magic UI Showcase Section -->
-    <section class="py-20 bg-gradient-to-b from-black to-gray-900">
+    <section class="py-20 bg-black border-t border-white/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl md:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
+            <h2 class="text-4xl md:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-white via-white to-gray-300 bg-clip-text text-transparent">
                 Tecnologías Avanzadas
             </h2>
 
             <!-- Terminal Component -->
             <div class="mb-16">
                 <h3 class="text-2xl font-bold mb-6 text-white">Terminal de Desarrollo</h3>
-                <div class="bg-black border border-white/20 rounded-lg overflow-hidden shadow-2xl">
-                    <div class="flex items-center gap-2 px-4 py-2 bg-gray-800 border-b border-white/10">
+                <div class="bg-black border-2 border-white/30 rounded-lg overflow-hidden shadow-2xl">
+                    <div class="flex items-center gap-2 px-4 py-2 bg-gray-800 border-b border-white/20">
                         <div class="w-3 h-3 bg-red-500 rounded-full"></div>
                         <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
                         <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-                        <span class="ml-2 text-sm text-gray-400">terminal</span>
+                        <span class="ml-2 text-sm text-gray-300">terminal</span>
                     </div>
                     <div class="p-4 font-mono text-sm">
-                        <div class="text-green-400">$ npm create hardcoded-site</div>
-                        <div class="text-gray-400">✓ Installing dependencies...</div>
-                        <div class="text-gray-400">✓ Setting up database...</div>
-                        <div class="text-gray-400">✓ Configuring payment gateway...</div>
-                        <div class="text-white">Ready! Your site is live at https://yoursite.com</div>
+                        <div class="text-green-400 font-semibold">$ npm create hardcoded-site</div>
+                        <div class="text-blue-400">✓ Installing dependencies...</div>
+                        <div class="text-yellow-400">✓ Setting up database...</div>
+                        <div class="text-purple-400">✓ Configuring payment gateway...</div>
+                        <div class="text-white font-semibold">Ready! Your site is live at https://yoursite.com</div>
                         <div class="flex items-center mt-2">
                             <span class="text-green-400">$</span>
                             <span class="animate-terminal-cursor ml-1 w-2 h-4 bg-white"></span>
@@ -392,7 +451,7 @@
             <!-- Hero Video Dialog -->
             <div class="mb-16">
                 <h3 class="text-2xl font-bold mb-6 text-white">Video Demostración</h3>
-                <div class="relative group cursor-pointer">
+                <div class="relative group cursor-pointer video-trigger">
                     <div class="aspect-video bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-2xl flex items-center justify-center relative overflow-hidden">
                         <div class="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-all duration-300"></div>
                         <button class="relative z-10 w-20 h-20 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -406,75 +465,98 @@
                 </div>
             </div>
 
-            <!-- Bento Grid -->
+            <!-- Official Magic UI Bento Grid -->
             <div class="mb-16">
                 <h3 class="text-2xl font-bold mb-6 text-white">Características Destacadas</h3>
-                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                    <div class="md:col-span-2 lg:col-span-2 bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                <div class="grid w-full auto-rows-[22rem] grid-cols-3 gap-4">
+                    <!-- Global Reach Card -->
+                    <div class="group relative col-span-3 md:col-span-2 flex flex-col justify-between overflow-hidden rounded-xl bg-white/8 border-2 border-white/20 hover:bg-white/15 transition-all duration-300 p-6 shadow-lg hover:shadow-xl">
                         <div class="flex items-center gap-3 mb-4">
                             <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center">
-                                <i data-lucide="globe" class="w-6 h-6 text-blue-400 animate-globe-rotate"></i>
+                                <i data-lucide="globe" class="w-6 h-6 text-blue-400 animate-globe-rotate globe-element"></i>
                             </div>
                             <div>
                                 <h4 class="font-semibold text-white">Alcance Global</h4>
-                                <p class="text-sm text-gray-400">CDN en 150+ países</p>
+                                <p class="text-sm text-gray-300">CDN en 150+ países</p>
                             </div>
                         </div>
-                        <div class="text-3xl font-bold text-white">99.9%</div>
-                        <div class="text-sm text-gray-400">Uptime garantizado</div>
+                        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-5">
+                            <i data-lucide="globe" class="w-48 h-48 text-blue-400"></i>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-bold text-white mb-2">99.9%</div>
+                            <div class="text-sm text-gray-300">Uptime garantizado</div>
+                            <button class="mt-4 inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors">
+                                <span class="text-sm font-medium">Ver detalles</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </button>
+                        </div>
                     </div>
 
-                    <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                    <!-- Speed Card -->
+                    <div class="group relative col-span-3 md:col-span-1 flex flex-col justify-between overflow-hidden rounded-xl bg-white/8 border-2 border-white/20 hover:bg-white/15 transition-all duration-300 p-6 shadow-lg hover:shadow-xl">
                         <div class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center mb-4">
                             <i data-lucide="zap" class="w-6 h-6 text-green-400"></i>
                         </div>
-                        <h4 class="font-semibold text-white mb-2">Velocidad</h4>
-                        <div class="text-2xl font-bold text-white">< 1s</div>
-                        <div class="text-sm text-gray-400">Tiempo de carga</div>
-                    </div>
-
-                    <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
-                        <div class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mb-4">
-                            <i data-lucide="shield-check" class="w-6 h-6 text-purple-400"></i>
+                        <div>
+                            <h4 class="font-semibold text-white mb-2">Velocidad</h4>
+                            <div class="text-3xl font-bold text-white mb-2">< 1s</div>
+                            <div class="text-sm text-gray-300 mb-4">Tiempo de carga</div>
+                            <button class="inline-flex items-center gap-2 text-green-400 hover:text-green-300 transition-colors">
+                                <span class="text-sm font-medium">Probar</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </button>
                         </div>
-                        <h4 class="font-semibold text-white mb-2">Seguridad</h4>
-                        <div class="text-2xl font-bold text-white">SSL</div>
-                        <div class="text-sm text-gray-400">Certificado</div>
                     </div>
 
-                    <div class="md:col-span-2 lg:col-span-2 bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
-                        <h4 class="font-semibold text-white mb-4">Animated List</h4>
-                        <div class="space-y-3">
+                    <!-- Animated List Card -->
+                    <div class="group relative col-span-3 md:col-span-1 flex flex-col justify-between overflow-hidden rounded-xl bg-white/8 border-2 border-white/20 hover:bg-white/15 transition-all duration-300 p-6 shadow-lg hover:shadow-xl">
+                        <h4 class="font-semibold text-white mb-4">Funcionalidades</h4>
+                        <div class="space-y-3 flex-1">
                             <div class="flex items-center gap-3 animate-bounce-in" style="animation-delay: 0.1s;">
                                 <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
-                                <span class="text-gray-300">Diseño Responsive</span>
+                                <span class="text-gray-300 text-sm">Responsive</span>
                             </div>
                             <div class="flex items-center gap-3 animate-bounce-in" style="animation-delay: 0.2s;">
                                 <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
-                                <span class="text-gray-300">SEO Optimizado</span>
+                                <span class="text-gray-300 text-sm">SEO</span>
                             </div>
                             <div class="flex items-center gap-3 animate-bounce-in" style="animation-delay: 0.3s;">
                                 <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
-                                <span class="text-gray-300">Base de Datos</span>
-                            </div>
-                            <div class="flex items-center gap-3 animate-bounce-in" style="animation-delay: 0.4s;">
-                                <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
-                                <span class="text-gray-300">Panel Admin</span>
+                                <span class="text-gray-300 text-sm">Admin Panel</span>
                             </div>
                         </div>
+                        <button class="mt-4 inline-flex items-center gap-2 text-white hover:text-gray-300 transition-colors">
+                            <span class="text-sm font-medium">Ver más</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </button>
                     </div>
 
-                    <div class="md:col-span-2 lg:col-span-2 bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
-                        <h4 class="font-semibold text-white mb-4">Orbiting Circles</h4>
-                        <div class="relative w-32 h-32 mx-auto">
-                            <div class="absolute inset-0 border-2 border-white/20 rounded-full"></div>
-                            <div class="absolute top-1/2 left-1/2 w-4 h-4 bg-blue-500 rounded-full animate-orbit" style="margin: -8px 0 0 -8px;"></div>
-                            <div class="absolute top-1/2 left-1/2 w-3 h-3 bg-green-500 rounded-full animate-orbit" style="margin: -6px 0 0 -6px; animation-delay: 1s; animation-duration: 15s;"></div>
-                            <div class="absolute top-1/2 left-1/2 w-2 h-2 bg-purple-500 rounded-full animate-orbit" style="margin: -4px 0 0 -4px; animation-delay: 2s; animation-duration: 10s;"></div>
-                            <div class="absolute top-1/2 left-1/2 w-6 h-6 bg-white/10 rounded-full flex items-center justify-center">
-                                <i data-lucide="cpu" class="w-3 h-3 text-white"></i>
+                    <!-- Orbiting Circles Card -->
+                    <div class="group relative col-span-3 md:col-span-2 flex flex-col justify-between overflow-hidden rounded-xl bg-white/8 border-2 border-white/20 hover:bg-white/15 transition-all duration-300 p-6 shadow-lg hover:shadow-xl">
+                        <div class="flex items-center justify-between mb-4">
+                            <h4 class="font-semibold text-white">Tecnologías Integradas</h4>
+                            <div class="w-8 h-8 bg-purple-500/20 rounded-lg flex items-center justify-center">
+                                <i data-lucide="cpu" class="w-4 h-4 text-purple-400"></i>
                             </div>
                         </div>
+
+                        <div class="flex-1 flex items-center justify-center">
+                            <div class="relative w-32 h-32">
+                                <div class="absolute inset-0 border-2 border-white/20 rounded-full"></div>
+                                <div class="absolute top-1/2 left-1/2 w-4 h-4 bg-blue-500 rounded-full animate-orbit" style="margin: -8px 0 0 -8px;"></div>
+                                <div class="absolute top-1/2 left-1/2 w-3 h-3 bg-green-500 rounded-full animate-orbit" style="margin: -6px 0 0 -6px; animation-delay: 1s; animation-duration: 15s;"></div>
+                                <div class="absolute top-1/2 left-1/2 w-2 h-2 bg-purple-500 rounded-full animate-orbit" style="margin: -4px 0 0 -4px; animation-delay: 2s; animation-duration: 10s;"></div>
+                                <div class="absolute top-1/2 left-1/2 w-6 h-6 bg-white/10 rounded-full flex items-center justify-center">
+                                    <i data-lucide="cpu" class="w-3 h-3 text-white"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors">
+                            <span class="text-sm font-medium">Stack completo</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -542,7 +624,7 @@
                                 <span class="text-2xl font-bold text-white">75%</span>
                             </div>
                         </div>
-                        <p class="text-gray-400">Diseño</p>
+                        <p class="text-gray-300">Diseño</p>
                     </div>
                     <div class="text-center">
                         <div class="relative w-24 h-24 mx-auto mb-4">
@@ -556,7 +638,7 @@
                                 <span class="text-2xl font-bold text-white">90%</span>
                             </div>
                         </div>
-                        <p class="text-gray-400">Desarrollo</p>
+                        <p class="text-gray-300">Desarrollo</p>
                     </div>
                     <div class="text-center">
                         <div class="relative w-24 h-24 mx-auto mb-4">
@@ -570,7 +652,7 @@
                                 <span class="text-2xl font-bold text-white">30%</span>
                             </div>
                         </div>
-                        <p class="text-gray-400">Testing</p>
+                        <p class="text-gray-300">Testing</p>
                     </div>
                 </div>
             </div>
@@ -585,14 +667,14 @@
                         </div>
                         <div>
                             <div class="font-semibold text-white">María González</div>
-                            <div class="text-sm text-gray-400">@mariagdz · 2h</div>
+                            <div class="text-sm text-gray-300">@mariagdz · 2h</div>
                         </div>
                         <i data-lucide="twitter" class="w-5 h-5 text-blue-400 ml-auto"></i>
                     </div>
                     <p class="text-white mb-4">
                         "Increíble trabajo de @hardcoded_space! Mi tienda online está funcionando perfectamente y las ventas han aumentado un 300%. Totalmente recomendado! 🚀"
                     </p>
-                    <div class="flex items-center gap-6 text-gray-400 text-sm">
+                    <div class="flex items-center gap-6 text-gray-300 text-sm">
                         <div class="flex items-center gap-1">
                             <i data-lucide="heart" class="w-4 h-4"></i>
                             <span>42</span>
@@ -614,11 +696,11 @@
                 <h3 class="text-2xl font-bold mb-6 text-white">Estructura del Proyecto</h3>
                 <div class="bg-black border border-white/20 rounded-lg p-4 font-mono text-sm max-w-md mx-auto">
                     <div class="space-y-1">
-                        <div class="flex items-center gap-2 text-gray-400">
+                        <div class="flex items-center gap-2 text-gray-300">
                             <i data-lucide="folder" class="w-4 h-4"></i>
                             <span>src/</span>
                         </div>
-                        <div class="flex items-center gap-2 text-gray-400 ml-4">
+                        <div class="flex items-center gap-2 text-gray-300 ml-4">
                             <i data-lucide="folder" class="w-4 h-4"></i>
                             <span>components/</span>
                         </div>
@@ -630,7 +712,7 @@
                             <i data-lucide="file-text" class="w-4 h-4"></i>
                             <span>Footer.jsx</span>
                         </div>
-                        <div class="flex items-center gap-2 text-gray-400 ml-4">
+                        <div class="flex items-center gap-2 text-gray-300 ml-4">
                             <i data-lucide="folder" class="w-4 h-4"></i>
                             <span>pages/</span>
                         </div>
@@ -664,9 +746,9 @@
                             Código Antiguo
                         </h4>
                         <div class="bg-red-950/30 border border-red-500/30 rounded-lg p-4 font-mono text-sm">
-                            <div class="text-gray-400">&lt;div class="header"&gt;</div>
-                            <div class="text-gray-400 ml-4">&lt;h1&gt;Mi Sitio&lt;/h1&gt;</div>
-                            <div class="text-gray-400">&lt;/div&gt;</div>
+                            <div class="text-gray-300">&lt;div class="header"&gt;</div>
+                            <div class="text-gray-300 ml-4">&lt;h1&gt;Mi Sitio&lt;/h1&gt;</div>
+                            <div class="text-gray-300">&lt;/div&gt;</div>
                             <div class="text-gray-500 mt-2">// Sin responsive</div>
                             <div class="text-gray-500">// Sin SEO</div>
                             <div class="text-gray-500">// Sin optimización</div>
@@ -696,7 +778,7 @@
                 <h3 class="text-2xl font-bold mb-6 text-white">Instalación Rápida</h3>
                 <div class="bg-black border border-white/20 rounded-lg overflow-hidden">
                     <div class="flex items-center justify-between px-4 py-2 bg-gray-800 border-b border-white/10">
-                        <span class="text-sm text-gray-400">Terminal</span>
+                        <span class="text-sm text-gray-300">Terminal</span>
                         <button id="copy-script" class="flex items-center gap-2 px-3 py-1 bg-white/10 hover:bg-white/20 rounded text-sm transition-all duration-300 animate-copy-success">
                             <i data-lucide="copy" class="w-4 h-4"></i>
                             <span>Copiar</span>
@@ -704,7 +786,7 @@
                     </div>
                     <div class="p-4 font-mono text-sm">
                         <div class="text-green-400">npx create-hardcoded-site@latest mi-sitio</div>
-                        <div class="text-gray-400">cd mi-sitio && npm run dev</div>
+                        <div class="text-gray-300">cd mi-sitio && npm run dev</div>
                     </div>
                 </div>
             </div>
@@ -712,13 +794,13 @@
             <!-- Lens Effect -->
             <div class="mb-16">
                 <h3 class="text-2xl font-bold mb-6 text-white">Vista Detallada</h3>
-                <div class="relative group cursor-pointer">
+                <div class="relative group cursor-pointer lens-effect">
                     <div class="aspect-video bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl flex items-center justify-center relative overflow-hidden">
                         <div class="text-white text-center">
                             <i data-lucide="search" class="w-12 h-12 mx-auto mb-4"></i>
                             <p>Hover para ampliar</p>
                         </div>
-                        <div class="absolute inset-0 bg-gradient-to-br from-purple-500/40 to-pink-500/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-lens-reveal"></div>
+                        <div class="lens-overlay absolute inset-0 bg-gradient-to-br from-purple-500/40 to-pink-500/40 opacity-0 transition-opacity duration-500"></div>
                     </div>
                 </div>
             </div>
@@ -728,13 +810,13 @@
                 <h3 class="text-2xl font-bold mb-6 text-white">Efecto de Profundidad</h3>
                 <div class="flex justify-center">
                     <div class="grid grid-cols-3 gap-4">
-                        <div class="w-24 h-24 bg-blue-500/30 rounded-lg flex items-center justify-center animate-progressive-blur">
+                        <div class="w-24 h-24 bg-blue-500/30 rounded-lg flex items-center justify-center progressive-blur">
                             <i data-lucide="layers" class="w-8 h-8 text-blue-400"></i>
                         </div>
-                        <div class="w-24 h-24 bg-green-500/30 rounded-lg flex items-center justify-center animate-progressive-blur" style="animation-delay: 0.5s;">
+                        <div class="w-24 h-24 bg-green-500/30 rounded-lg flex items-center justify-center progressive-blur">
                             <i data-lucide="layers" class="w-8 h-8 text-green-400"></i>
                         </div>
-                        <div class="w-24 h-24 bg-purple-500/30 rounded-lg flex items-center justify-center animate-progressive-blur" style="animation-delay: 1s;">
+                        <div class="w-24 h-24 bg-purple-500/30 rounded-lg flex items-center justify-center progressive-blur">
                             <i data-lucide="layers" class="w-8 h-8 text-purple-400"></i>
                         </div>
                     </div>
@@ -767,6 +849,206 @@
                         </div>
                         <div class="text-center">
                             <div class="text-sm text-purple-400 font-semibold">Entrega</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Complete Magic UI Showcase -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold mb-8 text-white text-center">Todos los Componentes Magic UI</h3>
+
+                <!-- Comprehensive Component Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+
+                    <!-- Enhanced Terminal -->
+                    <div class="bg-white/8 border-2 border-white/20 rounded-2xl p-6 hover:bg-white/15 transition-all duration-300 shadow-lg hover:shadow-xl">
+                        <h4 class="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+                            <i data-lucide="terminal" class="w-5 h-5 text-green-400"></i>
+                            Terminal Interactivo
+                        </h4>
+                        <div class="bg-black rounded-lg p-4 font-mono text-sm">
+                            <div class="flex items-center gap-2 mb-2">
+                                <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                                <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                                <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                            </div>
+                            <div class="text-green-400">$ hardcoded --build</div>
+                            <div class="text-blue-400">→ Compilando...</div>
+                            <div class="text-yellow-400">→ Optimizando...</div>
+                            <div class="text-green-400">✓ Listo en 2.3s</div>
+                            <div class="flex items-center mt-2">
+                                <span class="text-green-400">$</span>
+                                <span class="animate-terminal-cursor ml-1 w-2 h-4 bg-white"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Enhanced Dock -->
+                    <div class="bg-white/8 border-2 border-white/20 rounded-2xl p-6 hover:bg-white/15 transition-all duration-300 shadow-lg hover:shadow-xl">
+                        <h4 class="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+                            <i data-lucide="layout-grid" class="w-5 h-5 text-blue-400"></i>
+                            Dock Interactivo
+                        </h4>
+                        <div class="flex justify-center">
+                            <div class="flex items-center bg-white/10 border border-white/20 rounded-2xl px-4 py-2 backdrop-blur-xl">
+                                <div class="dock-item w-10 h-10 bg-blue-500/20 rounded-xl flex items-center justify-center mx-1 hover:scale-110 transition-transform cursor-pointer">
+                                    <i data-lucide="home" class="w-5 h-5 text-blue-400"></i>
+                                </div>
+                                <div class="dock-item w-10 h-10 bg-green-500/20 rounded-xl flex items-center justify-center mx-1 hover:scale-110 transition-transform cursor-pointer">
+                                    <i data-lucide="search" class="w-5 h-5 text-green-400"></i>
+                                </div>
+                                <div class="dock-item w-10 h-10 bg-purple-500/20 rounded-xl flex items-center justify-center mx-1 hover:scale-110 transition-transform cursor-pointer">
+                                    <i data-lucide="settings" class="w-5 h-5 text-purple-400"></i>
+                                </div>
+                                <div class="dock-item w-10 h-10 bg-orange-500/20 rounded-xl flex items-center justify-center mx-1 hover:scale-110 transition-transform cursor-pointer">
+                                    <i data-lucide="mail" class="w-5 h-5 text-orange-400"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Enhanced Globe -->
+                    <div class="bg-white/8 border-2 border-white/20 rounded-2xl p-6 hover:bg-white/15 transition-all duration-300 shadow-lg hover:shadow-xl">
+                        <h4 class="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+                            <i data-lucide="globe" class="w-5 h-5 text-cyan-400"></i>
+                            Globe Rotatorio
+                        </h4>
+                        <div class="flex justify-center">
+                            <div class="relative w-24 h-24">
+                                <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full animate-spin"></div>
+                                <div class="absolute inset-2 bg-gradient-to-r from-blue-500/30 to-purple-500/30 rounded-full animate-pulse"></div>
+                                <div class="absolute inset-4 bg-gradient-to-r from-purple-500/40 to-pink-500/40 rounded-full"></div>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <i data-lucide="globe" class="w-8 h-8 text-white animate-globe-rotate globe-element"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Enhanced Avatar Circles -->
+                    <div class="bg-white/8 border-2 border-white/20 rounded-2xl p-6 hover:bg-white/15 transition-all duration-300 shadow-lg hover:shadow-xl">
+                        <h4 class="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+                            <i data-lucide="users" class="w-5 h-5 text-pink-400"></i>
+                            Avatar Circles
+                        </h4>
+                        <div class="flex justify-center items-center gap-2">
+                            <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center animate-avatar-bounce">
+                                <i data-lucide="user" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center animate-avatar-bounce" style="animation-delay: 0.2s;">
+                                <i data-lucide="user" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div class="w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center">
+                                <i data-lucide="crown" class="w-7 h-7 text-white"></i>
+                            </div>
+                            <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center animate-avatar-bounce" style="animation-delay: 0.4s;">
+                                <i data-lucide="user" class="w-6 h-6 text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Enhanced Progress Bar -->
+                    <div class="bg-white/8 border-2 border-white/20 rounded-2xl p-6 hover:bg-white/15 transition-all duration-300 shadow-lg hover:shadow-xl">
+                        <h4 class="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+                            <i data-lucide="activity" class="w-5 h-5 text-yellow-400"></i>
+                            Progress Circular
+                        </h4>
+                        <div class="flex justify-center">
+                            <div class="relative w-20 h-20">
+                                <svg class="w-20 h-20 transform -rotate-90" viewBox="0 0 100 100">
+                                    <circle cx="50" cy="50" r="40" stroke="rgba(255,255,255,0.1)" stroke-width="8" fill="none"/>
+                                    <circle cx="50" cy="50" r="40" stroke="#F59E0B" stroke-width="8" fill="none"
+                                            stroke-dasharray="251.2" stroke-dashoffset="62.8"
+                                            class="animate-circle-progress" stroke-linecap="round"/>
+                                </svg>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <span class="text-lg font-bold text-white">75%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Enhanced Icon Cloud -->
+                    <div class="bg-white/8 border-2 border-white/20 rounded-2xl p-6 hover:bg-white/15 transition-all duration-300 shadow-lg hover:shadow-xl">
+                        <h4 class="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+                            <i data-lucide="cloud" class="w-5 h-5 text-gray-300"></i>
+                            Icon Cloud
+                        </h4>
+                        <div class="relative w-full h-24">
+                            <div class="absolute top-2 left-4 animate-icon-float">
+                                <i data-lucide="code" class="w-6 h-6 text-blue-400"></i>
+                            </div>
+                            <div class="absolute top-4 right-8 animate-icon-float" style="animation-delay: 0.5s;">
+                                <i data-lucide="database" class="w-5 h-5 text-green-400"></i>
+                            </div>
+                            <div class="absolute bottom-4 left-8 animate-icon-float" style="animation-delay: 1s;">
+                                <i data-lucide="server" class="w-5 h-5 text-purple-400"></i>
+                            </div>
+                            <div class="absolute bottom-2 right-4 animate-icon-float" style="animation-delay: 1.5s;">
+                                <i data-lucide="smartphone" class="w-6 h-6 text-pink-400"></i>
+                            </div>
+                            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-icon-float" style="animation-delay: 2s;">
+                                <i data-lucide="zap" class="w-7 h-7 text-yellow-400"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Row -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                    <!-- Scroll Progress Demo -->
+                    <div class="bg-white/8 border-2 border-white/20 rounded-2xl p-6 hover:bg-white/15 transition-all duration-300 shadow-lg hover:shadow-xl">
+                        <h4 class="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+                            <i data-lucide="scroll" class="w-5 h-5 text-indigo-400"></i>
+                            Scroll Progress
+                        </h4>
+                        <div class="w-full bg-white/10 rounded-full h-2 mb-2">
+                            <div class="bg-gradient-to-r from-indigo-500 to-purple-500 h-2 rounded-full transition-all duration-300" style="width: 65%"></div>
+                        </div>
+                        <div class="text-sm text-gray-300">65% scrolled</div>
+                    </div>
+
+                    <!-- Lens Effect Demo -->
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 lens-effect cursor-pointer">
+                        <h4 class="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+                            <i data-lucide="search" class="w-5 h-5 text-teal-400"></i>
+                            Lens Effect
+                        </h4>
+                        <div class="w-full h-16 bg-gradient-to-r from-teal-500/20 to-blue-500/20 rounded-lg flex items-center justify-center relative overflow-hidden">
+                            <span class="text-white text-sm">Hover to zoom</span>
+                            <div class="lens-overlay absolute inset-0 bg-gradient-to-r from-teal-500/40 to-blue-500/40 opacity-0 transition-opacity duration-500"></div>
+                        </div>
+                    </div>
+
+                    <!-- Pointer Demo -->
+                    <div class="bg-white/8 border-2 border-white/20 rounded-2xl p-6 hover:bg-white/15 transition-all duration-300 shadow-lg hover:shadow-xl">
+                        <h4 class="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+                            <i data-lucide="mouse-pointer" class="w-5 h-5 text-red-400"></i>
+                            Pointer Effects
+                        </h4>
+                        <div class="w-full h-16 bg-gradient-to-r from-red-500/20 to-pink-500/20 rounded-lg flex items-center justify-center">
+                            <span class="text-white text-sm">Move cursor here</span>
+                        </div>
+                    </div>
+
+                    <!-- Progressive Blur Demo -->
+                    <div class="bg-white/8 border-2 border-white/20 rounded-2xl p-6 hover:bg-white/15 transition-all duration-300 shadow-lg hover:shadow-xl">
+                        <h4 class="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+                            <i data-lucide="layers" class="w-5 h-5 text-violet-400"></i>
+                            Progressive Blur
+                        </h4>
+                        <div class="flex justify-center gap-2">
+                            <div class="w-8 h-8 bg-violet-500/30 rounded progressive-blur">
+                                <i data-lucide="circle" class="w-full h-full text-violet-400"></i>
+                            </div>
+                            <div class="w-8 h-8 bg-blue-500/30 rounded progressive-blur">
+                                <i data-lucide="square" class="w-full h-full text-blue-400"></i>
+                            </div>
+                            <div class="w-8 h-8 bg-green-500/30 rounded progressive-blur">
+                                <i data-lucide="triangle" class="w-full h-full text-green-400"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -879,13 +1161,146 @@
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="py-20 bg-black">
+    <!-- Aceternity-Style Effects Section -->
+    <section class="py-20 bg-black border-t border-white/20 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl md:text-6xl font-bold text-center mb-4 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
+            <h2 class="text-4xl md:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-white via-white to-gray-300 bg-clip-text text-transparent">
+                Efectos Premium
+            </h2>
+
+            <!-- Premium Effects Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+
+                <!-- Evervault Card Effect -->
+                <div class="evervault-card group relative overflow-hidden rounded-3xl bg-gradient-to-br from-blue-900/20 to-purple-900/20 border-2 border-white/10 hover:border-white/30 transition-all duration-500 cursor-pointer">
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 animate-evervault"></div>
+                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 blur-xl"></div>
+                    </div>
+                    <div class="relative z-10 p-8 h-64 flex flex-col justify-between">
+                        <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mb-4">
+                            <i data-lucide="shield-check" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Seguridad Avanzada</h3>
+                            <p class="text-gray-300 text-sm">Encriptación end-to-end y protección de datos premium</p>
+                            <div class="mt-4 text-xs font-mono text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                <span class="evervault-text">a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fluid Particles Card -->
+                <div class="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-green-900/20 to-teal-900/20 border-2 border-white/10 hover:border-white/30 transition-all duration-500 cursor-pointer">
+                    <div class="absolute inset-0">
+                        <div class="particle-1 absolute w-2 h-2 bg-green-400/30 rounded-full animate-fluid-particles" style="top: 20%; left: 10%;"></div>
+                        <div class="particle-2 absolute w-1 h-1 bg-teal-400/40 rounded-full animate-fluid-particles" style="top: 60%; left: 80%; animation-delay: 1s;"></div>
+                        <div class="particle-3 absolute w-3 h-3 bg-blue-400/20 rounded-full animate-fluid-particles" style="top: 80%; left: 30%; animation-delay: 2s;"></div>
+                        <div class="particle-4 absolute w-1.5 h-1.5 bg-cyan-400/35 rounded-full animate-fluid-particles" style="top: 40%; left: 60%; animation-delay: 3s;"></div>
+                        <div class="particle-5 absolute w-2.5 h-2.5 bg-emerald-400/25 rounded-full animate-fluid-particles" style="top: 10%; left: 70%; animation-delay: 4s;"></div>
+                    </div>
+                    <div class="relative z-10 p-8 h-64 flex flex-col justify-between">
+                        <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-500 rounded-xl flex items-center justify-center mb-4">
+                            <i data-lucide="zap" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Performance Extremo</h3>
+                            <p class="text-gray-300 text-sm">Optimización fluida con partículas dinámicas</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Prism Glow Card -->
+                <div class="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-purple-900/20 to-pink-900/20 border-2 border-white/10 hover:border-white/30 transition-all duration-500 cursor-pointer animate-prism-glow">
+                    <div class="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-red-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative z-10 p-8 h-64 flex flex-col justify-between">
+                        <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-4">
+                            <i data-lucide="sparkles" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Efectos Visuales</h3>
+                            <p class="text-gray-300 text-sm">Animaciones premium con tecnología Prism</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cyber Grid Card -->
+                <div class="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-cyan-900/20 to-blue-900/20 border-2 border-white/10 hover:border-white/30 transition-all duration-500 cursor-pointer">
+                    <div class="absolute inset-0 bg-grid-pattern animate-cyber-grid opacity-30"></div>
+                    <div class="relative z-10 p-8 h-64 flex flex-col justify-between">
+                        <div class="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-4">
+                            <i data-lucide="grid-3x3" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Grid Inteligente</h3>
+                            <p class="text-gray-300 text-sm">Layouts adaptativos con patrones cibernéticos</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Neural Network Card -->
+                <div class="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-orange-900/20 to-red-900/20 border-2 border-white/10 hover:border-white/30 transition-all duration-500 cursor-pointer">
+                    <div class="absolute inset-0">
+                        <div class="neural-node absolute w-3 h-3 bg-orange-400/50 rounded-full animate-neural-pulse" style="top: 20%; left: 20%;"></div>
+                        <div class="neural-node absolute w-2 h-2 bg-red-400/40 rounded-full animate-neural-pulse" style="top: 60%; left: 70%; animation-delay: 0.5s;"></div>
+                        <div class="neural-node absolute w-4 h-4 bg-yellow-400/30 rounded-full animate-neural-pulse" style="top: 80%; left: 30%; animation-delay: 1s;"></div>
+                        <svg class="absolute inset-0 w-full h-full opacity-20">
+                            <line x1="20%" y1="20%" x2="70%" y2="60%" stroke="url(#neural-gradient)" stroke-width="1"/>
+                            <line x1="70%" y1="60%" x2="30%" y2="80%" stroke="url(#neural-gradient)" stroke-width="1"/>
+                            <line x1="30%" y1="80%" x2="20%" y2="20%" stroke="url(#neural-gradient)" stroke-width="1"/>
+                            <defs>
+                                <linearGradient id="neural-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#f97316;stop-opacity:0.5" />
+                                    <stop offset="100%" style="stop-color:#dc2626;stop-opacity:0.5" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="relative z-10 p-8 h-64 flex flex-col justify-between">
+                        <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center mb-4">
+                            <i data-lucide="brain" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">IA Integrada</h3>
+                            <p class="text-gray-300 text-sm">Redes neuronales para optimización automática</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quantum Effects Card -->
+                <div class="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-violet-900/20 to-indigo-900/20 border-2 border-white/10 hover:border-white/30 transition-all duration-500 cursor-pointer">
+                    <div class="absolute inset-0 bg-gradient-to-br from-violet-500/5 to-indigo-500/5"></div>
+                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                        <div class="absolute inset-0 bg-radial-gradient from-violet-500/20 to-transparent blur-xl"></div>
+                    </div>
+                    <div class="relative z-10 p-8 h-64 flex flex-col justify-between">
+                        <div class="w-12 h-12 bg-gradient-to-br from-violet-500 to-indigo-500 rounded-xl flex items-center justify-center mb-4">
+                            <i data-lucide="atom" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Efectos Cuánticos</h3>
+                            <p class="text-gray-300 text-sm">Animaciones de próxima generación</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Background Effects -->
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl animate-pulse" style="animation-delay: 2s;"></div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-black border-t border-white/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-6xl font-bold text-center mb-4 bg-gradient-to-r from-white via-white to-gray-300 bg-clip-text text-transparent">
                 Nuestros Servicios
             </h2>
-            <p class="text-xl text-gray-400 text-center mb-16 max-w-3xl mx-auto">
+            <p class="text-xl text-gray-300 text-center mb-16 max-w-3xl mx-auto">
                 Desarrollamos dos tipos de soluciones web profesionales adaptadas a las necesidades de tu negocio
             </p>
 
@@ -898,32 +1313,36 @@
                         <div class="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-500/30 transition-colors duration-300">
                             <i data-lucide="globe" class="w-8 h-8 text-blue-400"></i>
                         </div>
-                        <h3 class="text-3xl font-bold mb-4 text-white">Presencial Digital Profesional</h3>
-                        <p class="text-gray-400 mb-6 text-lg leading-relaxed">
-                            Página web profesional para empresas que quieren tener presencia digital completa con todas las herramientas necesarias.
+                        <h3 class="text-3xl font-bold mb-4 text-white">Presencia Digital Profesional</h3>
+                        <p class="text-gray-300 mb-6 text-lg leading-relaxed">
+                            Para negocios de servicios que necesitan una presencia digital sólida. Ideal para consultorios, despachos, restaurantes y empresas de servicios.
                         </p>
 
                         <!-- Features List -->
                         <div class="space-y-3 mb-8">
                             <div class="flex items-center gap-3">
                                 <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
-                                <span>Mapas interactivos integrados</span>
+                                <span>Homepage profesional</span>
                             </div>
                             <div class="flex items-center gap-3">
                                 <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
-                                <span>Formularios de contacto inteligentes</span>
+                                <span>Catálogo de servicios</span>
                             </div>
                             <div class="flex items-center gap-3">
                                 <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
-                                <span>Integración WhatsApp y teléfono</span>
+                                <span>Formularios de contacto</span>
                             </div>
                             <div class="flex items-center gap-3">
                                 <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
-                                <span>SEO optimizado</span>
+                                <span>Mapa de ubicación</span>
                             </div>
                             <div class="flex items-center gap-3">
                                 <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
-                                <span>Diseño responsive</span>
+                                <span>Galería multimedia</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
+                                <span>Enlaces de contacto directo</span>
                             </div>
                         </div>
 
@@ -941,40 +1360,36 @@
                         <div class="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-purple-500/30 transition-colors duration-300">
                             <i data-lucide="shopping-cart" class="w-8 h-8 text-purple-400"></i>
                         </div>
-                        <h3 class="text-3xl font-bold mb-4 text-white">Tienda Online Completa</h3>
-                        <p class="text-gray-400 mb-6 text-lg leading-relaxed">
-                            E-commerce completo con todas las funcionalidades para vender online de forma profesional y segura.
+                        <h3 class="text-3xl font-bold mb-4 text-white">Tienda Online Ilimitada</h3>
+                        <p class="text-gray-300 mb-6 text-lg leading-relaxed">
+                            Para negocios que venden productos. Catálogo ilimitado con todas las funcionalidades de e-commerce profesional.
                         </p>
 
                         <!-- Features List -->
                         <div class="space-y-3 mb-8">
                             <div class="flex items-center gap-3">
                                 <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
-                                <span>Carrito de compras avanzado</span>
+                                <span>Catálogo de productos ilimitado</span>
                             </div>
                             <div class="flex items-center gap-3">
                                 <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
-                                <span>Pagos seguros integrados</span>
+                                <span>Carrito de compras</span>
                             </div>
                             <div class="flex items-center gap-3">
                                 <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
-                                <span>Gestión de usuarios y autenticación</span>
+                                <span>Gestión de inventario</span>
                             </div>
                             <div class="flex items-center gap-3">
                                 <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
-                                <span>Control de inventario</span>
+                                <span>Múltiples métodos de pago</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
+                                <span>Autenticación de usuarios</span>
                             </div>
                             <div class="flex items-center gap-3">
                                 <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
                                 <span>Dashboard administrativo</span>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
-                                <span>Estados de pedidos en tiempo real</span>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
-                                <span>Emails automáticos y SMS</span>
                             </div>
                         </div>
 
@@ -989,28 +1404,28 @@
             <!-- Features Bento Grid -->
             <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 <!-- Feature Cards -->
-                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                <div class="bg-white/8 border-2 border-white/20 rounded-2xl p-6 hover:bg-white/15 transition-all duration-300 shadow-lg hover:shadow-xl">
                     <i data-lucide="smartphone" class="w-8 h-8 text-blue-400 mb-4"></i>
                     <h4 class="font-semibold mb-2">Responsive</h4>
-                    <p class="text-sm text-gray-400">Perfecto en todos los dispositivos</p>
+                    <p class="text-sm text-gray-300">Perfecto en todos los dispositivos</p>
                 </div>
 
-                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                <div class="bg-white/8 border-2 border-white/20 rounded-2xl p-6 hover:bg-white/15 transition-all duration-300 shadow-lg hover:shadow-xl">
                     <i data-lucide="zap" class="w-8 h-8 text-yellow-400 mb-4"></i>
                     <h4 class="font-semibold mb-2">Ultra Rápido</h4>
-                    <p class="text-sm text-gray-400">Optimizado para velocidad</p>
+                    <p class="text-sm text-gray-300">Optimizado para velocidad</p>
                 </div>
 
-                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                <div class="bg-white/8 border-2 border-white/20 rounded-2xl p-6 hover:bg-white/15 transition-all duration-300 shadow-lg hover:shadow-xl">
                     <i data-lucide="shield" class="w-8 h-8 text-green-400 mb-4"></i>
                     <h4 class="font-semibold mb-2">Seguro</h4>
-                    <p class="text-sm text-gray-400">SSL y encriptación avanzada</p>
+                    <p class="text-sm text-gray-300">SSL y encriptación avanzada</p>
                 </div>
 
-                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                <div class="bg-white/8 border-2 border-white/20 rounded-2xl p-6 hover:bg-white/15 transition-all duration-300 shadow-lg hover:shadow-xl">
                     <i data-lucide="headphones" class="w-8 h-8 text-purple-400 mb-4"></i>
                     <h4 class="font-semibold mb-2">Soporte 24/7</h4>
-                    <p class="text-sm text-gray-400">Siempre disponibles</p>
+                    <p class="text-sm text-gray-300">Siempre disponibles</p>
                 </div>
             </div>
         </div>
@@ -1022,7 +1437,7 @@
             <h2 class="text-4xl md:text-6xl font-bold text-center mb-4 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
                 Planes y Precios
             </h2>
-            <p class="text-xl text-gray-400 text-center mb-16 max-w-3xl mx-auto">
+            <p class="text-xl text-gray-300 text-center mb-16 max-w-3xl mx-auto">
                 Precios transparentes y competitivos para cada tipo de proyecto
             </p>
 
@@ -1035,23 +1450,19 @@
                             <div class="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                                 <i data-lucide="globe" class="w-8 h-8 text-blue-400"></i>
                             </div>
-                            <h3 class="text-2xl font-bold text-white mb-2">Presencial Digital</h3>
-                            <div class="text-4xl font-bold text-white mb-2">$799</div>
-                            <p class="text-gray-400">Pago único + hosting</p>
+                            <h3 class="text-2xl font-bold text-white mb-2">Presencia Digital Profesional</h3>
+                            <div class="text-4xl font-bold text-white mb-2">$6,000 <span class="text-lg text-gray-300">MXN</span></div>
+                            <p class="text-gray-300">Para negocios de servicios</p>
                         </div>
 
                         <div class="space-y-4 mb-8">
                             <div class="flex items-center gap-3">
                                 <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
-                                <span>Diseño profesional personalizado</span>
+                                <span>Homepage profesional</span>
                             </div>
                             <div class="flex items-center gap-3">
                                 <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
-                                <span>Hasta 10 páginas</span>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
-                                <span>Google Maps integrado</span>
+                                <span>Catálogo de servicios</span>
                             </div>
                             <div class="flex items-center gap-3">
                                 <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
@@ -1059,19 +1470,15 @@
                             </div>
                             <div class="flex items-center gap-3">
                                 <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
-                                <span>WhatsApp y teléfono integrado</span>
+                                <span>Mapa de ubicación</span>
                             </div>
                             <div class="flex items-center gap-3">
                                 <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
-                                <span>SEO básico incluido</span>
+                                <span>Galería multimedia</span>
                             </div>
                             <div class="flex items-center gap-3">
                                 <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
-                                <span>SSL certificado</span>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
-                                <span>Soporte 3 meses</span>
+                                <span>Enlaces de contacto directo</span>
                             </div>
                         </div>
 
@@ -1097,47 +1504,35 @@
                             <div class="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                                 <i data-lucide="shopping-cart" class="w-8 h-8 text-purple-400"></i>
                             </div>
-                            <h3 class="text-2xl font-bold text-white mb-2">Tienda Online</h3>
-                            <div class="text-4xl font-bold text-white mb-2">$1,499</div>
-                            <p class="text-gray-400">Pago único + hosting</p>
+                            <h3 class="text-2xl font-bold text-white mb-2">Tienda Online Ilimitada</h3>
+                            <div class="text-4xl font-bold text-white mb-2">$11,000 <span class="text-lg text-gray-300">MXN</span></div>
+                            <p class="text-gray-300">Para negocios que venden productos</p>
                         </div>
 
                         <div class="space-y-4 mb-8">
                             <div class="flex items-center gap-3">
                                 <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
-                                <span>Todo lo del plan anterior</span>
+                                <span>Catálogo de productos ilimitado</span>
                             </div>
                             <div class="flex items-center gap-3">
                                 <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
-                                <span>Carrito de compras completo</span>
+                                <span>Carrito de compras</span>
                             </div>
                             <div class="flex items-center gap-3">
                                 <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
-                                <span>Pasarelas de pago integradas</span>
+                                <span>Gestión de inventario</span>
                             </div>
                             <div class="flex items-center gap-3">
                                 <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
-                                <span>Sistema de usuarios</span>
+                                <span>Múltiples métodos de pago</span>
                             </div>
                             <div class="flex items-center gap-3">
                                 <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
-                                <span>Control de inventario</span>
+                                <span>Autenticación de usuarios</span>
                             </div>
                             <div class="flex items-center gap-3">
                                 <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
                                 <span>Dashboard administrativo</span>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
-                                <span>Estados de pedidos</span>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
-                                <span>Emails y SMS automáticos</span>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
-                                <span>Soporte 6 meses</span>
                             </div>
                         </div>
 
@@ -1151,7 +1546,7 @@
 
             <!-- Additional Info -->
             <div class="text-center mt-12">
-                <p class="text-gray-400 mb-4">¿Necesitas algo personalizado?</p>
+                <p class="text-gray-300 mb-4">¿Necesitas algo personalizado?</p>
                 <a href="#contact" class="inline-flex items-center gap-2 text-white hover:text-gray-300 transition-colors duration-300">
                     <i data-lucide="phone" class="w-4 h-4"></i>
                     Hablemos de tu proyecto
@@ -1177,7 +1572,7 @@
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2 group-hover:text-white transition-colors">Restaurante El Sabor</h3>
-                        <p class="text-gray-400 mb-4">Presencial digital con menú, ubicación y reservas online</p>
+                        <p class="text-gray-300 mb-4">Presencial digital con menú, ubicación y reservas online</p>
                         <div class="flex gap-2">
                             <span class="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full">Presencial Digital</span>
                         </div>
@@ -1192,7 +1587,7 @@
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2 group-hover:text-white transition-colors">Tienda Fashion Style</h3>
-                        <p class="text-gray-400 mb-4">E-commerce completo con 500+ productos y múltiples pagos</p>
+                        <p class="text-gray-300 mb-4">E-commerce completo con 500+ productos y múltiples pagos</p>
                         <div class="flex gap-2">
                             <span class="px-2 py-1 bg-purple-500/20 text-purple-400 text-xs rounded-full">Tienda Online</span>
                         </div>
@@ -1207,7 +1602,7 @@
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2 group-hover:text-white transition-colors">Inmobiliaria Premium</h3>
-                        <p class="text-gray-400 mb-4">Portal inmobiliario con catálogo y sistema de citas</p>
+                        <p class="text-gray-300 mb-4">Portal inmobiliario con catálogo y sistema de citas</p>
                         <div class="flex gap-2">
                             <span class="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full">Presencial Digital</span>
                         </div>
@@ -1223,7 +1618,7 @@
             <h2 class="text-4xl md:text-6xl font-bold text-center mb-4 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
                 Contacto
             </h2>
-            <p class="text-xl text-gray-400 text-center mb-16 max-w-3xl mx-auto">
+            <p class="text-xl text-gray-300 text-center mb-16 max-w-3xl mx-auto">
                 ¿Listo para llevar tu negocio al siguiente nivel? Hablemos de tu proyecto
             </p>
 
@@ -1241,7 +1636,7 @@
                                 </div>
                                 <div>
                                     <div class="font-semibold text-white">WhatsApp</div>
-                                    <div class="text-gray-400">+1 (234) 567-8900</div>
+                                    <div class="text-gray-300">+1 (234) 567-8900</div>
                                 </div>
                             </a>
 
@@ -1251,7 +1646,7 @@
                                 </div>
                                 <div>
                                     <div class="font-semibold text-white">Teléfono</div>
-                                    <div class="text-gray-400">+1 (234) 567-8900</div>
+                                    <div class="text-gray-300">+1 (234) 567-8900</div>
                                 </div>
                             </a>
 
@@ -1261,7 +1656,7 @@
                                 </div>
                                 <div>
                                     <div class="font-semibold text-white">Email</div>
-                                    <div class="text-gray-400">hola@hardcoded.space</div>
+                                    <div class="text-gray-300">hola@hardcoded.space</div>
                                 </div>
                             </div>
 
@@ -1271,7 +1666,7 @@
                                 </div>
                                 <div>
                                     <div class="font-semibold text-white">Horario</div>
-                                    <div class="text-gray-400">Lun - Vie: 9:00 - 18:00</div>
+                                    <div class="text-gray-300">Lun - Vie: 9:00 - 18:00</div>
                                 </div>
                             </div>
                         </div>
@@ -1345,22 +1740,133 @@
         </div>
     </section>
 
+    <!-- Additional Magic UI Components Section -->
+    <section class="py-16 bg-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Grid with Advanced Animations -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <!-- Enhanced Terminal with Typing Animation -->
+                <div class="bg-white/8 border-2 border-white/20 rounded-2xl p-6 hover:bg-white/15 transition-all duration-300 shadow-lg hover:shadow-xl">
+                    <h4 class="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+                        <i data-lucide="terminal" class="w-5 h-5"></i>
+                        Deploy Automático
+                    </h4>
+                    <div class="bg-black rounded-lg p-3 font-mono text-sm">
+                        <div class="text-green-400">$ hardcoded deploy</div>
+                        <div class="text-blue-400">→ Building...</div>
+                        <div class="text-yellow-400">→ Optimizing...</div>
+                        <div class="text-green-400">✓ Deployed!</div>
+                    </div>
+                </div>
+
+                <!-- Interactive Card with Tilt Effect -->
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 tilt-card cursor-pointer">
+                    <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-4">
+                        <i data-lucide="zap" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <h4 class="text-lg font-semibold text-white mb-2">Ultra Rápido</h4>
+                    <p class="text-gray-300 text-sm">Optimizado para máximo rendimiento</p>
+                </div>
+
+                <!-- Animated Number Counter -->
+                <div class="bg-white/8 border-2 border-white/20 rounded-2xl p-6 hover:bg-white/15 transition-all duration-300 shadow-lg hover:shadow-xl">
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-white mb-2">
+                            <span id="animated-counter">0</span>+
+                        </div>
+                        <p class="text-gray-300">Sitios Entregados</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Advanced Marquee with Mixed Content -->
+            <div class="mb-16">
+                <div class="relative overflow-hidden bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-white/10 rounded-2xl py-4">
+                    <div class="animate-marquee-reverse flex items-center whitespace-nowrap">
+                        <div class="flex items-center gap-8 mx-8">
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="star" class="w-4 h-4 text-yellow-400"></i>
+                                <span class="text-white font-medium">Cliente Satisfecho</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="rocket" class="w-4 h-4 text-blue-400"></i>
+                                <span class="text-white font-medium">Deploy Exitoso</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="trending-up" class="w-4 h-4 text-green-400"></i>
+                                <span class="text-white font-medium">Ventas +300%</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="shield-check" class="w-4 h-4 text-purple-400"></i>
+                                <span class="text-white font-medium">SSL Activado</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="globe" class="w-4 h-4 text-cyan-400"></i>
+                                <span class="text-white font-medium">En Línea 24/7</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Timeline -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-center mb-8 text-white">Nuestro Proceso</h3>
+                <div class="relative max-w-4xl mx-auto">
+                    <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500"></div>
+
+                    <div class="space-y-8">
+                        <div class="relative flex items-center">
+                            <div class="absolute left-0 md:left-1/2 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center transform -translate-x-4 md:-translate-x-4 z-10">
+                                <span class="text-white text-sm font-bold">1</span>
+                            </div>
+                            <div class="ml-12 md:ml-0 md:w-1/2 md:pr-8">
+                                <h4 class="text-lg font-semibold text-white">Consulta Inicial</h4>
+                                <p class="text-gray-300">Entendemos tu negocio y objetivos</p>
+                            </div>
+                        </div>
+
+                        <div class="relative flex items-center md:justify-end">
+                            <div class="absolute left-0 md:left-1/2 w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center transform -translate-x-4 md:-translate-x-4 z-10">
+                                <span class="text-white text-sm font-bold">2</span>
+                            </div>
+                            <div class="ml-12 md:ml-0 md:w-1/2 md:pl-8">
+                                <h4 class="text-lg font-semibold text-white">Diseño y Desarrollo</h4>
+                                <p class="text-gray-300">Creamos tu solución personalizada</p>
+                            </div>
+                        </div>
+
+                        <div class="relative flex items-center">
+                            <div class="absolute left-0 md:left-1/2 w-8 h-8 bg-pink-500 rounded-full flex items-center justify-center transform -translate-x-4 md:-translate-x-4 z-10">
+                                <span class="text-white text-sm font-bold">3</span>
+                            </div>
+                            <div class="ml-12 md:ml-0 md:w-1/2 md:pr-8">
+                                <h4 class="text-lg font-semibold text-white">Entrega y Soporte</h4>
+                                <p class="text-gray-300">Lanzamiento y acompañamiento continuo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="bg-black py-12 border-t border-white/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Footer Marquee -->
             <div class="relative flex overflow-hidden mb-8 bg-white/5 border border-white/10 rounded-xl py-4">
                 <div class="animate-marquee whitespace-nowrap">
-                    <span class="text-sm text-gray-400 mx-4 flex items-center gap-2"><i data-lucide="code" class="w-3 h-3"></i> hardcoded.space</span>
-                    <span class="text-sm text-gray-400 mx-4">•</span>
-                    <span class="text-sm text-gray-400 mx-4 flex items-center gap-2"><i data-lucide="globe" class="w-3 h-3"></i> Presencial Digital</span>
-                    <span class="text-sm text-gray-400 mx-4">•</span>
-                    <span class="text-sm text-gray-400 mx-4 flex items-center gap-2"><i data-lucide="shopping-cart" class="w-3 h-3"></i> Tienda Online</span>
-                    <span class="text-sm text-gray-400 mx-4">•</span>
-                    <span class="text-sm text-gray-400 mx-4 flex items-center gap-2"><i data-lucide="zap" class="w-3 h-3"></i> Desarrollo Rápido</span>
-                    <span class="text-sm text-gray-400 mx-4">•</span>
-                    <span class="text-sm text-gray-400 mx-4 flex items-center gap-2"><i data-lucide="headphones" class="w-3 h-3"></i> Soporte 24/7</span>
-                    <span class="text-sm text-gray-400 mx-4">•</span>
+                    <span class="text-sm text-gray-300 mx-4 flex items-center gap-2"><i data-lucide="code" class="w-3 h-3"></i> hardcoded.space</span>
+                    <span class="text-sm text-gray-300 mx-4">•</span>
+                    <span class="text-sm text-gray-300 mx-4 flex items-center gap-2"><i data-lucide="globe" class="w-3 h-3"></i> Presencial Digital</span>
+                    <span class="text-sm text-gray-300 mx-4">•</span>
+                    <span class="text-sm text-gray-300 mx-4 flex items-center gap-2"><i data-lucide="shopping-cart" class="w-3 h-3"></i> Tienda Online</span>
+                    <span class="text-sm text-gray-300 mx-4">•</span>
+                    <span class="text-sm text-gray-300 mx-4 flex items-center gap-2"><i data-lucide="zap" class="w-3 h-3"></i> Desarrollo Rápido</span>
+                    <span class="text-sm text-gray-300 mx-4">•</span>
+                    <span class="text-sm text-gray-300 mx-4 flex items-center gap-2"><i data-lucide="headphones" class="w-3 h-3"></i> Soporte 24/7</span>
+                    <span class="text-sm text-gray-300 mx-4">•</span>
                 </div>
             </div>
 
@@ -1371,13 +1877,13 @@
                         <i data-lucide="code" class="w-5 h-5 text-white"></i>
                         <span class="text-white">hardcoded.space</span>
                     </div>
-                    <p class="text-gray-400 text-sm">Desarrollo web profesional para empresas que buscan crecer online.</p>
+                    <p class="text-gray-300 text-sm">Desarrollo web profesional para empresas que buscan crecer online.</p>
                 </div>
 
                 <!-- Services -->
                 <div>
                     <h4 class="font-semibold text-white mb-4">Servicios</h4>
-                    <ul class="space-y-2 text-sm text-gray-400">
+                    <ul class="space-y-2 text-sm text-gray-300">
                         <li><a href="#services" class="hover:text-white transition-colors">Presencial Digital</a></li>
                         <li><a href="#services" class="hover:text-white transition-colors">Tienda Online</a></li>
                         <li><a href="#services" class="hover:text-white transition-colors">SEO</a></li>
@@ -1388,7 +1894,7 @@
                 <!-- Contact -->
                 <div>
                     <h4 class="font-semibold text-white mb-4">Contacto</h4>
-                    <ul class="space-y-2 text-sm text-gray-400">
+                    <ul class="space-y-2 text-sm text-gray-300">
                         <li><a href="tel:+1234567890" class="hover:text-white transition-colors">+1 (234) 567-8900</a></li>
                         <li><a href="mailto:hola@hardcoded.space" class="hover:text-white transition-colors">hola@hardcoded.space</a></li>
                         <li><a href="https://wa.me/1234567890" class="hover:text-white transition-colors">WhatsApp</a></li>
@@ -1398,7 +1904,7 @@
                 <!-- Legal -->
                 <div>
                     <h4 class="font-semibold text-white mb-4">Legal</h4>
-                    <ul class="space-y-2 text-sm text-gray-400">
+                    <ul class="space-y-2 text-sm text-gray-300">
                         <li><a href="#" class="hover:text-white transition-colors">Términos</a></li>
                         <li><a href="#" class="hover:text-white transition-colors">Privacidad</a></li>
                         <li><a href="#" class="hover:text-white transition-colors">Cookies</a></li>
@@ -1406,14 +1912,14 @@
                 </div>
             </div>
 
-            <div class="border-t border-white/10 pt-8 text-center text-gray-400">
+            <div class="border-t border-white/10 pt-8 text-center text-gray-300">
                 <p>&copy; 2024 hardcoded.space. Todos los derechos reservados. Hecho con Inter font y Lucide Icons.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Smooth Cursor Trail -->
-    <div id="cursor-trail" class="fixed w-4 h-4 bg-white/50 rounded-full pointer-events-none z-50 mix-blend-difference animate-cursor-glow"></div>
+    <!-- Clean Cursor Trail -->
+    <div id="cursor-trail" class="fixed w-3 h-3 bg-white/60 rounded-full pointer-events-none z-50 transition-all duration-100"></div>
 
     <script>
         // Initialize Lucide icons
@@ -1421,10 +1927,10 @@
 
         // Typewriter effect
         const texts = [
-            "Páginas web que convierten visitantes en clientes",
-            "Tiendas online que venden 24/7",
-            "Presencia digital profesional",
-            "E-commerce completo y seguro"
+            "Para PyMEs que buscan crecer digitalmente",
+            "Consulta personalizada y desarrollo ágil",
+            "Presencia Digital Profesional desde $6,000 MXN",
+            "Tienda Online Ilimitada desde $11,000 MXN"
         ];
         let textIndex = 0;
         let charIndex = 0;
@@ -1478,7 +1984,8 @@
             });
         });
 
-        // Enhanced cursor trail
+
+        // Clean cursor trail
         const trail = document.getElementById('cursor-trail');
         let mouseX = 0, mouseY = 0;
         let trailX = 0, trailY = 0;
@@ -1492,16 +1999,213 @@
             const dx = mouseX - trailX;
             const dy = mouseY - trailY;
 
-            trailX += dx * 0.1;
-            trailY += dy * 0.1;
+            trailX += dx * 0.08;
+            trailY += dy * 0.08;
 
-            trail.style.left = trailX - 8 + 'px';
-            trail.style.top = trailY - 8 + 'px';
+            trail.style.left = trailX - 6 + 'px';
+            trail.style.top = trailY - 6 + 'px';
 
             requestAnimationFrame(animateTrail);
         }
 
         animateTrail();
+
+        // Theme toggler functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = themeToggle.querySelector('i');
+        let isDark = true;
+
+        themeToggle.addEventListener('click', () => {
+            isDark = !isDark;
+            if (isDark) {
+                document.documentElement.classList.add('dark');
+                themeIcon.setAttribute('data-lucide', 'sun');
+            } else {
+                document.documentElement.classList.remove('dark');
+                themeIcon.setAttribute('data-lucide', 'moon');
+            }
+            lucide.createIcons();
+            themeIcon.classList.add('animate-theme-switch');
+            setTimeout(() => {
+                themeIcon.classList.remove('animate-theme-switch');
+            }, 500);
+        });
+
+        // Copy script functionality
+        const copyButton = document.getElementById('copy-script');
+        const copyText = 'npx create-hardcoded-site@latest mi-sitio';
+
+        copyButton.addEventListener('click', async () => {
+            try {
+                await navigator.clipboard.writeText(copyText);
+                const span = copyButton.querySelector('span');
+                const originalText = span.textContent;
+
+                copyButton.classList.add('animate-copy-success');
+                span.textContent = '¡Copiado!';
+
+                setTimeout(() => {
+                    span.textContent = originalText;
+                    copyButton.classList.remove('animate-copy-success');
+                }, 2000);
+            } catch (err) {
+                console.error('Error copying to clipboard:', err);
+            }
+        });
+
+        // Video dialog functionality
+        document.querySelectorAll('.video-trigger').forEach(trigger => {
+            trigger.addEventListener('click', () => {
+                // Create modal overlay
+                const modal = document.createElement('div');
+                modal.className = 'fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4';
+                modal.innerHTML = `
+                    <div class="relative bg-black border border-white/20 rounded-2xl overflow-hidden max-w-4xl w-full">
+                        <button class="absolute top-4 right-4 z-10 w-8 h-8 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors duration-300" onclick="this.closest('.fixed').remove()">
+                            <i data-lucide="x" class="w-4 h-4 text-white"></i>
+                        </button>
+                        <div class="aspect-video bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center">
+                            <div class="text-white text-center">
+                                <i data-lucide="play-circle" class="w-16 h-16 mx-auto mb-4"></i>
+                                <h3 class="text-xl font-semibold mb-2">Video Demo</h3>
+                                <p class="text-gray-300">Aquí iría el video de demostración</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                document.body.appendChild(modal);
+                lucide.createIcons();
+
+                // Close on outside click
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        modal.remove();
+                    }
+                });
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-bounce-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe animated elements
+        document.querySelectorAll('.observe-animation').forEach(el => {
+            observer.observe(el);
+        });
+
+
+        // Lens effect
+        document.querySelectorAll('.lens-effect').forEach(lens => {
+            lens.addEventListener('mousemove', (e) => {
+                const rect = lens.getBoundingClientRect();
+                const x = ((e.clientX - rect.left) / rect.width) * 100;
+                const y = ((e.clientY - rect.top) / rect.height) * 100;
+
+                const overlay = lens.querySelector('.lens-overlay');
+                if (overlay) {
+                    overlay.style.clipPath = `circle(100px at ${x}% ${y}%)`;
+                    overlay.style.opacity = '1';
+                }
+            });
+
+            lens.addEventListener('mouseleave', () => {
+                const overlay = lens.querySelector('.lens-overlay');
+                if (overlay) {
+                    overlay.style.opacity = '0';
+                }
+            });
+        });
+
+        // Globe rotation on scroll
+        window.addEventListener('scroll', () => {
+            const globes = document.querySelectorAll('.globe-element');
+            const scrollPercent = window.pageYOffset / (document.documentElement.scrollHeight - window.innerHeight);
+
+            globes.forEach(globe => {
+                globe.style.transform = `rotateY(${scrollPercent * 360}deg)`;
+            });
+        });
+
+        // Progressive blur effect based on scroll
+        window.addEventListener('scroll', () => {
+            const blurElements = document.querySelectorAll('.progressive-blur');
+            const scrollY = window.pageYOffset;
+
+            blurElements.forEach((element, index) => {
+                const elementTop = element.offsetTop;
+                const distance = Math.abs(scrollY - elementTop);
+                const maxDistance = 500;
+                const blurAmount = Math.min(distance / maxDistance * 5, 5);
+
+                element.style.filter = `blur(${blurAmount}px)`;
+            });
+        });
+
+        // Animated counter
+        function animateCounter() {
+            const counter = document.getElementById('animated-counter');
+            const target = 50;
+            let current = 0;
+            const increment = target / 60; // 60 frames
+
+            const timer = setInterval(() => {
+                current += increment;
+                counter.textContent = Math.floor(current);
+
+                if (current >= target) {
+                    counter.textContent = target;
+                    clearInterval(timer);
+                }
+            }, 50);
+        }
+
+        // Start counter when visible
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter();
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        });
+
+        const counter = document.getElementById('animated-counter');
+        if (counter) {
+            counterObserver.observe(counter);
+        }
+
+        // Tilt effect for cards
+        document.querySelectorAll('.tilt-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+
+                const rotateX = (y - centerY) / 10;
+                const rotateY = (centerX - x) / 10;
+
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+            });
+        });
     </script>
     <script src="enhanced-script.js"></script>
 </body>
