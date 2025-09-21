@@ -1,0 +1,1508 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hardcoded.space - Desarrollo Web Profesional</title>
+    <meta name="description" content="Desarrollo web profesional. Presencial digital y tiendas online completas con todas las funcionalidades.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'marquee': 'marquee 25s linear infinite',
+                        'marquee2': 'marquee2 25s linear infinite',
+                        'marquee-vertical': 'marquee-vertical 15s linear infinite',
+                        'marquee-reverse': 'marquee-reverse 25s linear infinite',
+                        'float': 'float 3s ease-in-out infinite',
+                        'bounce-in': 'bounce-in 0.6s ease-out',
+                        'scale-in': 'scale-in 0.3s ease-out',
+                        'rotate-in': 'rotate-in 0.6s ease-out',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                        'shimmer': 'shimmer 2s linear infinite',
+                        'pulse-strong': 'pulse-strong 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'gradient-shift': 'gradient-shift 3s ease-in-out infinite',
+                        'text-reveal': 'text-reveal 0.8s ease-out',
+                        'border-beam': 'border-beam 8s linear infinite',
+                        'meteor': 'meteor 5s linear infinite',
+                        'spotlight': 'spotlight 8s ease-in-out infinite',
+                        'orbit': 'orbit 20s linear infinite',
+                        'progress': 'progress 3s ease-in-out infinite',
+                        'dock-bounce': 'dock-bounce 0.3s ease-out',
+                        'theme-toggle': 'theme-toggle 0.3s ease-in-out',
+                        'scroll-progress': 'scroll-progress 0.1s linear',
+                        'lens-zoom': 'lens-zoom 0.3s ease-out',
+                        'cursor-glow': 'cursor-glow 2s ease-in-out infinite',
+                        'blur-in': 'blur-in 0.5s ease-out',
+                        'arc-draw': 'arc-draw 2s ease-in-out infinite',
+                        'typing': 'typing 3.5s steps(30, end)',
+                        'terminal-cursor': 'terminal-cursor 1s infinite',
+                        'globe-rotate': 'globe-rotate 20s linear infinite',
+                        'avatar-bounce': 'avatar-bounce 1s ease-in-out infinite',
+                        'icon-float': 'icon-float 3s ease-in-out infinite',
+                        'circle-progress': 'circle-progress 3s ease-in-out forwards',
+                        'theme-switch': 'theme-switch 0.5s ease-in-out',
+                        'code-highlight': 'code-highlight 2s ease-in-out infinite',
+                        'copy-success': 'copy-success 0.3s ease-out',
+                        'lens-reveal': 'lens-reveal 0.5s ease-out',
+                        'progressive-blur': 'progressive-blur 3s ease-in-out infinite',
+                        'timeline-draw': 'timeline-draw 3s ease-in-out forwards',
+                    },
+                    keyframes: {
+                        marquee: {
+                            '0%': { transform: 'translateX(0%)' },
+                            '100%': { transform: 'translateX(-100%)' },
+                        },
+                        marquee2: {
+                            '0%': { transform: 'translateX(100%)' },
+                            '100%': { transform: 'translateX(0%)' },
+                        },
+                        'marquee-vertical': {
+                            '0%': { transform: 'translateY(0%)' },
+                            '100%': { transform: 'translateY(-100%)' },
+                        },
+                        'marquee-reverse': {
+                            '0%': { transform: 'translateX(-100%)' },
+                            '100%': { transform: 'translateX(0%)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        'bounce-in': {
+                            '0%': { transform: 'scale(0.3)', opacity: '0' },
+                            '50%': { transform: 'scale(1.05)' },
+                            '70%': { transform: 'scale(0.9)' },
+                            '100%': { transform: 'scale(1)', opacity: '1' },
+                        },
+                        'scale-in': {
+                            '0%': { transform: 'scale(0)', opacity: '0' },
+                            '100%': { transform: 'scale(1)', opacity: '1' },
+                        },
+                        'rotate-in': {
+                            '0%': { transform: 'rotate(-180deg) scale(0)', opacity: '0' },
+                            '100%': { transform: 'rotate(0) scale(1)', opacity: '1' },
+                        },
+                        glow: {
+                            '0%': { boxShadow: '0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff' },
+                            '100%': { boxShadow: '0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff' },
+                        },
+                        shimmer: {
+                            '0%': { backgroundPosition: '-200% 0' },
+                            '100%': { backgroundPosition: '200% 0' },
+                        },
+                        'pulse-strong': {
+                            '0%, 100%': { transform: 'scale(1)', opacity: '1' },
+                            '50%': { transform: 'scale(1.1)', opacity: '0.8' },
+                        },
+                        'gradient-shift': {
+                            '0%, 100%': { backgroundPosition: '0% 50%' },
+                            '50%': { backgroundPosition: '100% 50%' },
+                        },
+                        'text-reveal': {
+                            '0%': { clipPath: 'inset(0 100% 0 0)' },
+                            '100%': { clipPath: 'inset(0 0 0 0)' },
+                        },
+                        'border-beam': {
+                            '0%': { transform: 'translateX(-100%)' },
+                            '100%': { transform: 'translateX(100%)' },
+                        },
+                        meteor: {
+                            '0%': { transform: 'rotate(215deg) translateX(0)', opacity: '1' },
+                            '70%': { opacity: '1' },
+                            '100%': { transform: 'rotate(215deg) translateX(-500px)', opacity: '0' },
+                        },
+                        spotlight: {
+                            '0%': { opacity: '0', transform: 'translate(-72%, -62%) scale(0.5)' },
+                            '50%': { opacity: '1', transform: 'translate(-50%, -40%) scale(1)' },
+                            '100%': { opacity: '0', transform: 'translate(-28%, -18%) scale(0.5)' },
+                        },
+                        orbit: {
+                            '0%': { transform: 'rotate(0deg) translateX(100px) rotate(0deg)' },
+                            '100%': { transform: 'rotate(360deg) translateX(100px) rotate(-360deg)' },
+                        },
+                        progress: {
+                            '0%': { strokeDashoffset: '251' },
+                            '100%': { strokeDashoffset: '0' },
+                        },
+                        'dock-bounce': {
+                            '0%': { transform: 'scale(1) translateY(0)' },
+                            '50%': { transform: 'scale(1.1) translateY(-10px)' },
+                            '100%': { transform: 'scale(1) translateY(0)' },
+                        },
+                        'theme-toggle': {
+                            '0%': { transform: 'rotate(0deg)' },
+                            '100%': { transform: 'rotate(180deg)' },
+                        },
+                        'scroll-progress': {
+                            '0%': { width: '0%' },
+                            '100%': { width: '100%' },
+                        },
+                        'lens-zoom': {
+                            '0%': { transform: 'scale(1)' },
+                            '100%': { transform: 'scale(1.5)' },
+                        },
+                        'cursor-glow': {
+                            '0%, 100%': { boxShadow: '0 0 10px rgba(255,255,255,0.5)' },
+                            '50%': { boxShadow: '0 0 20px rgba(255,255,255,0.8)' },
+                        },
+                        'blur-in': {
+                            '0%': { filter: 'blur(10px)', opacity: '0' },
+                            '100%': { filter: 'blur(0px)', opacity: '1' },
+                        },
+                        'arc-draw': {
+                            '0%': { strokeDashoffset: '628' },
+                            '100%': { strokeDashoffset: '0' },
+                        },
+                        typing: {
+                            '0%': { width: '0' },
+                            '100%': { width: '100%' },
+                        },
+                        'terminal-cursor': {
+                            '0%, 50%': { opacity: '1' },
+                            '51%, 100%': { opacity: '0' },
+                        },
+                        'globe-rotate': {
+                            '0%': { transform: 'rotateY(0deg)' },
+                            '100%': { transform: 'rotateY(360deg)' },
+                        },
+                        'avatar-bounce': {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        'icon-float': {
+                            '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+                            '50%': { transform: 'translateY(-15px) rotate(180deg)' },
+                        },
+                        'circle-progress': {
+                            '0%': { strokeDashoffset: '314' },
+                            '100%': { strokeDashoffset: '78.5' },
+                        },
+                        'theme-switch': {
+                            '0%': { transform: 'rotate(0deg) scale(1)' },
+                            '50%': { transform: 'rotate(180deg) scale(1.2)' },
+                            '100%': { transform: 'rotate(360deg) scale(1)' },
+                        },
+                        'code-highlight': {
+                            '0%, 100%': { backgroundColor: 'transparent' },
+                            '50%': { backgroundColor: 'rgba(255, 255, 255, 0.1)' },
+                        },
+                        'copy-success': {
+                            '0%': { transform: 'scale(1)', backgroundColor: 'rgba(255, 255, 255, 0.1)' },
+                            '50%': { transform: 'scale(1.1)', backgroundColor: 'rgba(34, 197, 94, 0.3)' },
+                            '100%': { transform: 'scale(1)', backgroundColor: 'rgba(255, 255, 255, 0.1)' },
+                        },
+                        'lens-reveal': {
+                            '0%': { clipPath: 'circle(0% at 50% 50%)' },
+                            '100%': { clipPath: 'circle(100% at 50% 50%)' },
+                        },
+                        'progressive-blur': {
+                            '0%': { filter: 'blur(0px)' },
+                            '50%': { filter: 'blur(5px)' },
+                            '100%': { filter: 'blur(0px)' },
+                        },
+                        'timeline-draw': {
+                            '0%': { strokeDashoffset: '1000' },
+                            '100%': { strokeDashoffset: '0' },
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="shadcn-styles.css">
+</head>
+<body class="bg-black text-white overflow-x-hidden font-inter">
+    <!-- Scroll Progress -->
+    <div class="fixed top-0 left-0 w-full h-1 bg-white/10 z-50">
+        <div id="scroll-progress" class="h-full bg-white transition-all duration-100 ease-out" style="width: 0%"></div>
+    </div>
+
+    <!-- Animated Background -->
+    <div class="fixed inset-0 -z-50">
+        <!-- Grid Pattern -->
+        <div class="absolute inset-0 bg-[linear-gradient(to_right,#1f1f1f_1px,transparent_1px),linear-gradient(to_bottom,#1f1f1f_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
+
+        <!-- Floating Elements -->
+        <div class="absolute top-1/4 left-1/4 w-2 h-2 bg-white rounded-full animate-float opacity-20"></div>
+        <div class="absolute top-1/3 right-1/4 w-1 h-1 bg-white rounded-full animate-float opacity-30" style="animation-delay: 1s;"></div>
+        <div class="absolute bottom-1/4 left-1/3 w-3 h-3 bg-white rounded-full animate-float opacity-10" style="animation-delay: 2s;"></div>
+        <div class="absolute top-2/3 right-1/3 w-1.5 h-1.5 bg-white rounded-full animate-float opacity-25" style="animation-delay: 3s;"></div>
+
+        <!-- Spotlight Effect -->
+        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-spotlight"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-black/50 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center gap-2 text-2xl font-bold">
+                    <i data-lucide="code" class="w-6 h-6 text-white"></i>
+                    <span class="bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">hardcoded.space</span>
+                </div>
+
+                <!-- Dock Navigation -->
+                <div class="hidden md:flex items-center bg-white/5 border border-white/10 rounded-2xl px-4 py-2 backdrop-blur-xl">
+                    <a href="#hero" class="dock-item flex items-center justify-center w-10 h-10 rounded-xl hover:bg-white/10 transition-all duration-300 group">
+                        <i data-lucide="home" class="w-5 h-5 text-white group-hover:animate-dock-bounce"></i>
+                    </a>
+                    <a href="#services" class="dock-item flex items-center justify-center w-10 h-10 rounded-xl hover:bg-white/10 transition-all duration-300 group">
+                        <i data-lucide="briefcase" class="w-5 h-5 text-white group-hover:animate-dock-bounce"></i>
+                    </a>
+                    <a href="#pricing" class="dock-item flex items-center justify-center w-10 h-10 rounded-xl hover:bg-white/10 transition-all duration-300 group">
+                        <i data-lucide="credit-card" class="w-5 h-5 text-white group-hover:animate-dock-bounce"></i>
+                    </a>
+                    <a href="#portfolio" class="dock-item flex items-center justify-center w-10 h-10 rounded-xl hover:bg-white/10 transition-all duration-300 group">
+                        <i data-lucide="folder" class="w-5 h-5 text-white group-hover:animate-dock-bounce"></i>
+                    </a>
+                    <a href="#contact" class="dock-item flex items-center justify-center w-10 h-10 rounded-xl hover:bg-white/10 transition-all duration-300 group">
+                        <i data-lucide="phone" class="w-5 h-5 text-white group-hover:animate-dock-bounce"></i>
+                    </a>
+                </div>
+
+                <!-- Theme Toggler -->
+                <div class="flex items-center gap-4">
+                    <button id="theme-toggle" class="w-10 h-10 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center hover:bg-white/10 transition-all duration-300">
+                        <i data-lucide="sun" class="w-5 h-5 text-white animate-theme-switch"></i>
+                    </button>
+
+                    <!-- CTA Button -->
+                    <a href="#contact" class="hidden md:flex items-center gap-2 px-6 py-2 bg-white text-black font-semibold rounded-lg hover:bg-gray-200 transition-colors duration-300">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        Cotizar Proyecto
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <!-- Meteor Effect -->
+        <div class="absolute top-1/4 left-1/4 w-px h-48 bg-gradient-to-t from-transparent via-white to-transparent animate-meteor"></div>
+        <div class="absolute top-1/3 right-1/3 w-px h-32 bg-gradient-to-t from-transparent via-white to-transparent animate-meteor" style="animation-delay: 2s;"></div>
+
+        <div class="text-center z-10 px-4 max-w-6xl mx-auto">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent">
+                Desarrollo Web<br/>
+                <span class="animate-text-reveal">Profesional</span>
+            </h1>
+
+            <!-- Typewriter Effect -->
+            <div class="text-xl md:text-2xl text-gray-400 mb-8 h-8 relative">
+                <span id="typewriter-text" class="inline-block"></span>
+                <span class="inline-block w-0.5 h-6 bg-white animate-pulse ml-1"></span>
+            </div>
+
+            <!-- Stats -->
+            <div class="flex flex-wrap justify-center gap-8 mb-12">
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-white mb-1">50+</div>
+                    <div class="text-sm text-gray-400">Proyectos</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-white mb-1">5</div>
+                    <div class="text-sm text-gray-400">Años</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-white mb-1">24/7</div>
+                    <div class="text-sm text-gray-400">Soporte</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-white mb-1">100%</div>
+                    <div class="text-sm text-gray-400">Satisfacción</div>
+                </div>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#services" class="group relative px-8 py-4 bg-white text-black font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-white/25">
+                    <span class="relative z-10 flex items-center gap-2">
+                        <i data-lucide="eye" class="w-4 h-4"></i>
+                        Ver Servicios
+                    </span>
+                    <div class="absolute inset-0 bg-gradient-to-r from-transparent via-gray-200 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+                </a>
+
+                <a href="https://wa.me/1234567890" class="group relative px-8 py-4 border-2 border-white text-white font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:bg-white hover:text-black">
+                    <span class="relative z-10 flex items-center gap-2">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        WhatsApp
+                    </span>
+                    <div class="absolute inset-0 bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Floating Tech Icons -->
+        <div class="absolute bottom-10 left-10 flex gap-4">
+            <div class="w-12 h-12 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center backdrop-blur-sm animate-float">
+                <i data-lucide="code" class="w-6 h-6 text-white"></i>
+            </div>
+            <div class="w-12 h-12 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center backdrop-blur-sm animate-float" style="animation-delay: 0.5s;">
+                <i data-lucide="smartphone" class="w-6 h-6 text-white"></i>
+            </div>
+            <div class="w-12 h-12 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center backdrop-blur-sm animate-float" style="animation-delay: 1s;">
+                <i data-lucide="shopping-cart" class="w-6 h-6 text-white"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Magic UI Showcase Section -->
+    <section class="py-20 bg-gradient-to-b from-black to-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
+                Tecnologías Avanzadas
+            </h2>
+
+            <!-- Terminal Component -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold mb-6 text-white">Terminal de Desarrollo</h3>
+                <div class="bg-black border border-white/20 rounded-lg overflow-hidden shadow-2xl">
+                    <div class="flex items-center gap-2 px-4 py-2 bg-gray-800 border-b border-white/10">
+                        <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                        <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                        <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                        <span class="ml-2 text-sm text-gray-400">terminal</span>
+                    </div>
+                    <div class="p-4 font-mono text-sm">
+                        <div class="text-green-400">$ npm create hardcoded-site</div>
+                        <div class="text-gray-400">✓ Installing dependencies...</div>
+                        <div class="text-gray-400">✓ Setting up database...</div>
+                        <div class="text-gray-400">✓ Configuring payment gateway...</div>
+                        <div class="text-white">Ready! Your site is live at https://yoursite.com</div>
+                        <div class="flex items-center mt-2">
+                            <span class="text-green-400">$</span>
+                            <span class="animate-terminal-cursor ml-1 w-2 h-4 bg-white"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Video Dialog -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold mb-6 text-white">Video Demostración</h3>
+                <div class="relative group cursor-pointer">
+                    <div class="aspect-video bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-2xl flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-all duration-300"></div>
+                        <button class="relative z-10 w-20 h-20 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                            <i data-lucide="play" class="w-8 h-8 text-white ml-1"></i>
+                        </button>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h4 class="font-semibold">Cómo funciona hardcoded.space</h4>
+                            <p class="text-sm text-gray-300">3:24 mins</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bento Grid -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold mb-6 text-white">Características Destacadas</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <div class="md:col-span-2 lg:col-span-2 bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center">
+                                <i data-lucide="globe" class="w-6 h-6 text-blue-400 animate-globe-rotate"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-white">Alcance Global</h4>
+                                <p class="text-sm text-gray-400">CDN en 150+ países</p>
+                            </div>
+                        </div>
+                        <div class="text-3xl font-bold text-white">99.9%</div>
+                        <div class="text-sm text-gray-400">Uptime garantizado</div>
+                    </div>
+
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                        <div class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center mb-4">
+                            <i data-lucide="zap" class="w-6 h-6 text-green-400"></i>
+                        </div>
+                        <h4 class="font-semibold text-white mb-2">Velocidad</h4>
+                        <div class="text-2xl font-bold text-white">< 1s</div>
+                        <div class="text-sm text-gray-400">Tiempo de carga</div>
+                    </div>
+
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                        <div class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mb-4">
+                            <i data-lucide="shield-check" class="w-6 h-6 text-purple-400"></i>
+                        </div>
+                        <h4 class="font-semibold text-white mb-2">Seguridad</h4>
+                        <div class="text-2xl font-bold text-white">SSL</div>
+                        <div class="text-sm text-gray-400">Certificado</div>
+                    </div>
+
+                    <div class="md:col-span-2 lg:col-span-2 bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                        <h4 class="font-semibold text-white mb-4">Animated List</h4>
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3 animate-bounce-in" style="animation-delay: 0.1s;">
+                                <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                <span class="text-gray-300">Diseño Responsive</span>
+                            </div>
+                            <div class="flex items-center gap-3 animate-bounce-in" style="animation-delay: 0.2s;">
+                                <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                <span class="text-gray-300">SEO Optimizado</span>
+                            </div>
+                            <div class="flex items-center gap-3 animate-bounce-in" style="animation-delay: 0.3s;">
+                                <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                <span class="text-gray-300">Base de Datos</span>
+                            </div>
+                            <div class="flex items-center gap-3 animate-bounce-in" style="animation-delay: 0.4s;">
+                                <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                <span class="text-gray-300">Panel Admin</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-2 lg:col-span-2 bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                        <h4 class="font-semibold text-white mb-4">Orbiting Circles</h4>
+                        <div class="relative w-32 h-32 mx-auto">
+                            <div class="absolute inset-0 border-2 border-white/20 rounded-full"></div>
+                            <div class="absolute top-1/2 left-1/2 w-4 h-4 bg-blue-500 rounded-full animate-orbit" style="margin: -8px 0 0 -8px;"></div>
+                            <div class="absolute top-1/2 left-1/2 w-3 h-3 bg-green-500 rounded-full animate-orbit" style="margin: -6px 0 0 -6px; animation-delay: 1s; animation-duration: 15s;"></div>
+                            <div class="absolute top-1/2 left-1/2 w-2 h-2 bg-purple-500 rounded-full animate-orbit" style="margin: -4px 0 0 -4px; animation-delay: 2s; animation-duration: 10s;"></div>
+                            <div class="absolute top-1/2 left-1/2 w-6 h-6 bg-white/10 rounded-full flex items-center justify-center">
+                                <i data-lucide="cpu" class="w-3 h-3 text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Avatar Circles -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold mb-6 text-white">Nuestro Equipo</h3>
+                <div class="flex justify-center items-center gap-4">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center animate-avatar-bounce">
+                        <i data-lucide="user" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center animate-avatar-bounce" style="animation-delay: 0.2s;">
+                        <i data-lucide="user" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center">
+                        <i data-lucide="crown" class="w-10 h-10 text-white"></i>
+                    </div>
+                    <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center animate-avatar-bounce" style="animation-delay: 0.4s;">
+                        <i data-lucide="user" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <div class="w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-full flex items-center justify-center animate-avatar-bounce" style="animation-delay: 0.6s;">
+                        <i data-lucide="user" class="w-8 h-8 text-white"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Icon Cloud -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold mb-6 text-white">Tecnologías que Usamos</h3>
+                <div class="relative w-64 h-64 mx-auto">
+                    <div class="absolute top-4 left-8 animate-icon-float">
+                        <i data-lucide="code" class="w-8 h-8 text-blue-400"></i>
+                    </div>
+                    <div class="absolute top-12 right-12 animate-icon-float" style="animation-delay: 0.5s;">
+                        <i data-lucide="database" class="w-6 h-6 text-green-400"></i>
+                    </div>
+                    <div class="absolute bottom-16 left-4 animate-icon-float" style="animation-delay: 1s;">
+                        <i data-lucide="server" class="w-7 h-7 text-purple-400"></i>
+                    </div>
+                    <div class="absolute bottom-8 right-8 animate-icon-float" style="animation-delay: 1.5s;">
+                        <i data-lucide="cloud" class="w-9 h-9 text-orange-400"></i>
+                    </div>
+                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-icon-float" style="animation-delay: 2s;">
+                        <i data-lucide="smartphone" class="w-10 h-10 text-pink-400"></i>
+                    </div>
+                    <div class="absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-icon-float" style="animation-delay: 2.5s;">
+                        <i data-lucide="palette" class="w-5 h-5 text-yellow-400"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Animated Circular Progress Bar -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold mb-6 text-white">Progreso del Proyecto</h3>
+                <div class="flex justify-center gap-8">
+                    <div class="text-center">
+                        <div class="relative w-24 h-24 mx-auto mb-4">
+                            <svg class="w-24 h-24 transform -rotate-90" viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="40" stroke="rgba(255,255,255,0.1)" stroke-width="8" fill="none"/>
+                                <circle cx="50" cy="50" r="40" stroke="#3B82F6" stroke-width="8" fill="none"
+                                        stroke-dasharray="251.2" stroke-dashoffset="62.8"
+                                        class="animate-circle-progress" stroke-linecap="round"/>
+                            </svg>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <span class="text-2xl font-bold text-white">75%</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-400">Diseño</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="relative w-24 h-24 mx-auto mb-4">
+                            <svg class="w-24 h-24 transform -rotate-90" viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="40" stroke="rgba(255,255,255,0.1)" stroke-width="8" fill="none"/>
+                                <circle cx="50" cy="50" r="40" stroke="#10B981" stroke-width="8" fill="none"
+                                        stroke-dasharray="251.2" stroke-dashoffset="25.12"
+                                        class="animate-circle-progress" stroke-linecap="round" style="animation-delay: 0.5s;"/>
+                            </svg>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <span class="text-2xl font-bold text-white">90%</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-400">Desarrollo</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="relative w-24 h-24 mx-auto mb-4">
+                            <svg class="w-24 h-24 transform -rotate-90" viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="40" stroke="rgba(255,255,255,0.1)" stroke-width="8" fill="none"/>
+                                <circle cx="50" cy="50" r="40" stroke="#8B5CF6" stroke-width="8" fill="none"
+                                        stroke-dasharray="251.2" stroke-dashoffset="175.84"
+                                        class="animate-circle-progress" stroke-linecap="round" style="animation-delay: 1s;"/>
+                            </svg>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <span class="text-2xl font-bold text-white">30%</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-400">Testing</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tweet Card -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold mb-6 text-white">Lo que dicen nuestros clientes</h3>
+                <div class="max-w-md mx-auto bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
+                            <i data-lucide="user" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-white">María González</div>
+                            <div class="text-sm text-gray-400">@mariagdz · 2h</div>
+                        </div>
+                        <i data-lucide="twitter" class="w-5 h-5 text-blue-400 ml-auto"></i>
+                    </div>
+                    <p class="text-white mb-4">
+                        "Increíble trabajo de @hardcoded_space! Mi tienda online está funcionando perfectamente y las ventas han aumentado un 300%. Totalmente recomendado! 🚀"
+                    </p>
+                    <div class="flex items-center gap-6 text-gray-400 text-sm">
+                        <div class="flex items-center gap-1">
+                            <i data-lucide="heart" class="w-4 h-4"></i>
+                            <span>42</span>
+                        </div>
+                        <div class="flex items-center gap-1">
+                            <i data-lucide="repeat" class="w-4 h-4"></i>
+                            <span>12</span>
+                        </div>
+                        <div class="flex items-center gap-1">
+                            <i data-lucide="share" class="w-4 h-4"></i>
+                            <span>5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- File Tree -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold mb-6 text-white">Estructura del Proyecto</h3>
+                <div class="bg-black border border-white/20 rounded-lg p-4 font-mono text-sm max-w-md mx-auto">
+                    <div class="space-y-1">
+                        <div class="flex items-center gap-2 text-gray-400">
+                            <i data-lucide="folder" class="w-4 h-4"></i>
+                            <span>src/</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-gray-400 ml-4">
+                            <i data-lucide="folder" class="w-4 h-4"></i>
+                            <span>components/</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-gray-300 ml-8">
+                            <i data-lucide="file-text" class="w-4 h-4"></i>
+                            <span>Header.jsx</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-gray-300 ml-8">
+                            <i data-lucide="file-text" class="w-4 h-4"></i>
+                            <span>Footer.jsx</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-gray-400 ml-4">
+                            <i data-lucide="folder" class="w-4 h-4"></i>
+                            <span>pages/</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-gray-300 ml-8">
+                            <i data-lucide="file-text" class="w-4 h-4"></i>
+                            <span>Home.jsx</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-gray-300 ml-8">
+                            <i data-lucide="file-text" class="w-4 h-4"></i>
+                            <span>Shop.jsx</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-gray-300 ml-4">
+                            <i data-lucide="file-text" class="w-4 h-4"></i>
+                            <span>App.jsx</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-gray-300">
+                            <i data-lucide="file-text" class="w-4 h-4"></i>
+                            <span>package.json</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Code Comparison -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold mb-6 text-white">Antes vs Después</h3>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                    <div>
+                        <h4 class="text-lg font-semibold text-red-400 mb-3 flex items-center gap-2">
+                            <i data-lucide="x" class="w-5 h-5"></i>
+                            Código Antiguo
+                        </h4>
+                        <div class="bg-red-950/30 border border-red-500/30 rounded-lg p-4 font-mono text-sm">
+                            <div class="text-gray-400">&lt;div class="header"&gt;</div>
+                            <div class="text-gray-400 ml-4">&lt;h1&gt;Mi Sitio&lt;/h1&gt;</div>
+                            <div class="text-gray-400">&lt;/div&gt;</div>
+                            <div class="text-gray-500 mt-2">// Sin responsive</div>
+                            <div class="text-gray-500">// Sin SEO</div>
+                            <div class="text-gray-500">// Sin optimización</div>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold text-green-400 mb-3 flex items-center gap-2">
+                            <i data-lucide="check" class="w-5 h-5"></i>
+                            Código Nuevo
+                        </h4>
+                        <div class="bg-green-950/30 border border-green-500/30 rounded-lg p-4 font-mono text-sm animate-code-highlight">
+                            <div class="text-gray-300">&lt;header className="responsive"&gt;</div>
+                            <div class="text-gray-300 ml-4">&lt;h1 aria-label="title"&gt;</div>
+                            <div class="text-gray-300 ml-8">hardcoded.space</div>
+                            <div class="text-gray-300 ml-4">&lt;/h1&gt;</div>
+                            <div class="text-gray-300">&lt;/header&gt;</div>
+                            <div class="text-green-400 mt-2">// Totalmente responsive</div>
+                            <div class="text-green-400">// SEO optimizado</div>
+                            <div class="text-green-400">// Accesibilidad incluida</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Script Copy Button -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold mb-6 text-white">Instalación Rápida</h3>
+                <div class="bg-black border border-white/20 rounded-lg overflow-hidden">
+                    <div class="flex items-center justify-between px-4 py-2 bg-gray-800 border-b border-white/10">
+                        <span class="text-sm text-gray-400">Terminal</span>
+                        <button id="copy-script" class="flex items-center gap-2 px-3 py-1 bg-white/10 hover:bg-white/20 rounded text-sm transition-all duration-300 animate-copy-success">
+                            <i data-lucide="copy" class="w-4 h-4"></i>
+                            <span>Copiar</span>
+                        </button>
+                    </div>
+                    <div class="p-4 font-mono text-sm">
+                        <div class="text-green-400">npx create-hardcoded-site@latest mi-sitio</div>
+                        <div class="text-gray-400">cd mi-sitio && npm run dev</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lens Effect -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold mb-6 text-white">Vista Detallada</h3>
+                <div class="relative group cursor-pointer">
+                    <div class="aspect-video bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl flex items-center justify-center relative overflow-hidden">
+                        <div class="text-white text-center">
+                            <i data-lucide="search" class="w-12 h-12 mx-auto mb-4"></i>
+                            <p>Hover para ampliar</p>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-br from-purple-500/40 to-pink-500/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-lens-reveal"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progressive Blur -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold mb-6 text-white">Efecto de Profundidad</h3>
+                <div class="flex justify-center">
+                    <div class="grid grid-cols-3 gap-4">
+                        <div class="w-24 h-24 bg-blue-500/30 rounded-lg flex items-center justify-center animate-progressive-blur">
+                            <i data-lucide="layers" class="w-8 h-8 text-blue-400"></i>
+                        </div>
+                        <div class="w-24 h-24 bg-green-500/30 rounded-lg flex items-center justify-center animate-progressive-blur" style="animation-delay: 0.5s;">
+                            <i data-lucide="layers" class="w-8 h-8 text-green-400"></i>
+                        </div>
+                        <div class="w-24 h-24 bg-purple-500/30 rounded-lg flex items-center justify-center animate-progressive-blur" style="animation-delay: 1s;">
+                            <i data-lucide="layers" class="w-8 h-8 text-purple-400"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Arc Timeline -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold mb-6 text-white">Proceso de Desarrollo</h3>
+                <div class="relative max-w-2xl mx-auto">
+                    <svg viewBox="0 0 400 200" class="w-full h-48">
+                        <path d="M 50 150 Q 200 50 350 150" stroke="white" stroke-width="2" fill="none"
+                              stroke-dasharray="1000" stroke-dashoffset="1000" class="animate-timeline-draw"/>
+
+                        <circle cx="50" cy="150" r="8" fill="#3B82F6"/>
+                        <circle cx="133" cy="100" r="8" fill="#10B981"/>
+                        <circle cx="266" cy="100" r="8" fill="#F59E0B"/>
+                        <circle cx="350" cy="150" r="8" fill="#8B5CF6"/>
+                    </svg>
+
+                    <div class="absolute top-0 left-0 w-full h-full flex items-end justify-between px-8">
+                        <div class="text-center">
+                            <div class="text-sm text-blue-400 font-semibold">Consulta</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-sm text-green-400 font-semibold">Diseño</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-sm text-yellow-400 font-semibold">Desarrollo</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-sm text-purple-400 font-semibold">Entrega</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Marquee -->
+    <section class="py-8 bg-gradient-to-r from-black to-gray-900">
+        <!-- Horizontal Marquee -->
+        <div class="relative flex overflow-hidden bg-white/5 border-y border-white/10 mb-4">
+            <div class="animate-marquee whitespace-nowrap flex items-center py-4">
+                <span class="text-lg font-semibold mx-8 flex items-center gap-2"><i data-lucide="globe" class="w-4 h-4"></i> Presencial Digital</span>
+                <span class="text-lg font-semibold mx-8 flex items-center gap-2"><i data-lucide="shopping-bag" class="w-4 h-4"></i> Tienda Online</span>
+                <span class="text-lg font-semibold mx-8 flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4"></i> Google Maps</span>
+                <span class="text-lg font-semibold mx-8 flex items-center gap-2"><i data-lucide="credit-card" class="w-4 h-4"></i> Pagos Online</span>
+                <span class="text-lg font-semibold mx-8 flex items-center gap-2"><i data-lucide="users" class="w-4 h-4"></i> CRM</span>
+                <span class="text-lg font-semibold mx-8 flex items-center gap-2"><i data-lucide="bar-chart" class="w-4 h-4"></i> Analytics</span>
+                <span class="text-lg font-semibold mx-8 flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4"></i> Email Marketing</span>
+                <span class="text-lg font-semibold mx-8 flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> WhatsApp API</span>
+            </div>
+            <div class="animate-marquee2 whitespace-nowrap flex items-center py-4 absolute">
+                <span class="text-lg font-semibold mx-8 flex items-center gap-2"><i data-lucide="globe" class="w-4 h-4"></i> Presencial Digital</span>
+                <span class="text-lg font-semibold mx-8 flex items-center gap-2"><i data-lucide="shopping-bag" class="w-4 h-4"></i> Tienda Online</span>
+                <span class="text-lg font-semibold mx-8 flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4"></i> Google Maps</span>
+                <span class="text-lg font-semibold mx-8 flex items-center gap-2"><i data-lucide="credit-card" class="w-4 h-4"></i> Pagos Online</span>
+                <span class="text-lg font-semibold mx-8 flex items-center gap-2"><i data-lucide="users" class="w-4 h-4"></i> CRM</span>
+                <span class="text-lg font-semibold mx-8 flex items-center gap-2"><i data-lucide="bar-chart" class="w-4 h-4"></i> Analytics</span>
+                <span class="text-lg font-semibold mx-8 flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4"></i> Email Marketing</span>
+                <span class="text-lg font-semibold mx-8 flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> WhatsApp API</span>
+            </div>
+        </div>
+
+        <!-- Reverse Marquee -->
+        <div class="relative flex overflow-hidden bg-white/5 border-y border-white/10 mb-4">
+            <div class="animate-marquee-reverse whitespace-nowrap flex items-center py-3">
+                <span class="text-sm font-medium mx-6 flex items-center gap-2"><i data-lucide="shield" class="w-3 h-3"></i> SSL Seguro</span>
+                <span class="text-sm font-medium mx-6 flex items-center gap-2"><i data-lucide="zap" class="w-3 h-3"></i> Ultra Rápido</span>
+                <span class="text-sm font-medium mx-6 flex items-center gap-2"><i data-lucide="smartphone" class="w-3 h-3"></i> Responsive</span>
+                <span class="text-sm font-medium mx-6 flex items-center gap-2"><i data-lucide="headphones" class="w-3 h-3"></i> Soporte 24/7</span>
+                <span class="text-sm font-medium mx-6 flex items-center gap-2"><i data-lucide="star" class="w-3 h-3"></i> 5 Estrellas</span>
+                <span class="text-sm font-medium mx-6 flex items-center gap-2"><i data-lucide="clock" class="w-3 h-3"></i> Entrega Rápida</span>
+                <span class="text-sm font-medium mx-6 flex items-center gap-2"><i data-lucide="award" class="w-3 h-3"></i> Calidad Premium</span>
+                <span class="text-sm font-medium mx-6 flex items-center gap-2"><i data-lucide="thumbs-up" class="w-3 h-3"></i> 100% Satisfacción</span>
+            </div>
+        </div>
+
+        <!-- Vertical Marquee -->
+        <div class="grid grid-cols-3 gap-4">
+            <div class="h-32 overflow-hidden bg-white/5 border border-white/10 rounded-lg">
+                <div class="animate-marquee-vertical flex flex-col">
+                    <div class="py-4 text-center text-sm">
+                        <i data-lucide="code" class="w-4 h-4 mx-auto mb-1"></i>
+                        <div>HTML5</div>
+                    </div>
+                    <div class="py-4 text-center text-sm">
+                        <i data-lucide="palette" class="w-4 h-4 mx-auto mb-1"></i>
+                        <div>CSS3</div>
+                    </div>
+                    <div class="py-4 text-center text-sm">
+                        <i data-lucide="zap" class="w-4 h-4 mx-auto mb-1"></i>
+                        <div>JavaScript</div>
+                    </div>
+                    <div class="py-4 text-center text-sm">
+                        <i data-lucide="server" class="w-4 h-4 mx-auto mb-1"></i>
+                        <div>Node.js</div>
+                    </div>
+                </div>
+            </div>
+            <div class="h-32 overflow-hidden bg-white/5 border border-white/10 rounded-lg">
+                <div class="animate-marquee-vertical flex flex-col" style="animation-delay: 1s;">
+                    <div class="py-4 text-center text-sm">
+                        <i data-lucide="database" class="w-4 h-4 mx-auto mb-1"></i>
+                        <div>MySQL</div>
+                    </div>
+                    <div class="py-4 text-center text-sm">
+                        <i data-lucide="cloud" class="w-4 h-4 mx-auto mb-1"></i>
+                        <div>AWS</div>
+                    </div>
+                    <div class="py-4 text-center text-sm">
+                        <i data-lucide="git-branch" class="w-4 h-4 mx-auto mb-1"></i>
+                        <div>Git</div>
+                    </div>
+                    <div class="py-4 text-center text-sm">
+                        <i data-lucide="shield-check" class="w-4 h-4 mx-auto mb-1"></i>
+                        <div>Security</div>
+                    </div>
+                </div>
+            </div>
+            <div class="h-32 overflow-hidden bg-white/5 border border-white/10 rounded-lg">
+                <div class="animate-marquee-vertical flex flex-col" style="animation-delay: 2s;">
+                    <div class="py-4 text-center text-sm">
+                        <i data-lucide="trending-up" class="w-4 h-4 mx-auto mb-1"></i>
+                        <div>SEO</div>
+                    </div>
+                    <div class="py-4 text-center text-sm">
+                        <i data-lucide="gauge" class="w-4 h-4 mx-auto mb-1"></i>
+                        <div>Performance</div>
+                    </div>
+                    <div class="py-4 text-center text-sm">
+                        <i data-lucide="users" class="w-4 h-4 mx-auto mb-1"></i>
+                        <div>UX/UI</div>
+                    </div>
+                    <div class="py-4 text-center text-sm">
+                        <i data-lucide="monitor" class="w-4 h-4 mx-auto mb-1"></i>
+                        <div>Analytics</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-6xl font-bold text-center mb-4 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
+                Nuestros Servicios
+            </h2>
+            <p class="text-xl text-gray-400 text-center mb-16 max-w-3xl mx-auto">
+                Desarrollamos dos tipos de soluciones web profesionales adaptadas a las necesidades de tu negocio
+            </p>
+
+            <!-- Main Services Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
+                <!-- Presencial Digital -->
+                <div class="group bg-white/5 border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-all duration-500 hover:scale-105 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-500/30 transition-colors duration-300">
+                            <i data-lucide="globe" class="w-8 h-8 text-blue-400"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold mb-4 text-white">Presencial Digital Profesional</h3>
+                        <p class="text-gray-400 mb-6 text-lg leading-relaxed">
+                            Página web profesional para empresas que quieren tener presencia digital completa con todas las herramientas necesarias.
+                        </p>
+
+                        <!-- Features List -->
+                        <div class="space-y-3 mb-8">
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
+                                <span>Mapas interactivos integrados</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
+                                <span>Formularios de contacto inteligentes</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
+                                <span>Integración WhatsApp y teléfono</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
+                                <span>SEO optimizado</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
+                                <span>Diseño responsive</span>
+                            </div>
+                        </div>
+
+                        <a href="#contact" class="inline-flex items-center gap-2 px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition-colors duration-300">
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            Solicitar Cotización
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tienda Online -->
+                <div class="group bg-white/5 border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-all duration-500 hover:scale-105 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-purple-500/30 transition-colors duration-300">
+                            <i data-lucide="shopping-cart" class="w-8 h-8 text-purple-400"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold mb-4 text-white">Tienda Online Completa</h3>
+                        <p class="text-gray-400 mb-6 text-lg leading-relaxed">
+                            E-commerce completo con todas las funcionalidades para vender online de forma profesional y segura.
+                        </p>
+
+                        <!-- Features List -->
+                        <div class="space-y-3 mb-8">
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
+                                <span>Carrito de compras avanzado</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
+                                <span>Pagos seguros integrados</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
+                                <span>Gestión de usuarios y autenticación</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
+                                <span>Control de inventario</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
+                                <span>Dashboard administrativo</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
+                                <span>Estados de pedidos en tiempo real</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
+                                <span>Emails automáticos y SMS</span>
+                            </div>
+                        </div>
+
+                        <a href="#contact" class="inline-flex items-center gap-2 px-6 py-3 bg-purple-500 text-white font-semibold rounded-lg hover:bg-purple-600 transition-colors duration-300">
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            Solicitar Cotización
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features Bento Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Feature Cards -->
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                    <i data-lucide="smartphone" class="w-8 h-8 text-blue-400 mb-4"></i>
+                    <h4 class="font-semibold mb-2">Responsive</h4>
+                    <p class="text-sm text-gray-400">Perfecto en todos los dispositivos</p>
+                </div>
+
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                    <i data-lucide="zap" class="w-8 h-8 text-yellow-400 mb-4"></i>
+                    <h4 class="font-semibold mb-2">Ultra Rápido</h4>
+                    <p class="text-sm text-gray-400">Optimizado para velocidad</p>
+                </div>
+
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                    <i data-lucide="shield" class="w-8 h-8 text-green-400 mb-4"></i>
+                    <h4 class="font-semibold mb-2">Seguro</h4>
+                    <p class="text-sm text-gray-400">SSL y encriptación avanzada</p>
+                </div>
+
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                    <i data-lucide="headphones" class="w-8 h-8 text-purple-400 mb-4"></i>
+                    <h4 class="font-semibold mb-2">Soporte 24/7</h4>
+                    <p class="text-sm text-gray-400">Siempre disponibles</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-gradient-to-b from-gray-900 to-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-6xl font-bold text-center mb-4 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
+                Planes y Precios
+            </h2>
+            <p class="text-xl text-gray-400 text-center mb-16 max-w-3xl mx-auto">
+                Precios transparentes y competitivos para cada tipo de proyecto
+            </p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Presencial Digital Pricing -->
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-blue-600/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
+                    <div class="relative bg-white/5 border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-all duration-500">
+                        <div class="text-center mb-8">
+                            <div class="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                                <i data-lucide="globe" class="w-8 h-8 text-blue-400"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-2">Presencial Digital</h3>
+                            <div class="text-4xl font-bold text-white mb-2">$799</div>
+                            <p class="text-gray-400">Pago único + hosting</p>
+                        </div>
+
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
+                                <span>Diseño profesional personalizado</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
+                                <span>Hasta 10 páginas</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
+                                <span>Google Maps integrado</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
+                                <span>Formularios de contacto</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
+                                <span>WhatsApp y teléfono integrado</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
+                                <span>SEO básico incluido</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
+                                <span>SSL certificado</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
+                                <span>Soporte 3 meses</span>
+                            </div>
+                        </div>
+
+                        <a href="#contact" class="w-full inline-flex items-center justify-center gap-2 px-6 py-4 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition-colors duration-300">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                            Solicitar Presupuesto
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tienda Online Pricing -->
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-purple-600/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
+                    <div class="relative bg-white/5 border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-all duration-500">
+                        <!-- Popular Badge -->
+                        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                            <div class="bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                                Más Popular
+                            </div>
+                        </div>
+
+                        <div class="text-center mb-8 mt-4">
+                            <div class="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                                <i data-lucide="shopping-cart" class="w-8 h-8 text-purple-400"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-2">Tienda Online</h3>
+                            <div class="text-4xl font-bold text-white mb-2">$1,499</div>
+                            <p class="text-gray-400">Pago único + hosting</p>
+                        </div>
+
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
+                                <span>Todo lo del plan anterior</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
+                                <span>Carrito de compras completo</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
+                                <span>Pasarelas de pago integradas</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
+                                <span>Sistema de usuarios</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
+                                <span>Control de inventario</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
+                                <span>Dashboard administrativo</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
+                                <span>Estados de pedidos</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
+                                <span>Emails y SMS automáticos</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-400"></i>
+                                <span>Soporte 6 meses</span>
+                            </div>
+                        </div>
+
+                        <a href="#contact" class="w-full inline-flex items-center justify-center gap-2 px-6 py-4 bg-purple-500 text-white font-semibold rounded-lg hover:bg-purple-600 transition-colors duration-300">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                            Solicitar Presupuesto
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Info -->
+            <div class="text-center mt-12">
+                <p class="text-gray-400 mb-4">¿Necesitas algo personalizado?</p>
+                <a href="#contact" class="inline-flex items-center gap-2 text-white hover:text-gray-300 transition-colors duration-300">
+                    <i data-lucide="phone" class="w-4 h-4"></i>
+                    Hablemos de tu proyecto
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
+                Nuestros Proyectos
+            </h2>
+
+            <!-- Portfolio Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Portfolio Item 1 -->
+                <div class="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:bg-white/10 transition-all duration-500 hover:scale-105">
+                    <div class="aspect-video bg-gradient-to-br from-blue-500/20 to-blue-600/20 flex items-center justify-center relative overflow-hidden">
+                        <i data-lucide="globe" class="w-16 h-16 text-blue-400 group-hover:scale-110 transition-transform duration-300"></i>
+                        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 group-hover:text-white transition-colors">Restaurante El Sabor</h3>
+                        <p class="text-gray-400 mb-4">Presencial digital con menú, ubicación y reservas online</p>
+                        <div class="flex gap-2">
+                            <span class="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full">Presencial Digital</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 2 -->
+                <div class="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:bg-white/10 transition-all duration-500 hover:scale-105">
+                    <div class="aspect-video bg-gradient-to-br from-purple-500/20 to-purple-600/20 flex items-center justify-center relative overflow-hidden">
+                        <i data-lucide="shopping-bag" class="w-16 h-16 text-purple-400 group-hover:scale-110 transition-transform duration-300"></i>
+                        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 group-hover:text-white transition-colors">Tienda Fashion Style</h3>
+                        <p class="text-gray-400 mb-4">E-commerce completo con 500+ productos y múltiples pagos</p>
+                        <div class="flex gap-2">
+                            <span class="px-2 py-1 bg-purple-500/20 text-purple-400 text-xs rounded-full">Tienda Online</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 3 -->
+                <div class="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:bg-white/10 transition-all duration-500 hover:scale-105">
+                    <div class="aspect-video bg-gradient-to-br from-green-500/20 to-green-600/20 flex items-center justify-center relative overflow-hidden">
+                        <i data-lucide="building" class="w-16 h-16 text-green-400 group-hover:scale-110 transition-transform duration-300"></i>
+                        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 group-hover:text-white transition-colors">Inmobiliaria Premium</h3>
+                        <p class="text-gray-400 mb-4">Portal inmobiliario con catálogo y sistema de citas</p>
+                        <div class="flex gap-2">
+                            <span class="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full">Presencial Digital</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gradient-to-b from-gray-900 to-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-6xl font-bold text-center mb-4 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
+                Contacto
+            </h2>
+            <p class="text-xl text-gray-400 text-center mb-16 max-w-3xl mx-auto">
+                ¿Listo para llevar tu negocio al siguiente nivel? Hablemos de tu proyecto
+            </p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-8 text-white">Información de Contacto</h3>
+
+                        <!-- Contact Methods -->
+                        <div class="space-y-6">
+                            <a href="https://wa.me/1234567890" class="flex items-center gap-4 p-4 bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 transition-all duration-300 group">
+                                <div class="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center group-hover:bg-green-500/30 transition-colors duration-300">
+                                    <i data-lucide="message-circle" class="w-6 h-6 text-green-400"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-white">WhatsApp</div>
+                                    <div class="text-gray-400">+1 (234) 567-8900</div>
+                                </div>
+                            </a>
+
+                            <a href="tel:+1234567890" class="flex items-center gap-4 p-4 bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 transition-all duration-300 group">
+                                <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center group-hover:bg-blue-500/30 transition-colors duration-300">
+                                    <i data-lucide="phone" class="w-6 h-6 text-blue-400"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-white">Teléfono</div>
+                                    <div class="text-gray-400">+1 (234) 567-8900</div>
+                                </div>
+                            </a>
+
+                            <div class="flex items-center gap-4 p-4 bg-white/5 border border-white/10 rounded-xl">
+                                <div class="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center">
+                                    <i data-lucide="mail" class="w-6 h-6 text-purple-400"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-white">Email</div>
+                                    <div class="text-gray-400">hola@hardcoded.space</div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-4 p-4 bg-white/5 border border-white/10 rounded-xl">
+                                <div class="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center">
+                                    <i data-lucide="clock" class="w-6 h-6 text-orange-400"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-white">Horario</div>
+                                    <div class="text-gray-400">Lun - Vie: 9:00 - 18:00</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <div class="space-y-4">
+                        <h4 class="text-lg font-semibold text-white mb-4">Acciones Rápidas</h4>
+                        <div class="grid grid-cols-2 gap-4">
+                            <a href="https://wa.me/1234567890?text=Hola! Me interesa el servicio de Presencial Digital" class="flex items-center justify-center gap-2 p-3 bg-blue-500/20 border border-blue-500/30 rounded-lg hover:bg-blue-500/30 transition-colors duration-300 text-blue-400">
+                                <i data-lucide="globe" class="w-4 h-4"></i>
+                                <span class="text-sm">Presencial Digital</span>
+                            </a>
+                            <a href="https://wa.me/1234567890?text=Hola! Me interesa el servicio de Tienda Online" class="flex items-center justify-center gap-2 p-3 bg-purple-500/20 border border-purple-500/30 rounded-lg hover:bg-purple-500/30 transition-colors duration-300 text-purple-400">
+                                <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                                <span class="text-sm">Tienda Online</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-white/5 border border-white/10 rounded-3xl p-8">
+                    <h3 class="text-2xl font-bold mb-6 text-white">Solicitar Cotización</h3>
+
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-2">Nombre</label>
+                                <input type="text" class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-white/30 focus:bg-white/10 transition-all duration-300" placeholder="Tu nombre">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-2">Empresa</label>
+                                <input type="text" class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-white/30 focus:bg-white/10 transition-all duration-300" placeholder="Nombre de tu empresa">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-2">Email</label>
+                                <input type="email" class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-white/30 focus:bg-white/10 transition-all duration-300" placeholder="tu@email.com">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-2">Teléfono</label>
+                                <input type="tel" class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-white/30 focus:bg-white/10 transition-all duration-300" placeholder="+1 234 567 8900">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Tipo de Proyecto</label>
+                            <select class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:border-white/30 focus:bg-white/10 transition-all duration-300">
+                                <option value="">Selecciona una opción</option>
+                                <option value="presencial">Presencial Digital Profesional</option>
+                                <option value="tienda">Tienda Online Completa</option>
+                                <option value="personalizado">Proyecto Personalizado</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Mensaje</label>
+                            <textarea rows="4" class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-white/30 focus:bg-white/10 transition-all duration-300 resize-none" placeholder="Cuéntanos sobre tu proyecto..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full px-6 py-4 bg-white text-black font-semibold rounded-lg hover:bg-gray-200 transition-colors duration-300 flex items-center justify-center gap-2">
+                            <i data-lucide="send" class="w-4 h-4"></i>
+                            Enviar Solicitud
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Footer Marquee -->
+            <div class="relative flex overflow-hidden mb-8 bg-white/5 border border-white/10 rounded-xl py-4">
+                <div class="animate-marquee whitespace-nowrap">
+                    <span class="text-sm text-gray-400 mx-4 flex items-center gap-2"><i data-lucide="code" class="w-3 h-3"></i> hardcoded.space</span>
+                    <span class="text-sm text-gray-400 mx-4">•</span>
+                    <span class="text-sm text-gray-400 mx-4 flex items-center gap-2"><i data-lucide="globe" class="w-3 h-3"></i> Presencial Digital</span>
+                    <span class="text-sm text-gray-400 mx-4">•</span>
+                    <span class="text-sm text-gray-400 mx-4 flex items-center gap-2"><i data-lucide="shopping-cart" class="w-3 h-3"></i> Tienda Online</span>
+                    <span class="text-sm text-gray-400 mx-4">•</span>
+                    <span class="text-sm text-gray-400 mx-4 flex items-center gap-2"><i data-lucide="zap" class="w-3 h-3"></i> Desarrollo Rápido</span>
+                    <span class="text-sm text-gray-400 mx-4">•</span>
+                    <span class="text-sm text-gray-400 mx-4 flex items-center gap-2"><i data-lucide="headphones" class="w-3 h-3"></i> Soporte 24/7</span>
+                    <span class="text-sm text-gray-400 mx-4">•</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center gap-2 text-xl font-bold mb-4">
+                        <i data-lucide="code" class="w-5 h-5 text-white"></i>
+                        <span class="text-white">hardcoded.space</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">Desarrollo web profesional para empresas que buscan crecer online.</p>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Servicios</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#services" class="hover:text-white transition-colors">Presencial Digital</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Tienda Online</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">SEO</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Hosting</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Contacto</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="tel:+1234567890" class="hover:text-white transition-colors">+1 (234) 567-8900</a></li>
+                        <li><a href="mailto:hola@hardcoded.space" class="hover:text-white transition-colors">hola@hardcoded.space</a></li>
+                        <li><a href="https://wa.me/1234567890" class="hover:text-white transition-colors">WhatsApp</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Legal</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Términos</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Privacidad</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 hardcoded.space. Todos los derechos reservados. Hecho con Inter font y Lucide Icons.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Smooth Cursor Trail -->
+    <div id="cursor-trail" class="fixed w-4 h-4 bg-white/50 rounded-full pointer-events-none z-50 mix-blend-difference animate-cursor-glow"></div>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Typewriter effect
+        const texts = [
+            "Páginas web que convierten visitantes en clientes",
+            "Tiendas online que venden 24/7",
+            "Presencia digital profesional",
+            "E-commerce completo y seguro"
+        ];
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typewriterElement = document.getElementById('typewriter-text');
+
+        function typeWriter() {
+            const currentText = texts[textIndex];
+
+            if (isDeleting) {
+                typewriterElement.textContent = currentText.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typewriterElement.textContent = currentText.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            if (!isDeleting && charIndex === currentText.length) {
+                setTimeout(() => isDeleting = true, 2000);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                textIndex = (textIndex + 1) % texts.length;
+            }
+
+            const speed = isDeleting ? 50 : 100;
+            setTimeout(typeWriter, speed);
+        }
+
+        // Start typewriter effect
+        typeWriter();
+
+        // Scroll progress
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const maxHeight = document.body.scrollHeight - window.innerHeight;
+            const progress = (scrolled / maxHeight) * 100;
+            document.getElementById('scroll-progress').style.width = progress + '%';
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Enhanced cursor trail
+        const trail = document.getElementById('cursor-trail');
+        let mouseX = 0, mouseY = 0;
+        let trailX = 0, trailY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+
+        function animateTrail() {
+            const dx = mouseX - trailX;
+            const dy = mouseY - trailY;
+
+            trailX += dx * 0.1;
+            trailY += dy * 0.1;
+
+            trail.style.left = trailX - 8 + 'px';
+            trail.style.top = trailY - 8 + 'px';
+
+            requestAnimationFrame(animateTrail);
+        }
+
+        animateTrail();
+    </script>
+    <script src="enhanced-script.js"></script>
+</body>
+</html>
