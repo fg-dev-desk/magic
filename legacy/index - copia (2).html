@@ -19,18 +19,39 @@
                     },
                     animation: {
                         'fade-in-up': 'fadeInUp 0.6s ease-out forwards',
+                        'float': 'float 6s ease-in-out infinite',
+                        'gradient': 'gradient 8s linear infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
                     },
                     keyframes: {
                         fadeInUp: {
                             '0%': { opacity: '0', transform: 'translateY(30px)' },
                             '100%': { opacity: '1', transform: 'translateY(0)' }
                         },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' }
+                        },
+                        gradient: {
+                            '0%, 100%': { backgroundPosition: '0% 50%' },
+                            '50%': { backgroundPosition: '100% 50%' }
+                        }
                     }
                 }
             }
         }
     </script>
     <style>
+        /* Dots background pattern */
+        .dots-pattern {
+            background-image: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        .dots-pattern-dark {
+            background-image: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
 
         .animate-fade-in-up {
             opacity: 0;
@@ -55,20 +76,11 @@
             scroll-behavior: smooth;
         }
 
-        /* Common utility classes for repeated patterns */
-        .gradient-purple-pink {
-            background: linear-gradient(to right, rgb(147, 51, 234), rgb(236, 72, 153));
-        }
-        .gradient-cyan-blue {
-            background: linear-gradient(to right, rgb(8, 145, 178), rgb(37, 99, 235));
-        }
-        .card-base {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgb(229, 231, 235);
-        }
-        .common-transition {
-            transition: all 0.3s ease;
+        /* Custom gradient backgrounds */
+        .gradient-bg {
+            background: linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #f5576c);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
         }
 
         /* Scroll Velocity Styles */
@@ -87,58 +99,11 @@
         .scroll-velocity-row > div {
             flex-shrink: 0;
         }
-
-        /* Bento Grid Animations */
-        .bento-marquee {
-            animation: marquee 20s linear infinite;
-            mask-image: linear-gradient(to top, transparent 40%, #000 100%);
-            -webkit-mask-image: linear-gradient(to top, transparent 40%, #000 100%);
-        }
-
-        .bento-marquee:hover {
-            animation-play-state: paused;
-        }
-
-        @keyframes marquee {
-            0% { transform: translateY(100%); }
-            100% { transform: translateY(-100%); }
-        }
-
-        .notification-item {
-            animation: slideInUp 0.5s ease-out forwards;
-            opacity: 0;
-            transform: translateY(20px);
-        }
-
-        .notification-item:nth-child(1) { animation-delay: 0s; }
-        .notification-item:nth-child(2) { animation-delay: 0.2s; }
-        .notification-item:nth-child(3) { animation-delay: 0.4s; }
-        .notification-item:nth-child(4) { animation-delay: 0.6s; }
-
-        @keyframes slideInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .integration-beam {
-            stroke-dasharray: 1000;
-            stroke-dashoffset: 1000;
-            animation: drawBeam 3s ease-in-out infinite;
-        }
-
-        @keyframes drawBeam {
-            0%, 20% { stroke-dashoffset: 1000; }
-            80%, 100% { stroke-dashoffset: 0; }
-        }
     </style>
 </head>
 <body class="bg-white dark:bg-black text-gray-900 dark:text-white transition-colors duration-300">
-    <!-- Magic UI Particles Background -->
-    <div class="fixed inset-0 pointer-events-none -z-10" id="particles-container">
-        <canvas id="particles-canvas" class="w-full h-full"></canvas>
-    </div>
+    <!-- Dots background -->
+    <div class="fixed inset-0 dots-pattern-dark opacity-30 pointer-events-none -z-10"></div>
 
     <!-- Theme Toggle -->
     <button id="theme-toggle" class="fixed top-6 right-6 z-50 w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center hover:bg-white/20 transition-all duration-300">
@@ -201,36 +166,6 @@
         </div>
     </section>
 
-    <!-- Hero Parallax Section -->
-    <section class="h-[300vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto" style="perspective: 1000px; transform-style: preserve-3d;" id="hero-parallax">
-        <!-- Header -->
-        <div class="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
-            <h1 class="text-2xl md:text-7xl font-bold dark:text-white text-gray-900">
-                El mejor <br /> estudio de desarrollo
-            </h1>
-            <p class="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200 text-gray-700">
-                Construimos productos hermosos con las últimas tecnologías y frameworks.
-                Somos un equipo de desarrolladores y diseñadores apasionados que aman crear productos increíbles.
-            </p>
-        </div>
-
-        <!-- Parallax Content -->
-        <div id="parallax-content" class="">
-            <!-- First Row -->
-            <div class="flex flex-row-reverse space-x-reverse space-x-20 mb-20" id="first-row">
-                <!-- Products will be dynamically added here -->
-            </div>
-            <!-- Second Row -->
-            <div class="flex flex-row mb-20 space-x-20" id="second-row">
-                <!-- Products will be dynamically added here -->
-            </div>
-            <!-- Third Row -->
-            <div class="flex flex-row-reverse space-x-reverse space-x-20" id="third-row">
-                <!-- Products will be dynamically added here -->
-            </div>
-        </div>
-    </section>
-
     <!-- Showcase Section -->
     <section class="py-24 md:py-32 relative" data-section="showcase">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
@@ -259,116 +194,64 @@
                     <div class="absolute -top-5 sm:-top-10 md:-top-20 -left-5 sm:-left-10 md:-left-20 w-16 sm:w-20 md:w-40 h-16 sm:h-20 md:h-40 rounded-full bg-gradient-to-r from-purple-500/10 to-pink-500/10 dark:from-purple-500/20 dark:to-pink-500/20 blur-3xl"></div>
                     <div class="absolute -bottom-5 sm:-bottom-10 md:-bottom-20 -right-5 sm:-right-10 md:-right-20 w-16 sm:w-20 md:w-40 h-16 sm:h-20 md:h-40 rounded-full bg-gradient-to-r from-cyan-500/10 to-blue-500/10 dark:from-cyan-500/20 dark:to-blue-500/20 blur-3xl"></div>
 
-                    <!-- Magic UI Bento Grid - Business Features -->
-                    <div class="grid w-full grid-cols-1 lg:grid-cols-3 lg:grid-rows-3 gap-4 auto-rows-[22rem]">
-                        <!-- Gestión de Archivos -->
-                        <div class="group relative lg:row-start-1 lg:row-end-4 lg:col-start-2 lg:col-end-3 flex flex-col justify-between overflow-hidden rounded-xl bg-white dark:bg-gray-950 border border-gray-950/[.1] dark:border-gray-50/[.1] shadow-[0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] dark:shadow-[0_-20px_80px_-20px_#ffffff1f_inset] transition-all duration-300">
-                            <!-- Background Image -->
-                            <div class="absolute -right-20 -top-20 opacity-60">
-                                <div class="w-40 h-40 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-xl"></div>
+                    <div class="grid grid-cols-4 grid-rows-4 gap-2 sm:gap-3 md:gap-4 h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] relative">
+                        <!-- Featured Card - Empresarial -->
+                        <div class="col-span-2 row-span-2 rounded-xl sm:rounded-2xl md:rounded-3xl bg-gradient-to-br from-purple-500/10 to-pink-500/10 dark:from-purple-500/15 dark:to-pink-500/15 backdrop-blur-sm border-2 border-purple-300/50 dark:border-purple-400/30 p-2 sm:p-4 md:p-6 transition-all duration-500 flex flex-col justify-between shadow-lg group hover:scale-[1.02] hover:shadow-xl hover:border-purple-400/70 dark:hover:border-purple-400/50 relative overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-pink-500/5 dark:from-purple-500/10 dark:to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <div class="absolute top-2 sm:top-3 right-2 sm:right-3 w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full bg-purple-500 animate-pulse"></div>
+                            <div class="flex items-center gap-1 sm:gap-2 mb-1 sm:mb-2">
+                                <div class="w-4 sm:w-6 h-4 sm:h-6 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center">
+                                    <svg class="w-2 sm:w-3 h-2 sm:h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-[8px] sm:text-xs font-medium text-purple-600 dark:text-purple-400">
+                                    FEATURED
+                                </span>
                             </div>
-
-                            <div class="pointer-events-none z-10 flex transform-gpu flex-col gap-1 p-6 transition-all duration-300 group-hover:-translate-y-10">
-                                <i data-lucide="file-text" class="h-12 w-12 origin-left transform-gpu text-neutral-700 dark:text-neutral-300 transition-all duration-300 ease-in-out group-hover:scale-75"></i>
-                                <h3 class="text-xl font-semibold text-neutral-700 dark:text-neutral-300">
-                                    Gestión de Archivos
-                                </h3>
-                                <p class="max-w-lg text-neutral-400">Guardamos automáticamente todos tus contenidos mientras trabajas.</p>
-                            </div>
-
-                            <div class="pointer-events-none absolute bottom-0 flex w-full translate-y-10 transform-gpu flex-row items-center p-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-                                <button class="pointer-events-auto text-sm font-medium text-neutral-400 hover:text-neutral-300 transition-colors" onclick="scrollToSection('pricing')">
-                                    Ver más →
-                                </button>
-                            </div>
+                            <h3 class="text-sm sm:text-xl md:text-3xl font-bold text-gray-900 dark:text-white relative z-10">
+                                Empresarial
+                            </h3>
                         </div>
 
-                        <!-- Búsqueda Completa -->
-                        <div class="group relative lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-3 flex flex-col justify-between overflow-hidden rounded-xl bg-white dark:bg-gray-950 border border-gray-950/[.1] dark:border-gray-50/[.1] shadow-[0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] dark:shadow-[0_-20px_80px_-20px_#ffffff1f_inset] transition-all duration-300">
-                            <!-- Background Image -->
-                            <div class="absolute -right-20 -top-20 opacity-60">
-                                <div class="w-40 h-40 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-full blur-xl"></div>
-                            </div>
-
-                            <div class="pointer-events-none z-10 flex transform-gpu flex-col gap-1 p-6 transition-all duration-300 group-hover:-translate-y-10">
-                                <i data-lucide="search" class="h-12 w-12 origin-left transform-gpu text-neutral-700 dark:text-neutral-300 transition-all duration-300 ease-in-out group-hover:scale-75"></i>
-                                <h3 class="text-xl font-semibold text-neutral-700 dark:text-neutral-300">
-                                    Búsqueda Completa
-                                </h3>
-                                <p class="max-w-lg text-neutral-400">Busca en todo tu contenido desde un solo lugar.</p>
-                            </div>
-
-                            <div class="pointer-events-none absolute bottom-0 flex w-full translate-y-10 transform-gpu flex-row items-center p-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-                                <button class="pointer-events-auto text-sm font-medium text-neutral-400 hover:text-neutral-300 transition-colors" onclick="scrollToSection('pricing')">
-                                    Ver más →
-                                </button>
-                            </div>
+                        <!-- E-commerce -->
+                        <div class="col-span-2 row-span-1 rounded-xl sm:rounded-2xl md:rounded-3xl bg-white/80 dark:bg-white/5 backdrop-blur-sm border border-gray-200 dark:border-white/10 p-2 sm:p-3 md:p-6 transition-all duration-500 flex items-end shadow-sm group hover:scale-[1.02] hover:shadow-lg hover:bg-white/90 dark:hover:bg-white/10 hover:border-blue-300 dark:hover:border-blue-400/30 relative overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-cyan-500/5 dark:from-blue-500/10 dark:to-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <h3 class="text-xs sm:text-lg md:text-2xl font-medium text-gray-900 dark:text-white relative z-10">
+                                E-commerce
+                            </h3>
                         </div>
 
-                        <!-- Multilenguaje -->
-                        <div class="group relative lg:col-start-1 lg:col-end-2 lg:row-start-3 lg:row-end-4 flex flex-col justify-between overflow-hidden rounded-xl bg-white dark:bg-gray-950 border border-gray-950/[.1] dark:border-gray-50/[.1] shadow-[0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] dark:shadow-[0_-20px_80px_-20px_#ffffff1f_inset] transition-all duration-300">
-                            <!-- Background Image -->
-                            <div class="absolute -right-20 -top-20 opacity-60">
-                                <div class="w-40 h-40 bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-full blur-xl"></div>
-                            </div>
-
-                            <div class="pointer-events-none z-10 flex transform-gpu flex-col gap-1 p-6 transition-all duration-300 group-hover:-translate-y-10">
-                                <i data-lucide="globe" class="h-12 w-12 origin-left transform-gpu text-neutral-700 dark:text-neutral-300 transition-all duration-300 ease-in-out group-hover:scale-75"></i>
-                                <h3 class="text-xl font-semibold text-neutral-700 dark:text-neutral-300">
-                                    Alcance Global
-                                </h3>
-                                <p class="max-w-lg text-neutral-400">Tu negocio disponible para clientes de todo el mundo.</p>
-                            </div>
-
-                            <div class="pointer-events-none absolute bottom-0 flex w-full translate-y-10 transform-gpu flex-row items-center p-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-                                <button class="pointer-events-auto text-sm font-medium text-neutral-400 hover:text-neutral-300 transition-colors" onclick="scrollToSection('pricing')">
-                                    Ver más →
-                                </button>
-                            </div>
+                        <!-- Servicios -->
+                        <div class="col-span-1 row-span-1 rounded-xl sm:rounded-2xl md:rounded-3xl bg-white/80 dark:bg-white/5 backdrop-blur-sm border border-gray-200 dark:border-white/10 p-1 sm:p-2 md:p-6 transition-all duration-500 flex items-end shadow-sm group hover:scale-[1.05] hover:shadow-lg hover:bg-white/90 dark:hover:bg-white/10 hover:border-green-300 dark:hover:border-green-400/30 relative overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-br from-green-500/5 to-emerald-500/5 dark:from-green-500/10 dark:to-emerald-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <h3 class="text-[8px] sm:text-sm md:text-xl font-medium text-gray-900 dark:text-white relative z-10">
+                                Servicios
+                            </h3>
                         </div>
 
-                        <!-- Calendario -->
-                        <div class="group relative lg:col-start-3 lg:col-end-3 lg:row-start-1 lg:row-end-2 flex flex-col justify-between overflow-hidden rounded-xl bg-white dark:bg-gray-950 border border-gray-950/[.1] dark:border-gray-50/[.1] shadow-[0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] dark:shadow-[0_-20px_80px_-20px_#ffffff1f_inset] transition-all duration-300">
-                            <!-- Background Image -->
-                            <div class="absolute -right-20 -top-20 opacity-60">
-                                <div class="w-40 h-40 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-xl"></div>
-                            </div>
-
-                            <div class="pointer-events-none z-10 flex transform-gpu flex-col gap-1 p-6 transition-all duration-300 group-hover:-translate-y-10">
-                                <i data-lucide="calendar" class="h-12 w-12 origin-left transform-gpu text-neutral-700 dark:text-neutral-300 transition-all duration-300 ease-in-out group-hover:scale-75"></i>
-                                <h3 class="text-xl font-semibold text-neutral-700 dark:text-neutral-300">
-                                    Agenda
-                                </h3>
-                                <p class="max-w-lg text-neutral-400">Organiza tu negocio por fechas.</p>
-                            </div>
-
-                            <div class="pointer-events-none absolute bottom-0 flex w-full translate-y-10 transform-gpu flex-row items-center p-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-                                <button class="pointer-events-auto text-sm font-medium text-neutral-400 hover:text-neutral-300 transition-colors" onclick="scrollToSection('pricing')">
-                                    Ver más →
-                                </button>
-                            </div>
+                        <!-- Contacto -->
+                        <div class="col-span-1 row-span-2 rounded-xl sm:rounded-2xl md:rounded-3xl bg-white/80 dark:bg-white/5 backdrop-blur-sm border border-gray-200 dark:border-white/10 p-1 sm:p-2 md:p-6 transition-all duration-500 flex items-end shadow-sm group hover:scale-[1.05] hover:shadow-lg hover:bg-white/90 dark:hover:bg-white/10 hover:border-orange-300 dark:hover:border-orange-400/30 relative overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-red-500/5 dark:from-orange-500/10 dark:to-red-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <h3 class="text-[8px] sm:text-sm md:text-xl font-medium text-gray-900 dark:text-white relative z-10">
+                                Contacto
+                            </h3>
                         </div>
 
-                        <!-- Notificaciones -->
-                        <div class="group relative lg:col-start-3 lg:col-end-3 lg:row-start-2 lg:row-end-4 flex flex-col justify-between overflow-hidden rounded-xl bg-white dark:bg-gray-950 border border-gray-950/[.1] dark:border-gray-50/[.1] shadow-[0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] dark:shadow-[0_-20px_80px_-20px_#ffffff1f_inset] transition-all duration-300">
-                            <!-- Background Image -->
-                            <div class="absolute -right-20 -top-20 opacity-60">
-                                <div class="w-40 h-40 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-xl"></div>
-                            </div>
+                        <!-- Portafolio -->
+                        <div class="col-span-2 row-span-1 rounded-xl sm:rounded-2xl md:rounded-3xl bg-white/80 dark:bg-white/5 backdrop-blur-sm border border-gray-200 dark:border-white/10 p-2 sm:p-3 md:p-6 transition-all duration-500 flex items-end shadow-sm group hover:scale-[1.02] hover:shadow-lg hover:bg-white/90 dark:hover:bg-white/10 hover:border-cyan-300 dark:hover:border-cyan-400/30 relative overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 dark:from-cyan-500/10 dark:to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <h3 class="text-xs sm:text-lg md:text-2xl font-medium text-gray-900 dark:text-white relative z-10">
+                                Portafolio
+                            </h3>
+                        </div>
 
-                            <div class="pointer-events-none z-10 flex transform-gpu flex-col gap-1 p-6 transition-all duration-300 group-hover:-translate-y-10">
-                                <i data-lucide="bell" class="h-12 w-12 origin-left transform-gpu text-neutral-700 dark:text-neutral-300 transition-all duration-300 ease-in-out group-hover:scale-75"></i>
-                                <h3 class="text-xl font-semibold text-neutral-700 dark:text-neutral-300">
-                                    Notificaciones
-                                </h3>
-                                <p class="max-w-lg text-neutral-400">Te notificamos cuando alguien interactúa con tu negocio.</p>
-                            </div>
-
-                            <div class="pointer-events-none absolute bottom-0 flex w-full translate-y-10 transform-gpu flex-row items-center p-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-                                <button class="pointer-events-auto text-sm font-medium text-neutral-400 hover:text-neutral-300 transition-colors" onclick="scrollToSection('pricing')">
-                                    Ver más →
-                                </button>
-                            </div>
+                        <!-- Ventas -->
+                        <div class="col-span-1 row-span-1 rounded-xl sm:rounded-2xl md:rounded-3xl bg-white/80 dark:bg-white/5 backdrop-blur-sm border border-gray-200 dark:border-white/10 p-1 sm:p-2 md:p-6 transition-all duration-500 flex items-end shadow-sm group hover:scale-[1.05] hover:shadow-lg hover:bg-white/90 dark:hover:bg-white/10 hover:border-pink-300 dark:hover:border-pink-400/30 relative overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-br from-pink-500/5 to-purple-500/5 dark:from-pink-500/10 dark:to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <h3 class="text-[8px] sm:text-sm md:text-xl font-medium text-gray-900 dark:text-white relative z-10">
+                                Ventas
+                            </h3>
                         </div>
                     </div>
                 </div>
@@ -1214,20 +1097,10 @@
                 html.classList.remove('dark');
                 localStorage.setItem('theme', 'light');
                 updateThemeIcons(false);
-                // Update particles color
-                if (window.particlesInstance) {
-                    window.particlesInstance.options.color = '#000000';
-                    window.particlesInstance.rgb = window.particlesInstance.hexToRgb('#000000');
-                }
             } else {
                 html.classList.add('dark');
                 localStorage.setItem('theme', 'dark');
                 updateThemeIcons(true);
-                // Update particles color
-                if (window.particlesInstance) {
-                    window.particlesInstance.options.color = '#ffffff';
-                    window.particlesInstance.rgb = window.particlesInstance.hexToRgb('#ffffff');
-                }
             }
         });
 
@@ -1271,390 +1144,9 @@
                 lucide.createIcons();
             }
 
-            // Initialize Magic UI Particles
-            const particlesCanvas = document.getElementById('particles-canvas');
-            if (particlesCanvas) {
-                // Check if dark mode is active
-                const isDark = document.documentElement.classList.contains('dark');
-                const particleColor = isDark ? '#ffffff' : '#000000';
-
-                window.particlesInstance = new Particles(particlesCanvas, {
-                    quantity: 50,
-                    staticity: 50,
-                    ease: 50,
-                    size: 0.4,
-                    color: particleColor,
-                    vx: 0,
-                    vy: 0
-                });
-            }
-
             // Initialize Scroll Based Velocity
             initScrollVelocity();
-
-            // Initialize Hero Parallax
-            initHeroParallax();
         });
-
-        // Hero Parallax Implementation
-        function initHeroParallax() {
-            const products = [
-                {
-                    title: "Moonbeam",
-                    link: "https://gomoonbeam.com",
-                    thumbnail: "https://aceternity.com/images/products/thumbnails/new/moonbeam.png",
-                },
-                {
-                    title: "Cursor",
-                    link: "https://cursor.so",
-                    thumbnail: "https://aceternity.com/images/products/thumbnails/new/cursor.png",
-                },
-                {
-                    title: "Rogue",
-                    link: "https://userogue.com",
-                    thumbnail: "https://aceternity.com/images/products/thumbnails/new/rogue.png",
-                },
-                {
-                    title: "Editorially",
-                    link: "https://editorially.org",
-                    thumbnail: "https://aceternity.com/images/products/thumbnails/new/editorially.png",
-                },
-                {
-                    title: "Editrix AI",
-                    link: "https://editrix.ai",
-                    thumbnail: "https://aceternity.com/images/products/thumbnails/new/editrix.png",
-                },
-                {
-                    title: "Pixel Perfect",
-                    link: "https://app.pixelperfect.quest",
-                    thumbnail: "https://aceternity.com/images/products/thumbnails/new/pixelperfect.png",
-                },
-                {
-                    title: "Algochurn",
-                    link: "https://algochurn.com",
-                    thumbnail: "https://aceternity.com/images/products/thumbnails/new/algochurn.png",
-                },
-                {
-                    title: "Aceternity UI",
-                    link: "https://ui.aceternity.com",
-                    thumbnail: "https://aceternity.com/images/products/thumbnails/new/aceternityui.png",
-                },
-                {
-                    title: "Tailwind Master Kit",
-                    link: "https://tailwindmasterkit.com",
-                    thumbnail: "https://aceternity.com/images/products/thumbnails/new/tailwindmasterkit.png",
-                },
-                {
-                    title: "SmartBridge",
-                    link: "https://smartbridgetech.com",
-                    thumbnail: "https://aceternity.com/images/products/thumbnails/new/smartbridge.png",
-                },
-                {
-                    title: "Renderwork Studio",
-                    link: "https://renderwork.studio",
-                    thumbnail: "https://aceternity.com/images/products/thumbnails/new/renderwork.png",
-                },
-                {
-                    title: "Creme Digital",
-                    link: "https://cremedigital.com",
-                    thumbnail: "https://aceternity.com/images/products/thumbnails/new/cremedigital.png",
-                },
-                {
-                    title: "Golden Bells Academy",
-                    link: "https://goldenbellsacademy.com",
-                    thumbnail: "https://aceternity.com/images/products/thumbnails/new/goldenbellsacademy.png",
-                },
-                {
-                    title: "Invoker Labs",
-                    link: "https://invoker.lol",
-                    thumbnail: "https://aceternity.com/images/products/thumbnails/new/invoker.png",
-                },
-                {
-                    title: "E Free Invoice",
-                    link: "https://efreeinvoice.com",
-                    thumbnail: "https://aceternity.com/images/products/thumbnails/new/efreeinvoice.png",
-                },
-            ];
-
-            const firstRow = products.slice(0, 5);
-            const secondRow = products.slice(5, 10);
-            const thirdRow = products.slice(10, 15);
-
-            // Create product cards
-            function createProductCard(product, translate) {
-                const card = document.createElement('div');
-                card.className = 'group/product h-96 w-[30rem] relative shrink-0';
-                card.style.transform = `translateX(${translate}px)`;
-
-                card.innerHTML = `
-                    <a href="${product.link}" class="block group-hover/product:shadow-2xl">
-                        <img src="${product.thumbnail}" height="600" width="600"
-                             class="object-cover object-left-top absolute h-full w-full inset-0"
-                             alt="${product.title}" />
-                    </a>
-                    <div class="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none transition-opacity duration-300"></div>
-                    <h2 class="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white transition-opacity duration-300">
-                        ${product.title}
-                    </h2>
-                `;
-
-                // Add hover effect
-                card.addEventListener('mouseenter', () => {
-                    card.style.transform = `translateX(${translate}px) translateY(-20px)`;
-                });
-
-                card.addEventListener('mouseleave', () => {
-                    card.style.transform = `translateX(${translate}px) translateY(0px)`;
-                });
-
-                return card;
-            }
-
-            // Populate rows
-            const firstRowElement = document.getElementById('first-row');
-            const secondRowElement = document.getElementById('second-row');
-            const thirdRowElement = document.getElementById('third-row');
-
-            firstRow.forEach(product => {
-                const card = createProductCard(product, 0);
-                firstRowElement.appendChild(card);
-            });
-
-            secondRow.forEach(product => {
-                const card = createProductCard(product, 0);
-                secondRowElement.appendChild(card);
-            });
-
-            thirdRow.forEach(product => {
-                const card = createProductCard(product, 0);
-                thirdRowElement.appendChild(card);
-            });
-
-            // Parallax scroll effect
-            const heroParallaxSection = document.getElementById('hero-parallax');
-            const parallaxContent = document.getElementById('parallax-content');
-
-            function updateParallax() {
-                const rect = heroParallaxSection.getBoundingClientRect();
-                const scrollProgress = Math.max(0, Math.min(1, -rect.top / (rect.height - window.innerHeight)));
-
-                // Transform calculations
-                const translateX = scrollProgress * 1000;
-                const translateXReverse = scrollProgress * -1000;
-                const rotateX = 15 - (scrollProgress * 15);
-                const opacity = 0.2 + (scrollProgress * 0.8);
-                const rotateZ = 20 - (scrollProgress * 20);
-                const translateY = -700 + (scrollProgress * 1200);
-
-                // Apply transforms to parallax content
-                parallaxContent.style.transform = `
-                    rotateX(${rotateX}deg)
-                    rotateZ(${rotateZ}deg)
-                    translateY(${translateY}px)
-                `;
-                parallaxContent.style.opacity = opacity;
-
-                // Apply transforms to rows
-                const firstRowCards = firstRowElement.children;
-                const thirdRowCards = thirdRowElement.children;
-                for (let card of firstRowCards) {
-                    card.style.transform = `translateX(${translateX}px)`;
-                }
-                for (let card of thirdRowCards) {
-                    card.style.transform = `translateX(${translateX}px)`;
-                }
-
-                const secondRowCards = secondRowElement.children;
-                for (let card of secondRowCards) {
-                    card.style.transform = `translateX(${translateXReverse}px)`;
-                }
-            }
-
-            window.addEventListener('scroll', updateParallax);
-            updateParallax(); // Initial call
-        }
-
-        // Magic UI Particles Implementation
-        class Particles {
-            constructor(canvas, options = {}) {
-                this.canvas = canvas;
-                this.ctx = canvas.getContext('2d');
-                this.options = {
-                    quantity: options.quantity || 100,
-                    staticity: options.staticity || 50,
-                    ease: options.ease || 50,
-                    size: options.size || 0.4,
-                    color: options.color || '#ffffff',
-                    vx: options.vx || 0,
-                    vy: options.vy || 0,
-                    ...options
-                };
-
-                this.circles = [];
-                this.mouse = { x: 0, y: 0 };
-                this.canvasSize = { w: 0, h: 0 };
-                this.dpr = window.devicePixelRatio || 1;
-                this.rafId = null;
-                this.rgb = this.hexToRgb(this.options.color);
-
-                this.init();
-                this.setupEventListeners();
-                this.animate();
-            }
-
-            hexToRgb(hex) {
-                hex = hex.replace('#', '');
-                if (hex.length === 3) {
-                    hex = hex.split('').map(char => char + char).join('');
-                }
-                const hexInt = parseInt(hex, 16);
-                const red = (hexInt >> 16) & 255;
-                const green = (hexInt >> 8) & 255;
-                const blue = hexInt & 255;
-                return [red, green, blue];
-            }
-
-            init() {
-                this.resizeCanvas();
-                this.drawParticles();
-            }
-
-            setupEventListeners() {
-                window.addEventListener('mousemove', (e) => {
-                    const rect = this.canvas.getBoundingClientRect();
-                    const { w, h } = this.canvasSize;
-                    const x = e.clientX - rect.left - w / 2;
-                    const y = e.clientY - rect.top - h / 2;
-                    const inside = x < w / 2 && x > -w / 2 && y < h / 2 && y > -h / 2;
-                    if (inside) {
-                        this.mouse.x = x;
-                        this.mouse.y = y;
-                    }
-                });
-
-                window.addEventListener('resize', () => {
-                    this.resizeCanvas();
-                });
-            }
-
-            resizeCanvas() {
-                const container = this.canvas.parentNode;
-                this.canvasSize.w = container.offsetWidth;
-                this.canvasSize.h = container.offsetHeight;
-
-                this.canvas.width = this.canvasSize.w * this.dpr;
-                this.canvas.height = this.canvasSize.h * this.dpr;
-                this.canvas.style.width = `${this.canvasSize.w}px`;
-                this.canvas.style.height = `${this.canvasSize.h}px`;
-                this.ctx.scale(this.dpr, this.dpr);
-
-                this.circles = [];
-                for (let i = 0; i < this.options.quantity; i++) {
-                    const circle = this.circleParams();
-                    this.circles.push(circle);
-                }
-            }
-
-            circleParams() {
-                const x = Math.floor(Math.random() * this.canvasSize.w);
-                const y = Math.floor(Math.random() * this.canvasSize.h);
-                const size = Math.floor(Math.random() * 2) + this.options.size;
-                const alpha = 0;
-                const targetAlpha = parseFloat((Math.random() * 0.6 + 0.1).toFixed(1));
-                const dx = (Math.random() - 0.5) * 0.1;
-                const dy = (Math.random() - 0.5) * 0.1;
-                const magnetism = 0.1 + Math.random() * 4;
-
-                return {
-                    x, y,
-                    translateX: 0,
-                    translateY: 0,
-                    size, alpha, targetAlpha,
-                    dx, dy, magnetism
-                };
-            }
-
-            drawCircle(circle) {
-                const { x, y, translateX, translateY, size, alpha } = circle;
-                this.ctx.save();
-                this.ctx.translate(translateX, translateY);
-                this.ctx.beginPath();
-                this.ctx.arc(x, y, size, 0, 2 * Math.PI);
-                this.ctx.fillStyle = `rgba(${this.rgb.join(', ')}, ${alpha})`;
-                this.ctx.fill();
-                this.ctx.restore();
-            }
-
-            clearCanvas() {
-                this.ctx.clearRect(0, 0, this.canvasSize.w, this.canvasSize.h);
-            }
-
-            drawParticles() {
-                this.clearCanvas();
-                for (let i = 0; i < this.options.quantity; i++) {
-                    const circle = this.circleParams();
-                    this.circles.push(circle);
-                }
-            }
-
-            remapValue(value, start1, end1, start2, end2) {
-                const remapped = ((value - start1) * (end2 - start2)) / (end1 - start1) + start2;
-                return remapped > 0 ? remapped : 0;
-            }
-
-            animate() {
-                this.clearCanvas();
-
-                for (let i = this.circles.length - 1; i >= 0; i--) {
-                    const circle = this.circles[i];
-
-                    // Calculate distance from edges
-                    const edge = [
-                        circle.x + circle.translateX - circle.size,
-                        this.canvasSize.w - circle.x - circle.translateX - circle.size,
-                        circle.y + circle.translateY - circle.size,
-                        this.canvasSize.h - circle.y - circle.translateY - circle.size
-                    ];
-                    const closestEdge = Math.min(...edge);
-                    const remapClosestEdge = parseFloat(this.remapValue(closestEdge, 0, 20, 0, 1).toFixed(2));
-
-                    if (remapClosestEdge > 1) {
-                        circle.alpha += 0.02;
-                        if (circle.alpha > circle.targetAlpha) {
-                            circle.alpha = circle.targetAlpha;
-                        }
-                    } else {
-                        circle.alpha = circle.targetAlpha * remapClosestEdge;
-                    }
-
-                    // Update position
-                    circle.x += circle.dx + this.options.vx;
-                    circle.y += circle.dy + this.options.vy;
-                    circle.translateX += (this.mouse.x / (this.options.staticity / circle.magnetism) - circle.translateX) / this.options.ease;
-                    circle.translateY += (this.mouse.y / (this.options.staticity / circle.magnetism) - circle.translateY) / this.options.ease;
-
-                    this.drawCircle(circle);
-
-                    // Remove particles that are out of bounds and create new ones
-                    if (circle.x < -circle.size || circle.x > this.canvasSize.w + circle.size ||
-                        circle.y < -circle.size || circle.y > this.canvasSize.h + circle.size) {
-                        this.circles.splice(i, 1);
-                        const newCircle = this.circleParams();
-                        this.circles.push(newCircle);
-                    }
-                }
-
-                this.rafId = requestAnimationFrame(() => this.animate());
-            }
-
-            destroy() {
-                if (this.rafId) {
-                    cancelAnimationFrame(this.rafId);
-                }
-                window.removeEventListener('mousemove', this.handleMouseMove);
-                window.removeEventListener('resize', this.handleResize);
-            }
-        }
 
         // Scroll Based Velocity Implementation
         function initScrollVelocity() {

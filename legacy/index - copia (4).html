@@ -201,36 +201,6 @@
         </div>
     </section>
 
-    <!-- Hero Parallax Section -->
-    <section class="h-[300vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto" style="perspective: 1000px; transform-style: preserve-3d;" id="hero-parallax">
-        <!-- Header -->
-        <div class="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
-            <h1 class="text-2xl md:text-7xl font-bold dark:text-white text-gray-900">
-                El mejor <br /> estudio de desarrollo
-            </h1>
-            <p class="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200 text-gray-700">
-                Construimos productos hermosos con las últimas tecnologías y frameworks.
-                Somos un equipo de desarrolladores y diseñadores apasionados que aman crear productos increíbles.
-            </p>
-        </div>
-
-        <!-- Parallax Content -->
-        <div id="parallax-content" class="">
-            <!-- First Row -->
-            <div class="flex flex-row-reverse space-x-reverse space-x-20 mb-20" id="first-row">
-                <!-- Products will be dynamically added here -->
-            </div>
-            <!-- Second Row -->
-            <div class="flex flex-row mb-20 space-x-20" id="second-row">
-                <!-- Products will be dynamically added here -->
-            </div>
-            <!-- Third Row -->
-            <div class="flex flex-row-reverse space-x-reverse space-x-20" id="third-row">
-                <!-- Products will be dynamically added here -->
-            </div>
-        </div>
-    </section>
-
     <!-- Showcase Section -->
     <section class="py-24 md:py-32 relative" data-section="showcase">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
@@ -259,114 +229,172 @@
                     <div class="absolute -top-5 sm:-top-10 md:-top-20 -left-5 sm:-left-10 md:-left-20 w-16 sm:w-20 md:w-40 h-16 sm:h-20 md:h-40 rounded-full bg-gradient-to-r from-purple-500/10 to-pink-500/10 dark:from-purple-500/20 dark:to-pink-500/20 blur-3xl"></div>
                     <div class="absolute -bottom-5 sm:-bottom-10 md:-bottom-20 -right-5 sm:-right-10 md:-right-20 w-16 sm:w-20 md:w-40 h-16 sm:h-20 md:h-40 rounded-full bg-gradient-to-r from-cyan-500/10 to-blue-500/10 dark:from-cyan-500/20 dark:to-blue-500/20 blur-3xl"></div>
 
-                    <!-- Magic UI Bento Grid - Business Features -->
-                    <div class="grid w-full grid-cols-1 lg:grid-cols-3 lg:grid-rows-3 gap-4 auto-rows-[22rem]">
-                        <!-- Gestión de Archivos -->
-                        <div class="group relative lg:row-start-1 lg:row-end-4 lg:col-start-2 lg:col-end-3 flex flex-col justify-between overflow-hidden rounded-xl bg-white dark:bg-gray-950 border border-gray-950/[.1] dark:border-gray-50/[.1] shadow-[0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] dark:shadow-[0_-20px_80px_-20px_#ffffff1f_inset] transition-all duration-300">
-                            <!-- Background Image -->
-                            <div class="absolute -right-20 -top-20 opacity-60">
-                                <div class="w-40 h-40 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-xl"></div>
+                    <!-- Magic UI Bento Grid with Animations -->
+                    <div class="grid w-full auto-rows-[22rem] grid-cols-3 gap-4">
+                        <!-- Presencia Digital Profesional - Main Card with File Marquee -->
+                        <div class="group relative col-span-3 lg:col-span-1 flex flex-col justify-between overflow-hidden rounded-xl bg-white dark:bg-gray-950 border border-gray-950/[.1] dark:border-gray-50/[.1] shadow-[0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] dark:shadow-[0_-20px_80px_-20px_#ffffff1f_inset] transition-all duration-300">
+                            <!-- Animated Files Background -->
+                            <div class="absolute top-10 left-0 right-0 bento-marquee">
+                                <div class="space-y-3">
+                                    <div class="relative w-32 cursor-pointer overflow-hidden rounded-xl border p-4 border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05] dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15] transition-all duration-300 blur-[1px] hover:blur-none">
+                                        <div class="flex flex-col">
+                                            <div class="text-sm font-medium dark:text-white">servicios.pdf</div>
+                                            <div class="mt-2 text-xs text-gray-600 dark:text-gray-400">Catálogo completo de servicios profesionales</div>
+                                        </div>
+                                    </div>
+                                    <div class="relative w-32 cursor-pointer overflow-hidden rounded-xl border p-4 border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05] dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15] transition-all duration-300 blur-[1px] hover:blur-none">
+                                        <div class="flex flex-col">
+                                            <div class="text-sm font-medium dark:text-white">portfolio.jpg</div>
+                                            <div class="mt-2 text-xs text-gray-600 dark:text-gray-400">Galería de proyectos realizados</div>
+                                        </div>
+                                    </div>
+                                    <div class="relative w-32 cursor-pointer overflow-hidden rounded-xl border p-4 border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05] dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15] transition-all duration-300 blur-[1px] hover:blur-none">
+                                        <div class="flex flex-col">
+                                            <div class="text-sm font-medium dark:text-white">contact.vcf</div>
+                                            <div class="mt-2 text-xs text-gray-600 dark:text-gray-400">Información de contacto profesional</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="pointer-events-none z-10 flex transform-gpu flex-col gap-1 p-6 transition-all duration-300 group-hover:-translate-y-10">
-                                <i data-lucide="file-text" class="h-12 w-12 origin-left transform-gpu text-neutral-700 dark:text-neutral-300 transition-all duration-300 ease-in-out group-hover:scale-75"></i>
+                                <i data-lucide="file-text" class="h-12 w-12 origin-left transform-gpu text-neutral-700 transition-all duration-300 ease-in-out group-hover:scale-75"></i>
                                 <h3 class="text-xl font-semibold text-neutral-700 dark:text-neutral-300">
-                                    Gestión de Archivos
+                                    Presencia Digital Profesional
                                 </h3>
-                                <p class="max-w-lg text-neutral-400">Guardamos automáticamente todos tus contenidos mientras trabajas.</p>
+                                <p class="max-w-lg text-neutral-400">Ideal para empresas de servicios</p>
                             </div>
 
                             <div class="pointer-events-none absolute bottom-0 flex w-full translate-y-10 transform-gpu flex-row items-center p-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-                                <button class="pointer-events-auto text-sm font-medium text-neutral-400 hover:text-neutral-300 transition-colors" onclick="scrollToSection('pricing')">
-                                    Ver más →
+                                <button class="pointer-events-auto text-sm font-medium text-neutral-400 hover:text-neutral-300 transition-colors">
+                                    Ver detalles →
                                 </button>
                             </div>
                         </div>
 
-                        <!-- Búsqueda Completa -->
-                        <div class="group relative lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-3 flex flex-col justify-between overflow-hidden rounded-xl bg-white dark:bg-gray-950 border border-gray-950/[.1] dark:border-gray-50/[.1] shadow-[0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] dark:shadow-[0_-20px_80px_-20px_#ffffff1f_inset] transition-all duration-300">
-                            <!-- Background Image -->
-                            <div class="absolute -right-20 -top-20 opacity-60">
-                                <div class="w-40 h-40 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-full blur-xl"></div>
+                        <!-- Notifications Card -->
+                        <div class="group relative col-span-3 lg:col-span-2 flex flex-col justify-between overflow-hidden rounded-xl bg-white dark:bg-gray-950 border border-gray-950/[.1] dark:border-gray-50/[.1] shadow-[0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] dark:shadow-[0_-20px_80px_-20px_#ffffff1f_inset] transition-all duration-300">
+                            <!-- Animated Notifications Background -->
+                            <div class="absolute right-2 top-4 h-[300px] w-full scale-75 transition-all duration-300 ease-out group-hover:scale-90" style="mask-image: linear-gradient(to top, transparent 10%, #000 100%);">
+                                <div class="space-y-3 p-4">
+                                    <div class="notification-item flex items-center gap-3 p-3 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg">
+                                        <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+                                        <div>
+                                            <div class="text-sm font-medium text-green-900 dark:text-green-100">Proyecto completado</div>
+                                            <div class="text-xs text-green-600 dark:text-green-400">Tu sitio web está listo</div>
+                                        </div>
+                                    </div>
+                                    <div class="notification-item flex items-center gap-3 p-3 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg">
+                                        <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
+                                        <div>
+                                            <div class="text-sm font-medium text-blue-900 dark:text-blue-100">Nuevo pedido recibido</div>
+                                            <div class="text-xs text-blue-600 dark:text-blue-400">Cliente: María González</div>
+                                        </div>
+                                    </div>
+                                    <div class="notification-item flex items-center gap-3 p-3 bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-lg">
+                                        <div class="w-2 h-2 bg-purple-500 rounded-full"></div>
+                                        <div>
+                                            <div class="text-sm font-medium text-purple-900 dark:text-purple-100">Backup automático</div>
+                                            <div class="text-xs text-purple-600 dark:text-purple-400">Datos seguros en la nube</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="pointer-events-none z-10 flex transform-gpu flex-col gap-1 p-6 transition-all duration-300 group-hover:-translate-y-10">
-                                <i data-lucide="search" class="h-12 w-12 origin-left transform-gpu text-neutral-700 dark:text-neutral-300 transition-all duration-300 ease-in-out group-hover:scale-75"></i>
-                                <h3 class="text-xl font-semibold text-neutral-700 dark:text-neutral-300">
-                                    Búsqueda Completa
-                                </h3>
-                                <p class="max-w-lg text-neutral-400">Busca en todo tu contenido desde un solo lugar.</p>
-                            </div>
-
-                            <div class="pointer-events-none absolute bottom-0 flex w-full translate-y-10 transform-gpu flex-row items-center p-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-                                <button class="pointer-events-auto text-sm font-medium text-neutral-400 hover:text-neutral-300 transition-colors" onclick="scrollToSection('pricing')">
-                                    Ver más →
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Multilenguaje -->
-                        <div class="group relative lg:col-start-1 lg:col-end-2 lg:row-start-3 lg:row-end-4 flex flex-col justify-between overflow-hidden rounded-xl bg-white dark:bg-gray-950 border border-gray-950/[.1] dark:border-gray-50/[.1] shadow-[0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] dark:shadow-[0_-20px_80px_-20px_#ffffff1f_inset] transition-all duration-300">
-                            <!-- Background Image -->
-                            <div class="absolute -right-20 -top-20 opacity-60">
-                                <div class="w-40 h-40 bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-full blur-xl"></div>
-                            </div>
-
-                            <div class="pointer-events-none z-10 flex transform-gpu flex-col gap-1 p-6 transition-all duration-300 group-hover:-translate-y-10">
-                                <i data-lucide="globe" class="h-12 w-12 origin-left transform-gpu text-neutral-700 dark:text-neutral-300 transition-all duration-300 ease-in-out group-hover:scale-75"></i>
-                                <h3 class="text-xl font-semibold text-neutral-700 dark:text-neutral-300">
-                                    Alcance Global
-                                </h3>
-                                <p class="max-w-lg text-neutral-400">Tu negocio disponible para clientes de todo el mundo.</p>
-                            </div>
-
-                            <div class="pointer-events-none absolute bottom-0 flex w-full translate-y-10 transform-gpu flex-row items-center p-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-                                <button class="pointer-events-auto text-sm font-medium text-neutral-400 hover:text-neutral-300 transition-colors" onclick="scrollToSection('pricing')">
-                                    Ver más →
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Calendario -->
-                        <div class="group relative lg:col-start-3 lg:col-end-3 lg:row-start-1 lg:row-end-2 flex flex-col justify-between overflow-hidden rounded-xl bg-white dark:bg-gray-950 border border-gray-950/[.1] dark:border-gray-50/[.1] shadow-[0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] dark:shadow-[0_-20px_80px_-20px_#ffffff1f_inset] transition-all duration-300">
-                            <!-- Background Image -->
-                            <div class="absolute -right-20 -top-20 opacity-60">
-                                <div class="w-40 h-40 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-xl"></div>
-                            </div>
-
-                            <div class="pointer-events-none z-10 flex transform-gpu flex-col gap-1 p-6 transition-all duration-300 group-hover:-translate-y-10">
-                                <i data-lucide="calendar" class="h-12 w-12 origin-left transform-gpu text-neutral-700 dark:text-neutral-300 transition-all duration-300 ease-in-out group-hover:scale-75"></i>
-                                <h3 class="text-xl font-semibold text-neutral-700 dark:text-neutral-300">
-                                    Agenda
-                                </h3>
-                                <p class="max-w-lg text-neutral-400">Organiza tu negocio por fechas.</p>
-                            </div>
-
-                            <div class="pointer-events-none absolute bottom-0 flex w-full translate-y-10 transform-gpu flex-row items-center p-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-                                <button class="pointer-events-auto text-sm font-medium text-neutral-400 hover:text-neutral-300 transition-colors" onclick="scrollToSection('pricing')">
-                                    Ver más →
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Notificaciones -->
-                        <div class="group relative lg:col-start-3 lg:col-end-3 lg:row-start-2 lg:row-end-4 flex flex-col justify-between overflow-hidden rounded-xl bg-white dark:bg-gray-950 border border-gray-950/[.1] dark:border-gray-50/[.1] shadow-[0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] dark:shadow-[0_-20px_80px_-20px_#ffffff1f_inset] transition-all duration-300">
-                            <!-- Background Image -->
-                            <div class="absolute -right-20 -top-20 opacity-60">
-                                <div class="w-40 h-40 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-xl"></div>
-                            </div>
-
-                            <div class="pointer-events-none z-10 flex transform-gpu flex-col gap-1 p-6 transition-all duration-300 group-hover:-translate-y-10">
-                                <i data-lucide="bell" class="h-12 w-12 origin-left transform-gpu text-neutral-700 dark:text-neutral-300 transition-all duration-300 ease-in-out group-hover:scale-75"></i>
+                                <i data-lucide="bell" class="h-12 w-12 origin-left transform-gpu text-neutral-700 transition-all duration-300 ease-in-out group-hover:scale-75"></i>
                                 <h3 class="text-xl font-semibold text-neutral-700 dark:text-neutral-300">
                                     Notificaciones
                                 </h3>
-                                <p class="max-w-lg text-neutral-400">Te notificamos cuando alguien interactúa con tu negocio.</p>
+                                <p class="max-w-lg text-neutral-400">Mantente informado sobre el estado de tus proyectos</p>
                             </div>
 
                             <div class="pointer-events-none absolute bottom-0 flex w-full translate-y-10 transform-gpu flex-row items-center p-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-                                <button class="pointer-events-auto text-sm font-medium text-neutral-400 hover:text-neutral-300 transition-colors" onclick="scrollToSection('pricing')">
-                                    Ver más →
+                                <button class="pointer-events-auto text-sm font-medium text-neutral-400 hover:text-neutral-300 transition-colors">
+                                    Ver todas →
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Integrations Card -->
+                        <div class="group relative col-span-3 lg:col-span-2 flex flex-col justify-between overflow-hidden rounded-xl bg-white dark:bg-gray-950 border border-gray-950/[.1] dark:border-gray-50/[.1] shadow-[0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] dark:shadow-[0_-20px_80px_-20px_#ffffff1f_inset] transition-all duration-300">
+                            <!-- Animated Beams Background -->
+                            <div class="absolute right-2 top-4 h-[300px] transition-all duration-300 ease-out group-hover:scale-105" style="mask-image: linear-gradient(to top, transparent 10%, #000 100%);">
+                                <svg viewBox="0 0 300 200" class="w-full h-full">
+                                    <!-- Central Node -->
+                                    <circle cx="150" cy="100" r="8" fill="rgb(139, 92, 246)" />
+
+                                    <!-- Integration Nodes -->
+                                    <circle cx="50" cy="50" r="6" fill="rgb(34, 197, 94)" />
+                                    <circle cx="250" cy="50" r="6" fill="rgb(59, 130, 246)" />
+                                    <circle cx="50" cy="150" r="6" fill="rgb(239, 68, 68)" />
+                                    <circle cx="250" cy="150" r="6" fill="rgb(245, 158, 11)" />
+
+                                    <!-- Animated Beams -->
+                                    <line x1="150" y1="100" x2="50" y2="50" stroke="rgb(139, 92, 246)" stroke-width="2" class="integration-beam" style="animation-delay: 0s;" />
+                                    <line x1="150" y1="100" x2="250" y2="50" stroke="rgb(139, 92, 246)" stroke-width="2" class="integration-beam" style="animation-delay: 0.5s;" />
+                                    <line x1="150" y1="100" x2="50" y2="150" stroke="rgb(139, 92, 246)" stroke-width="2" class="integration-beam" style="animation-delay: 1s;" />
+                                    <line x1="150" y1="100" x2="250" y2="150" stroke="rgb(139, 92, 246)" stroke-width="2" class="integration-beam" style="animation-delay: 1.5s;" />
+                                </svg>
+                            </div>
+
+                            <div class="pointer-events-none z-10 flex transform-gpu flex-col gap-1 p-6 transition-all duration-300 group-hover:-translate-y-10">
+                                <i data-lucide="share-2" class="h-12 w-12 origin-left transform-gpu text-neutral-700 transition-all duration-300 ease-in-out group-hover:scale-75"></i>
+                                <h3 class="text-xl font-semibold text-neutral-700 dark:text-neutral-300">
+                                    Tienda Online Ilimitada
+                                </h3>
+                                <p class="max-w-lg text-neutral-400">Integración completa con pagos, inventario y envíos</p>
+                            </div>
+
+                            <div class="pointer-events-none absolute bottom-0 flex w-full translate-y-10 transform-gpu flex-row items-center p-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                                <button class="pointer-events-auto text-sm font-medium text-neutral-400 hover:text-neutral-300 transition-colors">
+                                    Ver detalles →
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Calendar Card -->
+                        <div class="group relative col-span-3 lg:col-span-1 flex flex-col justify-between overflow-hidden rounded-xl bg-white dark:bg-gray-950 border border-gray-950/[.1] dark:border-gray-50/[.1] shadow-[0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] dark:shadow-[0_-20px_80px_-20px_#ffffff1f_inset] transition-all duration-300">
+                            <!-- Animated Calendar Background -->
+                            <div class="absolute right-0 top-10 origin-top scale-75 rounded-md border transition-all duration-300 ease-out group-hover:scale-90" style="mask-image: linear-gradient(to top, transparent 40%, #000 100%);">
+                                <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-3">
+                                    <div class="grid grid-cols-7 gap-1 text-xs">
+                                        <div class="text-center text-gray-500 dark:text-gray-400 font-medium">L</div>
+                                        <div class="text-center text-gray-500 dark:text-gray-400 font-medium">M</div>
+                                        <div class="text-center text-gray-500 dark:text-gray-400 font-medium">X</div>
+                                        <div class="text-center text-gray-500 dark:text-gray-400 font-medium">J</div>
+                                        <div class="text-center text-gray-500 dark:text-gray-400 font-medium">V</div>
+                                        <div class="text-center text-gray-500 dark:text-gray-400 font-medium">S</div>
+                                        <div class="text-center text-gray-500 dark:text-gray-400 font-medium">D</div>
+                                        <div class="text-center p-1 text-gray-600 dark:text-gray-300">1</div>
+                                        <div class="text-center p-1 text-gray-600 dark:text-gray-300">2</div>
+                                        <div class="text-center p-1 text-gray-600 dark:text-gray-300">3</div>
+                                        <div class="text-center p-1 text-gray-600 dark:text-gray-300">4</div>
+                                        <div class="text-center p-1 text-gray-600 dark:text-gray-300">5</div>
+                                        <div class="text-center p-1 text-gray-600 dark:text-gray-300">6</div>
+                                        <div class="text-center p-1 text-gray-600 dark:text-gray-300">7</div>
+                                        <div class="text-center p-1 text-gray-600 dark:text-gray-300">8</div>
+                                        <div class="text-center p-1 text-gray-600 dark:text-gray-300">9</div>
+                                        <div class="text-center p-1 text-gray-600 dark:text-gray-300">10</div>
+                                        <div class="text-center p-1 bg-purple-500 text-white rounded">11</div>
+                                        <div class="text-center p-1 text-gray-600 dark:text-gray-300">12</div>
+                                        <div class="text-center p-1 text-gray-600 dark:text-gray-300">13</div>
+                                        <div class="text-center p-1 text-gray-600 dark:text-gray-300">14</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="pointer-events-none z-10 flex transform-gpu flex-col gap-1 p-6 transition-all duration-300 group-hover:-translate-y-10">
+                                <i data-lucide="calendar" class="h-12 w-12 origin-left transform-gpu text-neutral-700 transition-all duration-300 ease-in-out group-hover:scale-75"></i>
+                                <h3 class="text-xl font-semibold text-neutral-700 dark:text-neutral-300">
+                                    Calendario
+                                </h3>
+                                <p class="max-w-lg text-neutral-400">Gestiona tus proyectos por fechas</p>
+                            </div>
+
+                            <div class="pointer-events-none absolute bottom-0 flex w-full translate-y-10 transform-gpu flex-row items-center p-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                                <button class="pointer-events-auto text-sm font-medium text-neutral-400 hover:text-neutral-300 transition-colors">
+                                    Ver agenda →
                                 </button>
                             </div>
                         </div>
@@ -1291,188 +1319,7 @@
 
             // Initialize Scroll Based Velocity
             initScrollVelocity();
-
-            // Initialize Hero Parallax
-            initHeroParallax();
         });
-
-        // Hero Parallax Implementation
-        function initHeroParallax() {
-            const products = [
-                {
-                    title: "Moonbeam",
-                    link: "https://gomoonbeam.com",
-                    thumbnail: "https://aceternity.com/images/products/thumbnails/new/moonbeam.png",
-                },
-                {
-                    title: "Cursor",
-                    link: "https://cursor.so",
-                    thumbnail: "https://aceternity.com/images/products/thumbnails/new/cursor.png",
-                },
-                {
-                    title: "Rogue",
-                    link: "https://userogue.com",
-                    thumbnail: "https://aceternity.com/images/products/thumbnails/new/rogue.png",
-                },
-                {
-                    title: "Editorially",
-                    link: "https://editorially.org",
-                    thumbnail: "https://aceternity.com/images/products/thumbnails/new/editorially.png",
-                },
-                {
-                    title: "Editrix AI",
-                    link: "https://editrix.ai",
-                    thumbnail: "https://aceternity.com/images/products/thumbnails/new/editrix.png",
-                },
-                {
-                    title: "Pixel Perfect",
-                    link: "https://app.pixelperfect.quest",
-                    thumbnail: "https://aceternity.com/images/products/thumbnails/new/pixelperfect.png",
-                },
-                {
-                    title: "Algochurn",
-                    link: "https://algochurn.com",
-                    thumbnail: "https://aceternity.com/images/products/thumbnails/new/algochurn.png",
-                },
-                {
-                    title: "Aceternity UI",
-                    link: "https://ui.aceternity.com",
-                    thumbnail: "https://aceternity.com/images/products/thumbnails/new/aceternityui.png",
-                },
-                {
-                    title: "Tailwind Master Kit",
-                    link: "https://tailwindmasterkit.com",
-                    thumbnail: "https://aceternity.com/images/products/thumbnails/new/tailwindmasterkit.png",
-                },
-                {
-                    title: "SmartBridge",
-                    link: "https://smartbridgetech.com",
-                    thumbnail: "https://aceternity.com/images/products/thumbnails/new/smartbridge.png",
-                },
-                {
-                    title: "Renderwork Studio",
-                    link: "https://renderwork.studio",
-                    thumbnail: "https://aceternity.com/images/products/thumbnails/new/renderwork.png",
-                },
-                {
-                    title: "Creme Digital",
-                    link: "https://cremedigital.com",
-                    thumbnail: "https://aceternity.com/images/products/thumbnails/new/cremedigital.png",
-                },
-                {
-                    title: "Golden Bells Academy",
-                    link: "https://goldenbellsacademy.com",
-                    thumbnail: "https://aceternity.com/images/products/thumbnails/new/goldenbellsacademy.png",
-                },
-                {
-                    title: "Invoker Labs",
-                    link: "https://invoker.lol",
-                    thumbnail: "https://aceternity.com/images/products/thumbnails/new/invoker.png",
-                },
-                {
-                    title: "E Free Invoice",
-                    link: "https://efreeinvoice.com",
-                    thumbnail: "https://aceternity.com/images/products/thumbnails/new/efreeinvoice.png",
-                },
-            ];
-
-            const firstRow = products.slice(0, 5);
-            const secondRow = products.slice(5, 10);
-            const thirdRow = products.slice(10, 15);
-
-            // Create product cards
-            function createProductCard(product, translate) {
-                const card = document.createElement('div');
-                card.className = 'group/product h-96 w-[30rem] relative shrink-0';
-                card.style.transform = `translateX(${translate}px)`;
-
-                card.innerHTML = `
-                    <a href="${product.link}" class="block group-hover/product:shadow-2xl">
-                        <img src="${product.thumbnail}" height="600" width="600"
-                             class="object-cover object-left-top absolute h-full w-full inset-0"
-                             alt="${product.title}" />
-                    </a>
-                    <div class="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none transition-opacity duration-300"></div>
-                    <h2 class="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white transition-opacity duration-300">
-                        ${product.title}
-                    </h2>
-                `;
-
-                // Add hover effect
-                card.addEventListener('mouseenter', () => {
-                    card.style.transform = `translateX(${translate}px) translateY(-20px)`;
-                });
-
-                card.addEventListener('mouseleave', () => {
-                    card.style.transform = `translateX(${translate}px) translateY(0px)`;
-                });
-
-                return card;
-            }
-
-            // Populate rows
-            const firstRowElement = document.getElementById('first-row');
-            const secondRowElement = document.getElementById('second-row');
-            const thirdRowElement = document.getElementById('third-row');
-
-            firstRow.forEach(product => {
-                const card = createProductCard(product, 0);
-                firstRowElement.appendChild(card);
-            });
-
-            secondRow.forEach(product => {
-                const card = createProductCard(product, 0);
-                secondRowElement.appendChild(card);
-            });
-
-            thirdRow.forEach(product => {
-                const card = createProductCard(product, 0);
-                thirdRowElement.appendChild(card);
-            });
-
-            // Parallax scroll effect
-            const heroParallaxSection = document.getElementById('hero-parallax');
-            const parallaxContent = document.getElementById('parallax-content');
-
-            function updateParallax() {
-                const rect = heroParallaxSection.getBoundingClientRect();
-                const scrollProgress = Math.max(0, Math.min(1, -rect.top / (rect.height - window.innerHeight)));
-
-                // Transform calculations
-                const translateX = scrollProgress * 1000;
-                const translateXReverse = scrollProgress * -1000;
-                const rotateX = 15 - (scrollProgress * 15);
-                const opacity = 0.2 + (scrollProgress * 0.8);
-                const rotateZ = 20 - (scrollProgress * 20);
-                const translateY = -700 + (scrollProgress * 1200);
-
-                // Apply transforms to parallax content
-                parallaxContent.style.transform = `
-                    rotateX(${rotateX}deg)
-                    rotateZ(${rotateZ}deg)
-                    translateY(${translateY}px)
-                `;
-                parallaxContent.style.opacity = opacity;
-
-                // Apply transforms to rows
-                const firstRowCards = firstRowElement.children;
-                const thirdRowCards = thirdRowElement.children;
-                for (let card of firstRowCards) {
-                    card.style.transform = `translateX(${translateX}px)`;
-                }
-                for (let card of thirdRowCards) {
-                    card.style.transform = `translateX(${translateX}px)`;
-                }
-
-                const secondRowCards = secondRowElement.children;
-                for (let card of secondRowCards) {
-                    card.style.transform = `translateX(${translateXReverse}px)`;
-                }
-            }
-
-            window.addEventListener('scroll', updateParallax);
-            updateParallax(); // Initial call
-        }
 
         // Magic UI Particles Implementation
         class Particles {
